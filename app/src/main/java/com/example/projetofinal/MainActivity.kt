@@ -57,7 +57,6 @@ class MainActivity : AppCompatActivity() {
         val context = langHelper.setNewLocale(this, lang)
         val refresh = Intent(context, MainActivity::class.java)
         refresh.putExtra("FIRSTTIME", false)
-        //recreate()
         finish()
         startActivity(refresh)
     }
