@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import kotlinx.android.synthetic.main.second_activity.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,7 +17,14 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.second_activity)
 
+         val adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter.addFragment(FragmentOne(),"One")
+        adapter.addFragment(FragmentTwo(),"Two")
+        viewpager.adapter = adapter
+        tabs.setupWithViewPager(viewpager)
 
+
+/*
         val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
         val call = service?.custom_search("Brexit","10")
         call?.enqueue(object : Callback<Example> {
@@ -26,8 +34,9 @@ class SecondActivity : AppCompatActivity() {
                 val examples = response.body()
                 examples?.let {
                     println("ijferif")
-                    //val refresh = Intent(this@SecondActivity, SecondActivity::class.java)
-                    //startActivity(refresh)
+                    val refresh = Intent(this@SecondActivity, SecondActivity::class.java)
+                    //refresh.putExtra("EXTRA_PEOPLE", examples)
+                    startActivity(refresh)
                 }
             }
 
@@ -35,5 +44,6 @@ class SecondActivity : AppCompatActivity() {
                 Toast.makeText(this@SecondActivity,"Erro no serviço ", Toast.LENGTH_SHORT)
             }
         })
+        */
     }
 }
