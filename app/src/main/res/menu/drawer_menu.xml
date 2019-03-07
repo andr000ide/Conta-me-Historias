@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+    <!-- faz com que apenas seja possivel clicar num icon da sidebar-->
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_one"
+              android:icon="@drawable/ic_check_box_black_24dp"
+              android:title="Characters"></item>
+
+        <item android:id="@+id/nav_two"
+              android:icon="@drawable/ic_check_box_black_24dp"
+              android:title="Location"></item>
+
+        <item android:id="@+id/nav_three"
+              android:icon="@drawable/ic_check_box_black_24dp"
+              android:title="Episodes"></item>
+
+    </group>
+</menu>
