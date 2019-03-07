@@ -1,29 +1,17 @@
 package com.example.projetofinal
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
-import kotlinx.android.synthetic.main.second_activity.*
 import kotlinx.android.synthetic.main.second_activitynew.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
-class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
+class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
-    private var drawer : DrawerLayout? = null
+    private var drawer: DrawerLayout? = null
     private var navView: NavigationView? = null
     private var check: Int = 0
 
@@ -45,12 +33,13 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         drawer = drawerlayout
         val toggle = EndDrawerToggle(
             this, drawerlayout, toolbar, R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close)
+            R.string.navigation_drawer_close
+        )
 
         drawerlayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        navView= nav_view
+        navView = nav_view
         navView?.setNavigationItemSelectedListener(this)
 
 
@@ -86,7 +75,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
-        when (p0.itemId){
+        when (p0.itemId) {
             R.id.nav_one -> {
                 if (check != R.id.nav_one) {
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FragmentOne())
@@ -95,7 +84,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 }
             }
             R.id.nav_two -> {
-                if(check != R.id.nav_two){
+                if (check != R.id.nav_two) {
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FragmentTwo())
                         .addToBackStack("2").commit()
                     check = R.id.nav_two
@@ -107,6 +96,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 check = R.id.nav_three
             }
         }
+
         drawer?.closeDrawer(GravityCompat.END)
         return true
     }
@@ -114,11 +104,11 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     override fun onBackPressed() {
         super.onBackPressed()
         //var aux = supportFragmentManager.backStackEntryCount
-        val aux = supportFragmentManager.getBackStackEntryAt(supportFragmentManager.backStackEntryCount-1).name
-        println("------------------ "+supportFragmentManager.backStackEntryCount)
+        val aux = supportFragmentManager.getBackStackEntryAt(supportFragmentManager.backStackEntryCount - 1).name
+        println("------------------ " + supportFragmentManager.backStackEntryCount)
         //navView?.setCheckedItem(R.id.nav_one)
 
-        when (aux){
+        when (aux) {
             "1" -> navView?.setCheckedItem(R.id.nav_one)
             "2" -> navView?.setCheckedItem(R.id.nav_two)
             "3" -> navView?.setCheckedItem(R.id.nav_three)
