@@ -1,10 +1,12 @@
 package com.example.projetofinal
 
+import android.app.Activity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
+import android.view.KeyEvent
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.second_activitynew.*
 
@@ -101,6 +103,12 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         return true
     }
 
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        println("jeededj")
+        return super.onKeyDown(keyCode, event)
+    }
+
     override fun onBackPressed() {
         super.onBackPressed()
         //var aux = supportFragmentManager.backStackEntryCount
@@ -109,9 +117,18 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         //navView?.setCheckedItem(R.id.nav_one)
 
         when (aux) {
-            "1" -> navView?.setCheckedItem(R.id.nav_one)
-            "2" -> navView?.setCheckedItem(R.id.nav_two)
-            "3" -> navView?.setCheckedItem(R.id.nav_three)
+            "1" -> {
+                navView?.setCheckedItem(R.id.nav_one)
+                check=R.id.nav_one
+            }
+            "2" -> {
+                navView?.setCheckedItem(R.id.nav_two)
+                check=R.id.nav_two
+            }
+            "3" -> {
+                navView?.setCheckedItem(R.id.nav_three)
+                check=R.id.nav_three
+            }
         }
 
 
@@ -127,4 +144,8 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         }
     }
+
+
+
+
 }

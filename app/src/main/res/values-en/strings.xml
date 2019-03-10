@@ -4,4 +4,7 @@
     <string name="key_search">Search</string>
     <string name="key_try">Try</string>
     <string name="key_teste">something</string>
+    <string name="key_options">
+        <u>Advanced Options</u>
+    </string>
 </resources>
