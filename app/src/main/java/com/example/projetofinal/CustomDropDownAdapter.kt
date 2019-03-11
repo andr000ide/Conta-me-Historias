@@ -1,6 +1,7 @@
 package com.example.projetofinal
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +12,18 @@ import android.widget.TextView
 
 class CustomDropDownAdapter(val context: Context, var listItemsTxt: Array<String>) : BaseAdapter() {
 
+    var aux2 = 0
 
-    val mInflater: LayoutInflater = LayoutInflater.from(context)
+    private val mInflater: LayoutInflater = LayoutInflater.from(context)
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view: View
         val vh: ItemRowHolder
         if (convertView == null) {
-            view = mInflater.inflate(R.layout.view_drop_down_menu, parent, false)
+
+               view = mInflater.inflate(R.layout.view_drop_down_menu, parent, false)
+
+
             vh = ItemRowHolder(view)
             view?.tag = vh
         } else {
@@ -43,9 +48,7 @@ class CustomDropDownAdapter(val context: Context, var listItemsTxt: Array<String
     }
 
     override fun getItemId(position: Int): Long {
-
-        return 0
-
+        return position.toLong()
     }
 
     override fun getCount(): Int {
@@ -54,10 +57,11 @@ class CustomDropDownAdapter(val context: Context, var listItemsTxt: Array<String
 
     private class ItemRowHolder(row: View?) {
 
-        val label: TextView
+        val label: TextView = row?.findViewById(R.id.txtDropDownLabel) as TextView
 
-        init {
-            this.label = row?.findViewById(R.id.txtDropDownLabel) as TextView
-        }
+    }
+
+    fun setSelection(aux : Int){
+        aux2=aux
     }
 }

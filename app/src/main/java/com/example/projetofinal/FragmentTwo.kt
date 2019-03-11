@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.Spinner
 import kotlinx.android.synthetic.main.pesquisar.view.*
+import java.util.*
 
 
 class FragmentTwo : Fragment() {
@@ -24,18 +25,30 @@ class FragmentTwo : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.pesquisar, container, false)
 
-        view.constraintclick.setOnFocusChangeListener { v, hasFocus -> view.constraintclick.hideKeyboard() }
+        view.constraintclick.setOnFocusChangeListener { _, _ ->
+            run {
+                view.constraintclick.hideKeyboard()
+                view.imagePesquisa.setImageResource(R.drawable.ic_search_blue_24dp)
+            }
+        }
+
 
         view.constraintclick.setOnClickListener {
             // view.constraintclick.hideKeyboard()
         }
-        view.searchbar.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+
+        view.searchbar.setOnFocusChangeListener { _, _ ->  view.imagePesquisa.setImageResource(R.drawable.ic_search_black_24dp) }
+
+
+        view.searchbar.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
                 println("iedije")
                 val aux = view.spinner1.selectedItem
                 println(aux)
                 view.searchbar.hideKeyboard()
                 view.constraintclick.requestFocus()
+
+
                 //Perform Code
                 return@OnKeyListener true
             }
@@ -44,26 +57,27 @@ class FragmentTwo : Fragment() {
 
 
         val listItemsTxt = arrayOf("Last 5 years", "Last 10 years", "Last 15 years", "Last 20 years")
+        val spinnerAdapter = CustomDropDownAdapter(context!!, listItemsTxt)
+        view.spinner1.adapter = spinnerAdapter
+        //(view.spinner1.adapter as CustomDropDownAdapter).setSelection(1)
+        //view.spinner1.setSelection(1)
 
-        var spinnerAdapter: CustomDropDownAdapter = CustomDropDownAdapter(context!!, listItemsTxt)
-        var spinner: Spinner = view.findViewById(R.id.spinner1) as Spinner
-        spinner?.adapter = spinnerAdapter
-        spinner.setSelection(1)
 
 
-        spinner?.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                println("oedodeo")
+
+        /*
+        view.spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                //val selectedItem = parent.getItemAtPosition(position)
+                //(view.spinner1.adapter as CustomDropDownAdapter).setSelection(position)
+                println("j")
+                //view.setBackgroundColor(Color.BLUE)
+            } // to close the onItemSelected
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
             }
-
-            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-                //parent.getChildAt(position).setBackgroundColor(Color.BLACK)
-                //parent.getChildAt(position).setBackgroundColor(0x00000000)
-                println("ee")
-                //((TextView) parent.getChildAt(0)).setTextColor(0x00000000);
-            }
-        })
+        }
+        */
 
 
         /*
