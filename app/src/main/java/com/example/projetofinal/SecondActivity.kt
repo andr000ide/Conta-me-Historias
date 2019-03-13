@@ -110,8 +110,14 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     }
 
     override fun onBackPressed() {
+        if(supportFragmentManager.backStackEntryCount ==1){
+            supportFragmentManager.popBackStack();
+        }
         super.onBackPressed()
         //var aux = supportFragmentManager.backStackEntryCount
+        if(supportFragmentManager.backStackEntryCount >0){
+
+
         val aux = supportFragmentManager.getBackStackEntryAt(supportFragmentManager.backStackEntryCount - 1).name
         println("------------------ " + supportFragmentManager.backStackEntryCount)
         //navView?.setCheckedItem(R.id.nav_one)
@@ -132,6 +138,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         }
 
 
+        }
+        else{
+
+        }
 
 
 

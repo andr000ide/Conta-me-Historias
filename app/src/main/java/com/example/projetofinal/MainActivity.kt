@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity() {
         finish()
         startActivity(refresh)
     }
-
 }
 
 
