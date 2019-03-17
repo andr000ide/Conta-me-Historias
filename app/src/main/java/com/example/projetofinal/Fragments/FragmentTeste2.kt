@@ -1,4 +1,4 @@
-package com.example.projetofinal
+package com.example.projetofinal.Fragments
 
 
 import android.os.Bundle
@@ -6,10 +6,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.projetofinal.R
 import kotlinx.android.synthetic.main.fragment_fragment_one.*
 
 
-class FragmentTeste1 : Fragment() {
+class FragmentTeste2 : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,7 +21,7 @@ class FragmentTeste1 : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        fragment_one.text="Fragment Teste1"
+        fragment_one.text="Fragment Teste2"
     }
 
 }

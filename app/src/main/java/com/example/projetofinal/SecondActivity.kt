@@ -1,13 +1,16 @@
 package com.example.projetofinal
 
-import android.app.Activity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.KeyEvent
 import android.view.MenuItem
+import com.example.projetofinal.Fragments.FragmentOne
+import com.example.projetofinal.Fragments.FragmentThree
+import com.example.projetofinal.Fragments.FragmentTwo
 import kotlinx.android.synthetic.main.second_activitynew.*
 
 
@@ -46,10 +49,12 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FragmentOne())
-                .addToBackStack("1").commit()
-            navView?.setCheckedItem(R.id.nav_one)
-            check = R.id.nav_one
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                FragmentThree()
+            )
+                .addToBackStack("3").commit()
+            navView?.setCheckedItem(R.id.nav_three)
+            check = R.id.nav_three
         }
 
 /*
@@ -80,20 +85,26 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         when (p0.itemId) {
             R.id.nav_one -> {
                 if (check != R.id.nav_one) {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FragmentOne())
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        FragmentThree()
+                    )
                         .addToBackStack("1").commit()
                     check = R.id.nav_one
                 }
             }
             R.id.nav_two -> {
                 if (check != R.id.nav_two) {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FragmentTwo())
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        FragmentTwo()
+                    )
                         .addToBackStack("2").commit()
                     check = R.id.nav_two
                 }
             }
             R.id.nav_three -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FragmentThree())
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentThree()
+                )
                     .addToBackStack("3").commit()
                 check = R.id.nav_three
             }
@@ -109,9 +120,15 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         return super.onKeyDown(keyCode, event)
     }
 
+    fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment).addToBackStack("").commit()
+    }
+
+
     override fun onBackPressed() {
         if(supportFragmentManager.backStackEntryCount ==1){
-            supportFragmentManager.popBackStack();
+            supportFragmentManager.popBackStack()
         }
         super.onBackPressed()
         //var aux = supportFragmentManager.backStackEntryCount

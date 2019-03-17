@@ -1,19 +1,21 @@
-package com.example.projetofinal
+package com.example.projetofinal.Fragments
 
 
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
+import android.text.SpannableStringBuilder
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.AdapterView
-import android.widget.Spinner
+import com.example.projetofinal.CustomDropDownAdapter
+import com.example.projetofinal.R
+import com.example.projetofinal.SecondActivity
 import kotlinx.android.synthetic.main.pesquisar.view.*
-import java.util.*
 
 
 class FragmentTwo : Fragment() {
@@ -60,7 +62,7 @@ class FragmentTwo : Fragment() {
         val spinnerAdapter = CustomDropDownAdapter(context!!, listItemsTxt)
         view.spinner1.adapter = spinnerAdapter
         //(view.spinner1.adapter as CustomDropDownAdapter).setSelection(1)
-        //view.spinner1.setSelection(1)
+        view.spinner1.setSelection(1)
 
 
 
@@ -106,7 +108,16 @@ class FragmentTwo : Fragment() {
             }
         }
 
+        view.imagePesquisa.setOnClickListener {
+            var aux = view.searchbar.text.toString()
+            var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
 
+            val kotlinFragment = FragmentOne.newInstance(aux2,aux)
+
+            (activity as SecondActivity).replaceFragment(kotlinFragment)
+            println(aux)
+            println(aux2)
+        }
         return view
     }
 
