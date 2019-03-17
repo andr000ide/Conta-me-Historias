@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.projetofinal.*
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.second_activity.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,6 +17,7 @@ import retrofit2.Response
 
 
 class FragmentOne : Fragment(){
+    private lateinit var helper: NarrativasHelper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +26,8 @@ class FragmentOne : Fragment(){
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.second_activity, container, false)
         val adapter = ViewPagerAdapter(childFragmentManager)
+
+        helper= NarrativasHelper.instance
 
         val name1 = arguments?.getString("pesquisa")
         val name2 = arguments?.getString("anos")
@@ -38,11 +42,14 @@ class FragmentOne : Fragment(){
             override fun onResponse(call: Call<Example>, response: Response<Example>) {
                 val examples = response.body()
                 examples?.let {
-                    //println(response)
-                    //println("ijferif")
 
                     var array = examples.result.timeline
-                    var fragmento1 = FragmentTeste1.newInstance(array as ArrayList<Timeline>)
+
+                    var gson = Gson()
+                    var jsonString = gson.toJson(array)
+
+
+                    var fragmento1 = FragmentTeste1.newInstance(jsonString)
                     //var fragmento1 = FragmentTeste1.newInstance(array?.get(0)!!.headlines as ArrayList<Headline>,array?.get(0)!!.date_interval_end,array?.get(0)!!.date_interval_begin )
                     var fragmento2 = FragmentTeste2()
 
@@ -57,10 +64,6 @@ class FragmentOne : Fragment(){
                 Toast.makeText(activity, "Erro no serviço ", Toast.LENGTH_SHORT)
             }
         })
-
-
-
-
 
         return view
     }

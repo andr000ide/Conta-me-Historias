@@ -12,6 +12,8 @@ import com.example.projetofinal.AdapterNarrativas
 import com.example.projetofinal.Headline
 import com.example.projetofinal.R
 import com.example.projetofinal.Timeline
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.frag_searchview.view.*
 import kotlinx.android.synthetic.main.fragment_fragment_one.*
 import java.io.Serializable
@@ -28,8 +30,13 @@ class FragmentVistaNarrativas : Fragment() {
 
         val inicio = arguments?.getString("begin")
         val fim = arguments?.getString("end")
-        val listHeadline = arguments?.getSerializable("listHeadlines")
-        val auxiliar = listHeadline as  ArrayList<Headline>
+
+        val jsonArray = arguments?.getString("headline")
+
+        var gson = Gson()
+        val turnsType = object : TypeToken<List<Headline>>() {}.type
+        var testModel = gson.fromJson<List<Headline>>(jsonArray, turnsType)
+
         var arrayNoticias = ArrayList<String>()
         /*
         for(item in auxiliar){
@@ -43,7 +50,7 @@ class FragmentVistaNarrativas : Fragment() {
             // RecyclerView behavior
             layoutManager = LinearLayoutManager(activity)
             // set the custom adapter to the RecyclerView
-            adapter = AdapterNarrativas(auxiliar, context!!)
+            adapter = AdapterNarrativas(testModel as ArrayList<Headline>, context!!)
         }
 
        // view.recycler_view.adapter = AdapterNarrativas(arrayNoticias, context!!)
@@ -58,11 +65,11 @@ class FragmentVistaNarrativas : Fragment() {
 
 
     companion object {
-        fun newInstance(headline: ArrayList<Headline>,end : String,begin : String): FragmentVistaNarrativas {
+        fun newInstance(headline: String,end : String,begin : String): FragmentVistaNarrativas {
             val args = Bundle()
             args.putString("begin", begin)
             args.putString("end", end)
-            args.putSerializable("listHeadlines",headline)
+            args.putString("headline",headline)
             val fragment = FragmentVistaNarrativas()
             fragment.arguments = args
             return fragment
