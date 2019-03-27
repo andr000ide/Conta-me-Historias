@@ -10,4 +10,7 @@ interface ServiceAPI {
 
     @GET("search?")
     fun custom_search(@Query("query")query : String, @Query("last_years") last_years : String) : Call<Example>
+
+    @GET("extract_keywords?")
+    fun search_words()
 }

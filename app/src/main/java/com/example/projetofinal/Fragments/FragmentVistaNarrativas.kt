@@ -61,9 +61,6 @@ class FragmentVistaNarrativas : Fragment() {
 
     }
 
-
-
-
     companion object {
         fun newInstance(headline: String,end : String,begin : String): FragmentVistaNarrativas {
             val args = Bundle()

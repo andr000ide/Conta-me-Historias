@@ -110,13 +110,12 @@ class FragmentTwo : Fragment() {
 
         view.imagePesquisa.setOnClickListener {
             var aux = view.searchbar.text.toString()
-            var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
+            var aux3 = view.spinner1.selectedItemPosition
+            //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
 
-            val kotlinFragment = FragmentOne.newInstance(aux2,aux)
+            val kotlinFragment = FragmentOne.newInstance(aux,aux3)
 
             (activity as SecondActivity).replaceFragment(kotlinFragment)
-            println(aux)
-            println(aux2)
         }
         return view
     }

@@ -10,9 +10,11 @@
                       android:orientation="vertical">
 
 
+
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:id="@+id/titulo_narrativa"
-                      android:padding="20dp"
+                      android:paddingTop="10dp"
+                      android:padding="15dp"
                       android:text="- Exemplo"
                       android:textSize="18sp"/>
 

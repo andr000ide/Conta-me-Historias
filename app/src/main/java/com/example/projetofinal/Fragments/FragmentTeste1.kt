@@ -3,9 +3,11 @@ package com.example.projetofinal.Fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import com.example.projetofinal.Headline
 import com.example.projetofinal.R
 import com.example.projetofinal.Timeline
@@ -43,6 +45,31 @@ class FragmentTeste1 : Fragment(){
         }
         view.viewpagernarr.adapter = adapter
 
+        view.viewpagernarr.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+                var aux = view.viewpagernarr.currentItem
+                var tam = view.viewpagernarr.adapter?.count
+
+                if(aux==0){
+                    view.seek_bar.setProgress(0,true)
+                }else{
+                    var colocar = 0
+                    tam.let {
+                        colocar= (aux*100/(tam!!-1))
+                    }
+                    view.seek_bar.setProgress(colocar,true)
+                }
+                println("fijf")
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                println("Iejide")
+            }
+
+            override fun onPageSelected(position: Int) {
+                println("jeijide")
+            }
+        })
 
         return view
 

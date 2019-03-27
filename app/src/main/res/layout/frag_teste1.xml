@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+                                             android:layout_height="match_parent"
+              android:orientation="vertical"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SeekBar android:layout_width="match_parent" android:layout_height="wrap_content"
+             android:id="@+id/seek_bar"
+             android:paddingTop="10dp"
+             android:paddingBottom="10dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+    />
 
     <android.support.v4.view.ViewPager android:layout_width="match_parent"
+                                       app:layout_constraintTop_toBottomOf="@id/seek_bar"
+                                       app:layout_constraintBottom_toBottomOf="parent"
                                        android:id="@+id/viewpagernarr"
                                        android:layout_height="match_parent">
 
     </android.support.v4.view.ViewPager>
-    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
-    android:id="@+id/frame_layout">
 
 
-    </FrameLayout>
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

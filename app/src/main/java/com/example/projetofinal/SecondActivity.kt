@@ -1,11 +1,16 @@
 package com.example.projetofinal
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.KeyEvent
 import android.view.MenuItem
 import com.example.projetofinal.Fragments.FragmentOne
@@ -26,6 +31,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         setSupportActionBar(toolbar)
         val actionbar = supportActionBar
         actionbar?.setDisplayHomeAsUpEnabled(true)
+
 
         /*
          val adapter = ViewPagerAdapter(supportFragmentManager)
@@ -79,6 +85,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         })
         */
     }
+
 
 
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
@@ -159,9 +166,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         else{
 
         }
-
-
-
 
         println("rfkofofr")
         if (drawer!!.isDrawerOpen(GravityCompat.START)) {
