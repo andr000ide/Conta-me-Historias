@@ -1,13 +1,13 @@
 package com.example.projetofinal
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.util.Log
-import android.support.v4.app.ActivityCompat
+import androidx.core.app.ActivityCompat
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupPermissions()
+        makeReq()
 
         val checkIfFirstTime = intent.getBooleanExtra("FIRSTTIME", true)
         langHelper = LangHelper(this)
@@ -48,9 +48,6 @@ class MainActivity : AppCompatActivity() {
                 refreshApp("en")
             }
         }
-
-
-
     }
 
 
@@ -60,7 +57,21 @@ class MainActivity : AppCompatActivity() {
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
             Log.i(TAG, "Permission to record denied")
-            makeRequest()
+            makeReq()
+        }
+    }
+
+    private fun makeReq(){
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                RECORD_REQUEST_CODE)
+        } else {
+            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), RECORD_REQUEST_CODE)
+            } else {
+                //saveFiles()
+            }
         }
     }
 

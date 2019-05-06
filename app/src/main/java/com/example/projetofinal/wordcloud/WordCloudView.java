@@ -1,15 +1,12 @@
 package com.example.projetofinal.wordcloud;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.AttributeSet;
-
-
 import android.util.DisplayMetrics;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +36,7 @@ public class WordCloudView extends WebView {
         this.dataSet = new ArrayList<>();
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        ((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        ((AppCompatActivity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
         int width = displayMetrics.widthPixels;
 

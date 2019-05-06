@@ -1,20 +1,20 @@
 package com.example.projetofinal
 
-import android.app.Activity
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.graphics.drawable.DrawerArrowDrawable
-import android.support.v7.widget.AppCompatImageButton
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.graphics.drawable.DrawerArrowDrawable
+import androidx.appcompat.widget.AppCompatImageButton
+import androidx.appcompat.widget.Toolbar
 import android.view.View
 
 
 
 
 class EndDrawerToggle(
-    activity: Activity, private val drawerLayout: DrawerLayout, toolbar: Toolbar,
+    activity: AppCompatActivity, private val drawerLayout: androidx.drawerlayout.widget.DrawerLayout, toolbar: Toolbar,
     openDrawerContentDescRes: Int, closeDrawerContentDescRes: Int
-) : DrawerLayout.DrawerListener {
+) : androidx.drawerlayout.widget.DrawerLayout.DrawerListener {
     private val arrowDrawable: DrawerArrowDrawable
     private val toggleButton: AppCompatImageButton
     private val openDrawerContentDesc: String

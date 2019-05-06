@@ -4,8 +4,8 @@ package com.example.projetofinal.Fragments
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import android.text.SpannableStringBuilder
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -18,7 +18,7 @@ import com.example.projetofinal.SecondActivity
 import kotlinx.android.synthetic.main.pesquisar.view.*
 
 
-class FragmentTwo : Fragment() {
+class FragmentTwo : androidx.fragment.app.Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -112,6 +112,7 @@ class FragmentTwo : Fragment() {
             var aux = view.searchbar.text.toString()
             var aux3 = view.spinner1.selectedItemPosition
             //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
+            view.imagePesquisa.hideKeyboard()
 
             val kotlinFragment = FragmentOne.newInstance(aux,aux3)
 

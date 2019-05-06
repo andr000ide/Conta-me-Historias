@@ -3,13 +3,13 @@ package com.example.projetofinal
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.app.ActivityCompat
-import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.navigation.NavigationView
+import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
+import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.KeyEvent
 import android.view.MenuItem
@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.second_activitynew.*
 
 class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private var drawer: DrawerLayout? = null
+    private var drawer: androidx.drawerlayout.widget.DrawerLayout? = null
     private var navView: NavigationView? = null
     private var check: Int = 0
 
@@ -127,7 +127,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         return super.onKeyDown(keyCode, event)
     }
 
-    fun replaceFragment(fragment: Fragment) {
+    fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment).addToBackStack("").commit()
     }

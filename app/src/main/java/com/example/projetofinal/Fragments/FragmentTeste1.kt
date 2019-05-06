@@ -2,8 +2,8 @@ package com.example.projetofinal.Fragments
 
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.view.ViewPager
+import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +22,7 @@ import java.io.Serializable
 import java.sql.Time
 
 
-class FragmentTeste1 : Fragment(){
+class FragmentTeste1 : androidx.fragment.app.Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +45,7 @@ class FragmentTeste1 : Fragment(){
         }
         view.viewpagernarr.adapter = adapter
 
-        view.viewpagernarr.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        view.viewpagernarr.addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
                 var aux = view.viewpagernarr.currentItem
                 var tam = view.viewpagernarr.adapter?.count

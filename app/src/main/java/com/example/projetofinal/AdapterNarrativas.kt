@@ -1,23 +1,23 @@
 package com.example.projetofinal
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.frag_rowview.view.*
-import android.support.v4.content.ContextCompat.startActivity
+import androidx.core.content.ContextCompat.startActivity
 import android.content.Intent
 import android.net.Uri
-import android.support.v4.content.ContextCompat.startActivity
-import android.support.v4.content.ContextCompat.startActivity
+import androidx.core.content.ContextCompat.startActivity
+import androidx.core.content.ContextCompat.startActivity
 
 
 
 
 
 
-class AdapterNarrativas(val items : ArrayList<Headline>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class AdapterNarrativas(val items : ArrayList<Headline>, val context: Context) : androidx.recyclerview.widget.RecyclerView.Adapter<ViewHolder>() {
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val view =  ViewHolder(LayoutInflater.from(context).inflate(R.layout.frag_rowview,p0,false))
 
@@ -46,7 +46,7 @@ class AdapterNarrativas(val items : ArrayList<Headline>, val context: Context) :
     }
 }
 
-class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+class ViewHolder (view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
     // Holds the TextView that will add each animal to
     val noticia = view.noticia
 }

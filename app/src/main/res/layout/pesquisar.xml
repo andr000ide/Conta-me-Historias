@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -54,10 +54,10 @@
 
 
 
-    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
-                                                 android:id="@+id/constraint"
-                                                 app:layout_constraintTop_toBottomOf="@id/descricao"
-                                                 android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:id="@+id/constraint"
+                                                       app:layout_constraintTop_toBottomOf="@id/descricao"
+                                                       android:layout_height="wrap_content">
 
         <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:id="@+id/searchbar"
@@ -85,12 +85,12 @@
                 android:layout_height="match_parent"
                 android:paddingRight="20dp"
                 android:paddingEnd="20dp"
-                android:src="@drawable/ic_search_blue_24dp"
+                app:srcCompat="@drawable/ic_search_blue_24dp"
                 android:layout_centerVertical="true"
                 android:text="Button"/>
 
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -119,4 +119,4 @@
     </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

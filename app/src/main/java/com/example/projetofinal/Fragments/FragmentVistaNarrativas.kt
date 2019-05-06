@@ -3,8 +3,8 @@ package com.example.projetofinal.Fragments
 
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.fragment_fragment_one.*
 import java.io.Serializable
 
 
-class FragmentVistaNarrativas : Fragment() {
+class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +48,7 @@ class FragmentVistaNarrativas : Fragment() {
         view.recycler_view.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
-            layoutManager = LinearLayoutManager(activity)
+            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
             // set the custom adapter to the RecyclerView
             adapter = AdapterNarrativas(testModel as ArrayList<Headline>, context!!)
         }

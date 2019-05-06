@@ -2,6 +2,7 @@ package com.example.projetofinal.Fragments
 
 
 import android.Manifest
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -9,12 +10,13 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.os.StrictMode
-import android.support.v4.app.ActivityCompat
-import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
+import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
+import androidx.core.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 import com.example.projetofinal.*
 import com.google.gson.Gson
@@ -27,7 +29,7 @@ import java.io.FileOutputStream
 import java.util.*
 
 
-class FragmentOne : Fragment(){
+class FragmentOne : androidx.fragment.app.Fragment(){
     private lateinit var helper: NarrativasHelper
     private var sharePath = "no"
 
@@ -54,9 +56,13 @@ class FragmentOne : Fragment(){
             else -> years = "10"
         }
 
+        // ainda n faz nada
+        //val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
+        //val call2 = service2?.search_words(content,"1","20")
+        // acaba aqui
 
-
-
+        view.linear_vis.visibility=View.INVISIBLE
+        view.spin_kit.visibility=View.VISIBLE
         val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
         val call = service?.custom_search(queryPesquisa!!, years)
         call?.enqueue(object : Callback<Example> {
@@ -64,6 +70,16 @@ class FragmentOne : Fragment(){
 
             override fun onResponse(call: Call<Example>, response: Response<Example>) {
                 val examples = response.body()
+                if(response.message().equals("INTERNAL SERVER ERROR")){
+                    withButtonCentered(view)
+                    //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
+                    //activity!!.onBackPressed()
+                }
+                if(examples==null){
+                    view.linear_vis.visibility=View.VISIBLE
+                    view.spin_kit.visibility=View.INVISIBLE
+                    // por popup e mandar para o fragmento two
+                }
                 examples?.let {
 
                     var array = examples.result.timeline
@@ -80,19 +96,22 @@ class FragmentOne : Fragment(){
                     adapter.addFragment(fragmento2, "Termos Relacionados")
                     view.viewpager.adapter = adapter
                     view.tabs.setupWithViewPager(view.viewpager)
+
+                    view.linear_vis.visibility=View.VISIBLE
+                    view.spin_kit.visibility=View.INVISIBLE
                 }
             }
 
             override fun onFailure(call: Call<Example>, t: Throwable) {
-                Toast.makeText(activity, "Erro no serviço ", Toast.LENGTH_SHORT)
+                withButtonCentered(view)
             }
         })
 
-       /* view.shareButton.setOnClickListener {
+        view.shareButton.setOnClickListener {
             val bitmap = loadBitmapFromView(activity!!.window.decorView.rootView)
             saveImage(bitmap)
-            share(sharePath)
-        }*/
+            share(sharePath,bitmap,queryPesquisa!!,years)
+        }
         return view
     }
 
@@ -116,7 +135,6 @@ class FragmentOne : Fragment(){
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
     }
 
     fun loadBitmapFromView(v: View): Bitmap {
@@ -127,7 +145,8 @@ class FragmentOne : Fragment(){
         return bitmap
     }
 
-    private fun share(sharePath: String) {
+    private fun share(sharePath: String, bitmap: Bitmap,pesquisa:String , anos:String) {
+
         val builder = StrictMode.VmPolicy.Builder()
         StrictMode.setVmPolicy(builder.build())
         val file = File(sharePath)
@@ -135,11 +154,9 @@ class FragmentOne : Fragment(){
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "image/*"
         intent.putExtra(Intent.EXTRA_STREAM, uri)
-        startActivity(intent)
-
+        intent.putExtra(Intent.EXTRA_TEXT, "http://contamehistorias.pt/arquivopt/search?query="+pesquisa+"&lastyears="+anos+"&lang_code=pt")
+        startActivity(Intent.createChooser(intent,"share image via..."))
     }
-
-
 
 
     companion object {
@@ -152,4 +169,18 @@ class FragmentOne : Fragment(){
             return fragment
         }
     }
+
+    fun withButtonCentered(view: View) {
+
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Error")
+        builder.setMessage("Não foram encontrados resultados suficientes para a pesquisa efetuada. Tente novamente com outra pesquisa.")
+        //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
+
+        builder.setNeutralButton("Ok") { dialog, which ->
+            activity!!.onBackPressed()
+        }
+        builder.show()
+    }
+
 }
