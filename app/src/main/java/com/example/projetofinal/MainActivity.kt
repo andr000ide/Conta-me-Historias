@@ -30,24 +30,20 @@ class MainActivity : AppCompatActivity() {
             refreshApp(langHelper.getLanguageSaved())
         }
 
-        if (langHelper.getLanguageSaved() == "en") {
-            portugal.setBackgroundResource(R.drawable.pt_pt_dark)
-        } else {
-            england.setBackgroundResource(R.drawable.en_en_dark)
+
+        Btn_try.setOnClickListener {
+            val randomIntent = Intent(this, SecondActivity::class.java)
+            randomIntent.putExtra("indicacao","try")
+            startActivity(randomIntent)
         }
 
 
-        portugal.setOnClickListener {
-            if (langHelper.getLanguageSaved() != "pt") {
-                refreshApp("pt")
-            }
+        search_button.setOnClickListener {
+            val randomIntent = Intent(this, SecondActivity::class.java)
+            randomIntent.putExtra("indicacao","pesquisar")
+            startActivity(randomIntent)
         }
 
-        england.setOnClickListener {
-            if (langHelper.getLanguageSaved() != "en") {
-                refreshApp("en")
-            }
-        }
     }
 
 
@@ -81,10 +77,7 @@ class MainActivity : AppCompatActivity() {
             RECORD_REQUEST_CODE)
     }
 
-    fun random(view: View) {
-        val randomIntent = Intent(this, SecondActivity::class.java)
-        startActivity(randomIntent)
-    }
+
 
     fun refreshApp(lang: String) {
         val context = langHelper.setNewLocale(this, lang)

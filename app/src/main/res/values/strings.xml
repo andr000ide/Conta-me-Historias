@@ -11,6 +11,7 @@
     <string name="key_options"><u>Opções Avançandas</u></string>
 
     <string name="country_prompt" translatable="false">Choose number of years</string>
+    <string name="lingua">English</string>
 
     <string-array name="country_arrays">
         <item>Last 5 years</item>

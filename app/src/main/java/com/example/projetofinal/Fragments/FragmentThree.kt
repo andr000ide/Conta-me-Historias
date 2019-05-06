@@ -27,8 +27,6 @@ class FragmentThree : androidx.fragment.app.Fragment() {
         // Inflate the layout for this fragment
         var view = inflater.inflate(com.example.projetofinal.R.layout.fragment_fragment_one, container, false)
 
-        view.titulo_1.text="Algo"
-        view.titulo_2.text="Algo2"
 
         var carousel_View = view.carouselView
         var carouse2_View = view.carouselView2

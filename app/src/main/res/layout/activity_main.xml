@@ -19,7 +19,7 @@
             android:autoSizeMinTextSize="30sp"
             android:autoSizeMaxTextSize="50sp"
             android:textColor="#FFFFFF"
-            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintVertical_bias="0.3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -51,7 +51,6 @@
 
     <Button android:id="@+id/Btn_try"
             android:layout_marginTop="30dp"
-            android:onClick="random"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:layout_width="200dp"
@@ -62,30 +61,5 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="@string/key_try"/>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Btn_try">
-
-
-        <ImageView android:id="@+id/england"
-                   android:layout_width="60dp"
-                   android:layout_height="40dp"
-                   android:layout_marginEnd="20dp"
-                   android:layout_marginRight="20dp"
-                   android:background="@drawable/en_en"/>
-
-        <ImageView android:id="@+id/portugal"
-                   android:layout_width="60dp"
-                   android:layout_height="40dp"
-                   android:background="@drawable/pt_pt"/>
-
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

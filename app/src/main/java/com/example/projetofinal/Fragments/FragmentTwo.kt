@@ -65,39 +65,6 @@ class FragmentTwo : androidx.fragment.app.Fragment() {
         view.spinner1.setSelection(1)
 
 
-
-
-        /*
-        view.spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                //val selectedItem = parent.getItemAtPosition(position)
-                //(view.spinner1.adapter as CustomDropDownAdapter).setSelection(position)
-                println("j")
-                //view.setBackgroundColor(Color.BLUE)
-            } // to close the onItemSelected
-
-            override fun onNothingSelected(parent: AdapterView<*>) {
-            }
-        }
-        */
-
-
-        /*
-        //get the spinner from the xml.
-        val dropdown = view.spinner1
-        //create a list of items for the spinner.
-        //val items = arrayListOf<String>("5","10","15","20")
-        val items = arrayOf("5", "10", "15","20")
-        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
-        //There are multiple variations of this, but this is the basic variant.
-        //val adapter = ArrayAdapter(activity, android.R.layout.simple_spinner_dropdown_item, items)
-    //set the spinners adapter to the previously created one.
-        //dropdown.setAdapter(adapter)
-        dropdown.setSelection(1)
-
-    */
-
-
         view.advancedoptions.setOnClickListener {
             if (view.linear_visibility.visibility == View.INVISIBLE) {
                 view.advancedoptions.setTextColor(Color.GRAY)
@@ -110,11 +77,14 @@ class FragmentTwo : androidx.fragment.app.Fragment() {
 
         view.imagePesquisa.setOnClickListener {
             var aux = view.searchbar.text.toString()
+
+            val result = aux.trim()
+
             var aux3 = view.spinner1.selectedItemPosition
             //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
             view.imagePesquisa.hideKeyboard()
 
-            val kotlinFragment = FragmentOne.newInstance(aux,aux3)
+            val kotlinFragment = FragmentOne.newInstance(result,aux3)
 
             (activity as SecondActivity).replaceFragment(kotlinFragment)
         }

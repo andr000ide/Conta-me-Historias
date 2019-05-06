@@ -17,7 +17,6 @@ import java.util.*
 class FragmentTeste2 : androidx.fragment.app.Fragment() {
 
 
-
     val colors: IntArray = intArrayOf(
         Color.parseColor("#7f9650"),
         Color.parseColor("#d6812f"),

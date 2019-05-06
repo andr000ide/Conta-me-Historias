@@ -29,7 +29,6 @@
             app:pageColor="#FFFFFF"
             app:radius="6dp"
             app:slideInterval="10000"
-            android:layout_marginBottom="10dp"
             app:strokeColor="#FF777777"
             app:strokeWidth="1dp"/>
 
@@ -54,7 +53,6 @@
             app:radius="6dp"
             app:slideInterval="10000"
             app:strokeColor="#FF777777"
-            android:layout_marginBottom="10dp"
             app:strokeWidth="1dp"/>
 
         <TextView

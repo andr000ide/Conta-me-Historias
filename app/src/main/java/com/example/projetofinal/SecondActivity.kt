@@ -1,6 +1,7 @@
 package com.example.projetofinal
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import com.google.android.material.navigation.NavigationView
@@ -24,6 +25,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     private var drawer: androidx.drawerlayout.widget.DrawerLayout? = null
     private var navView: NavigationView? = null
     private var check: Int = 0
+    private lateinit var langHelper: LangHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,9 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         val actionbar = supportActionBar
         actionbar?.setDisplayHomeAsUpEnabled(true)
 
+        val indicator:String = intent.getStringExtra("indicacao")
 
+        langHelper = LangHelper(this)
         /*
          val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(FragmentOne(),"One")
@@ -55,12 +59,23 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                FragmentThree()
-            )
-                .addToBackStack("3").commit()
-            navView?.setCheckedItem(R.id.nav_three)
-            check = R.id.nav_three
+            if(indicator.equals("try")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentThree()
+                )
+                    .addToBackStack("3").commit()
+                navView?.setCheckedItem(R.id.nav_one)
+                check = R.id.nav_one
+            }
+            else{
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentTwo()
+                )
+                    .addToBackStack("2").commit()
+                navView?.setCheckedItem(R.id.nav_two)
+                check = R.id.nav_two
+            }
+
         }
 
 /*
@@ -114,6 +129,19 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 )
                     .addToBackStack("3").commit()
                 check = R.id.nav_three
+            }
+            R.id.nav_four -> {
+                if(p0.title=="Português"){
+                    if (langHelper.getLanguageSaved() != "pt") {
+                        refreshApp("pt")
+                    }
+                }
+                else{
+                    if (langHelper.getLanguageSaved() != "en") {
+                        refreshApp("en")
+                    }
+                }
+
             }
         }
 
@@ -174,6 +202,15 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         } else {
 
         }
+    }
+
+
+    fun refreshApp(lang: String) {
+        val context = langHelper.setNewLocale(this, lang)
+        val refresh = Intent(context, MainActivity::class.java)
+        refresh.putExtra("FIRSTTIME", false)
+        finish()
+        startActivity(refresh)
     }
 
 
