@@ -6,4 +6,5 @@
     <color name="backgroundMain">#4fc1ea</color>
     <color name="backgroundMainCoiso">#38add2</color>
     <color name="searchbar">#72CDEE</color>
+    <color name="colorGrey">#D6D6D6</color>
 </resources>

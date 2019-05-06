@@ -14,9 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.KeyEvent
 import android.view.MenuItem
-import com.example.projetofinal.Fragments.FragmentOne
-import com.example.projetofinal.Fragments.FragmentThree
-import com.example.projetofinal.Fragments.FragmentTwo
+import com.example.projetofinal.Fragments.*
 import kotlinx.android.synthetic.main.second_activitynew.*
 
 
@@ -125,12 +123,19 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             }
             R.id.nav_three -> {
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                    FragmentThree()
+                    FragmentSobre()
                 )
                     .addToBackStack("3").commit()
                 check = R.id.nav_three
             }
             R.id.nav_four -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentEquipa()
+                )
+                    .addToBackStack("4").commit()
+                check = R.id.nav_four
+            }
+            R.id.nav_five -> {
                 if(p0.title=="Português"){
                     if (langHelper.getLanguageSaved() != "pt") {
                         refreshApp("pt")
