@@ -24,11 +24,13 @@ class MainActivity : AppCompatActivity() {
         makeReq()
 
         val checkIfFirstTime = intent.getBooleanExtra("FIRSTTIME", true)
-        langHelper = LangHelper(this)
+        val checkIfFirstTime2 = intent.getBooleanExtra("SECONDTIME", false)
+        langHelper = LangHelper(applicationContext)
 
         if (checkIfFirstTime == true) {
             refreshApp(langHelper.getLanguageSaved())
         }
+
 
 
         Btn_try.setOnClickListener {

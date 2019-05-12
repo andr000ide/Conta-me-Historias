@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">ProjectoFinal</string>
+    <string name="app_name">Conta-me histórias</string>
     <string name="key_description">Cria narrativas sobre qualquer assunto</string>
     <string name="key_title" translatable="false">conta-me historias</string>
     <string name="key_search">Pesquisar</string>
@@ -12,6 +12,17 @@
 
     <string name="country_prompt" translatable="false">Choose number of years</string>
     <string name="lingua">English</string>
+    <string name="know_team">conheça a equipa</string>
+    <string name="exemplos1">Economia e Atualidade</string>
+    <string name="exemplos2">Política, Justiça e Jornalismo</string>
+    <string name="exemplos3">Desporto e Cultura</string>
+    <string name="sobre">sobre</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="what_is">O que é o Conta-me Histórias?</string>
+    <string name="menu_exemplos">Exemplos</string>
+    <string name="menu_pesquisar">Pesquisar</string>
+    <string name="menu_sobre">Sobre</string>
+    <string name="menu_equipa">Equipa</string>
 
     <string-array name="country_arrays">
         <item>Last 5 years</item>

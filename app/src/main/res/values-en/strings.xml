@@ -8,4 +8,17 @@
         <u>Advanced Options</u>
     </string>
     <string name="lingua">Português</string>
+    <string name="key_title" translatable="false">tell me stories</string>
+    <string name="know_team">know the team</string>
+    <string name="exemplos1">Economy and Present</string>
+    <string name="exemplos2">" Politics, Justice and Journalism"</string>
+    <string name="exemplos3">Sports and Culture</string>
+    <string name="sobre">about</string>
+    <string name="pesquisar">Search</string>
+    <string name="what_is">What\'s Tell me stories?</string>
+    <string name="menu_exemplos">Examples</string>
+    <string name="menu_pesquisar">Search</string>
+    <string name="menu_sobre">About</string>
+    <string name="menu_equipa">Team</string>
+    <string name="app_name" translatable="false">Tell me stories</string>
 </resources>

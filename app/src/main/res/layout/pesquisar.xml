@@ -21,7 +21,7 @@
               app:layout_constraintEnd_toEndOf="parent"
               android:textColor="#FFFFFF"
               app:layout_constraintVertical_bias="0.1"
-    android:text="Pesquisar" android:gravity="center" android:textSize="40sp"/>
+              android:text="@string/pesquisar" android:gravity="center" android:textSize="40sp"/>
 
     <TextView
             android:id="@+id/titulo"

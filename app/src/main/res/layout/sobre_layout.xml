@@ -18,7 +18,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:id="@+id/topico_titulo"
-                tools:text="O que é o Conta-me Histórias? " />
+                tools:text="@string/what_is" />
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

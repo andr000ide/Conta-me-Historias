@@ -34,7 +34,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         val indicator:String = intent.getStringExtra("indicacao")
 
-        langHelper = LangHelper(this)
+        langHelper = LangHelper(applicationContext)
         /*
          val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(FragmentOne(),"One")
@@ -137,21 +137,24 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             }
             R.id.nav_five -> {
                 if(p0.title=="Português"){
-                    if (langHelper.getLanguageSaved() != "pt") {
                         refreshApp("pt")
-                    }
                 }
                 else{
-                    if (langHelper.getLanguageSaved() != "en") {
                         refreshApp("en")
-                    }
                 }
-
             }
         }
 
         drawer?.closeDrawer(GravityCompat.END)
         return true
+    }
+
+
+    fun emptybackstack(){
+        val fm = getSupportFragmentManager()
+        for (i in 0 until fm.getBackStackEntryCount()) {
+            fm.popBackStack()
+        }
     }
 
 
@@ -213,7 +216,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     fun refreshApp(lang: String) {
         val context = langHelper.setNewLocale(this, lang)
         val refresh = Intent(context, MainActivity::class.java)
-        refresh.putExtra("FIRSTTIME", false)
+        refresh.putExtra("SECONDTIME", false)
         finish()
         startActivity(refresh)
     }

@@ -18,7 +18,7 @@
             android:textColor="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Economia e Atualidade"/>
+            android:text="@string/exemplos1"/>
 
 
     <com.synnapps.carouselview.CarouselView
@@ -41,7 +41,7 @@
             android:textSize="25sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Política, Justiça e Jornalismo"/>
+            android:text="@string/exemplos2"/>
 
 
     <com.synnapps.carouselview.CarouselView
@@ -63,7 +63,7 @@
                 android:textSize="25sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Desporto e Cultura"/>
+                android:text="@string/exemplos3"/>
 
         <com.synnapps.carouselview.CarouselView
                 android:id="@+id/carouselView3"
