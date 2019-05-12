@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetofinal.ModelClass.sobreTopico
+import com.example.projetofinal.modelclass.sobreTopico
 import kotlinx.android.synthetic.main.sobre_layout.view.*
 
 

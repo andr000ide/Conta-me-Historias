@@ -1,20 +1,13 @@
 package com.example.projetofinal.Fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.projetofinal.AdapterNarrativas
 import com.example.projetofinal.EquipaAdapter
-import com.example.projetofinal.Headline
-import com.example.projetofinal.ModelClass.sobreTopico
+import com.example.projetofinal.modelclass.sobreTopico
 import com.example.projetofinal.R
-import kotlinx.android.synthetic.main.fragment_sobre.*
 import kotlinx.android.synthetic.main.fragment_sobre.view.*
-import kotlin.math.E
 
 
 class FragmentSobre : androidx.fragment.app.Fragment(){

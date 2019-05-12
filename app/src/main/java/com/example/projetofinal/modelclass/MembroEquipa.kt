@@ -1,4 +1,4 @@
-package com.example.projetofinal.ModelClass
+package com.example.projetofinal.modelclass
 
 
 import android.graphics.Bitmap

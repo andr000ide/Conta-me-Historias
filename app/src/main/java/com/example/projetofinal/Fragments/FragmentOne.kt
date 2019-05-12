@@ -6,6 +6,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -19,7 +20,11 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.example.projetofinal.*
+import com.example.projetofinal.modelclass.Algo
+import com.example.projetofinal.modelclass.Example_Yake
+import com.example.projetofinal.modelclass.Wordcloud
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.second_activity.*
 import kotlinx.android.synthetic.main.second_activity.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -27,6 +32,7 @@ import retrofit2.Response
 import java.io.File
 import java.io.FileOutputStream
 import java.util.*
+import kotlin.concurrent.thread
 
 
 class FragmentOne : androidx.fragment.app.Fragment(){
@@ -99,6 +105,8 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
                     view.linear_vis.visibility=View.VISIBLE
                     view.spin_kit.visibility=View.INVISIBLE
+
+                    //chamarServico(array!!)
                 }
             }
 
@@ -115,6 +123,63 @@ class FragmentOne : androidx.fragment.app.Fragment(){
         return view
     }
 
+    fun chamarServico(array : List<Timeline>){
+
+        thread(start = true) {
+            println(array)
+            var teste : String = ""
+            for(item in array){
+                for(item2 in item.headlines.orEmpty()){
+                    teste+=item2.keyphrase+" "
+                }
+            }
+            println(teste)
+
+
+            val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
+            val call2 = service2?.search_words(teste,"1","20")
+            call2?.enqueue(object : Callback<Example_Yake> {
+
+
+                override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {
+                    val gson = Gson()
+                    outroServico(gson.toJson(response.body()))
+                }
+
+                override fun onFailure(call: Call<Example_Yake>, t: Throwable) {
+                    println("edede")
+                }
+            })
+        }
+
+    }
+
+
+    fun outroServico(algo2 : String){
+
+        println(algo2)
+        val service3 = RetrofitWordCloudInstance.retrofitInstance?.create(ServiceAPI::class.java)
+        val call3 = service3?.search_cloud("300","300",algo2)
+        println(call3.toString())
+        call3?.enqueue(object : Callback<Wordcloud> {
+
+
+            override fun onResponse(call: Call<Wordcloud>, response: Response<Wordcloud>) {
+                println(response)
+                val outronome = response.body()
+                println(outronome)
+
+                val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
+                val decodedByte = BitmapFactory.decodeByteArray(decodedstring,0,decodedstring.size)
+                val atividade = activity as SecondActivity
+                atividade.imagemtestar.setImageBitmap(decodedByte)
+            }
+
+            override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
+                println("edede")
+            }
+        })
+    }
 
     fun saveImage(bitmap: Bitmap) {
         val now = Date()

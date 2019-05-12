@@ -1,8 +1,16 @@
 package com.example.projetofinal
 
+import com.example.projetofinal.modelclass.Algo
+import com.example.projetofinal.modelclass.Example_Yake
+import com.example.projetofinal.modelclass.Wordcloud
 import retrofit2.Call
-import retrofit2.http.GET
+import retrofit2.http.*
+import retrofit2.http.POST
 import retrofit2.http.Query
+import retrofit2.http.GET
+import retrofit2.http.FormUrlEncoded
+
+
 
 interface ServiceAPI {
     @GET("search?query=Brexit&last_years=10")
@@ -11,6 +19,14 @@ interface ServiceAPI {
     @GET("search?")
     fun custom_search(@Query("query")query : String, @Query("last_years") last_years : String) : Call<Example>
 
-    @GET("extract_keywords?")
-    fun search_words(@Query("content")content : String, @Query("max_ngram_size") max_ngram_size : String ,@Query("number_of_keywords") number_of_keywords : String) : Call<Example>
+    @FormUrlEncoded
+    @POST("extract_keywords?")
+    fun search_words(@Field("content") content : String, @Query("max_ngram_size") max_ngram_size : String, @Query("number_of_keywords") number_of_keywords : String) : Call<Example_Yake>
+
+    @GET("?")
+    fun search_cloud(@Query("width") width : String,@Query("height") height : String,@Query("json") json : String) : Call<Wordcloud>
+
+//    @POST("extract_keywords")
+//    fun addAlgo(@Body newAlgo : String,@Query("max_ngram_size") max_ngram_size : String ,@Query("number_of_keywords" ) number_of_keywords : String) : Call<Example_Yake>
+
 }

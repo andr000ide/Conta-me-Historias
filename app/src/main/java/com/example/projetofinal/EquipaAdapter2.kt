@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetofinal.ModelClass.MembroEquipa
+import com.example.projetofinal.modelclass.MembroEquipa
 import kotlinx.android.synthetic.main.layout_listitem.view.*
 import org.jetbrains.anko.toast
 

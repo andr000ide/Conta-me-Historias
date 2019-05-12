@@ -1,4 +1,4 @@
-package com.example.projetofinal.ModelClass
+package com.example.projetofinal.modelclass
 
 
 class sobreTopico(titulo: String, texto: String, url: String) {

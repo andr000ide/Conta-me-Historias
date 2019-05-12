@@ -5,9 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.projetofinal.EquipaAdapter
 import com.example.projetofinal.EquipaAdapter2
-import com.example.projetofinal.ModelClass.MembroEquipa
+import com.example.projetofinal.modelclass.MembroEquipa
 import com.example.projetofinal.R
 import kotlinx.android.synthetic.main.fragment_sobre.view.*
 
@@ -21,6 +20,11 @@ class FragmentEquipa : androidx.fragment.app.Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_equipa_layout, container, false)
 
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         membrosArr.add(MembroEquipa(nome = "Ricardo Campos", linkedin = "https://www.linkedin.com/in/camposricardo/", mail = "ricardo.campos@ipt.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.ricardo), cargo = "RESEARCHER AND PROFESSOR"))
 
         membrosArr.add(MembroEquipa(nome = "Arian Pasquali", linkedin = "https://www.linkedin.com/in/arianpasquali/", mail = "arrp@inesctec.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.arian), cargo = "SOFTWARE DEVELOPER AND RESEARCHER"))
@@ -48,6 +52,5 @@ class FragmentEquipa : androidx.fragment.app.Fragment() {
         view.rec_view.isNestedScrollingEnabled = false
         view.rec_view.isFocusable=false
 
-        return view
     }
 }
