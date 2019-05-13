@@ -23,6 +23,7 @@
     <string name="menu_pesquisar">Pesquisar</string>
     <string name="menu_sobre">Sobre</string>
     <string name="menu_equipa">Equipa</string>
+    <string name="sobre01">O que é o Conta-me Histórias?</string>
 
     <string-array name="country_arrays">
         <item>Last 5 years</item>
