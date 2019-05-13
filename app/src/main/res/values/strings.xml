@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Conta-me histórias</string>
     <string name="key_description">Cria narrativas sobre qualquer assunto</string>
-    <string name="key_title" translatable="false">conta-me historias</string>
+    <string name="key_title">conta-me historias</string>
     <string name="key_search">Pesquisar</string>
     <string name="key_try">Experimentar</string>
     <string name="key_teste">algo</string>
