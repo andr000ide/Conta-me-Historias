@@ -54,4 +54,7 @@
     <string name="sobreReferencias">References</string>
     <string name="sobreContribuicoesT02">One possible approach to overcome this problem is to automatically summarize large amount of news into consistent narratives. Tell me Stories emerges in this context, as an important contribution for anyone interested in having access to the overall picture of a given event in a quick manner. Our project may be considered as an additional solution that allows the general public (students, journalists, politics, researchers, etc) to better explore any kind of data that has been covered by the media.
     </string>
+    <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
+        LIAAD INESC TEC, University of Porto and University of Kyoto.
+    </string>
 </resources>

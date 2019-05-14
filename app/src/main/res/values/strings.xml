@@ -67,6 +67,8 @@
     </string>
     <string name="sobreContribuicoesT02">O Conta-me Histórias surge neste contexto, como um importante contributo para todos aqueles que pretendem ter acesso rápido a uma visão geral de um dado evento criando narrativas resumidas a partir de um elevado volume de dados. Oferecemos desta forma aos seus utilizadores (estudantes, jornalistas, políticos, investigadores, etc) uma ferramenta privilegiada para o acesso a qualquer tipo de dados que tenha sido objeto de cobertura noticiosa.
     </string>
+    <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD INESC TEC, Universidade do Porto e Universidade de Kyoto.
+    </string>
 
     <string-array name="country_arrays">
         <item>Last 5 years</item>
