@@ -23,7 +23,50 @@
     <string name="menu_pesquisar">Pesquisar</string>
     <string name="menu_sobre">Sobre</string>
     <string name="menu_equipa">Equipa</string>
-    <string name="sobre01">O que é o Conta-me Histórias?</string>
+    <string name="sobreConta">O que é o Conta-me Histórias?</string>
+    <string name="sobreContaT">Conta-me Histórias [http://contamehistorias.pt] é uma plataforma agregadora de notícias que
+        oferece aos seus utilizadores a possibilidade de navegar e revisitar eventos no passado. Inicialmente
+        desenvolvido em cima de notícias preservadas pelo arquivo da web portuguesa [http://arquivo.pt], foi
+        posteriormente extendido para suportar diferentes tipos de dados, tais como notícias da Reuters, Bloomberg, Bing
+        ou o Signal Media dataset.
+    </string>
+    <string name="sobreFunciona">Como é que funciona?</string>
+    <string name="sobreFuncionaT">O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e media
+        tradicionais (e.g., Reuters, Bloomberg ou Bing News) disponibilizando um serviço de pesquisa “à lá Google” que
+        oferece aos seus utilizadores uma contextualização histórica de um dado evento (em alguns casos a partir de
+        conteúdos atualmente já inexistentes na web convencional). Para selecionar as melhores estórias ao longo do
+        tempo, recorremos ao YAKE! um extrator de palavras relevantes desenvolvido pela nossa equipa de investigação, e
+        que neste contexto é utilizado para selecionar os excertos mais importantes de uma notícia (mais concretamente
+        os seus títulos) ao longo do tempo.
+    </string>
+    <string name="sobreContribuicoes">Contribuições</string>
+    <string name="sobreContribuicoesT">Ao longo da última década, temos vindo a assistir a um crescente aumento na disponibilização de conteúdos online, colocando novos desafios àqueles que pretendem entender a estória de um dado evento. Mais recentemente, fenómenos como o media bias, as fake news e as filter bubbles, vieram adensar ainda mais as dificuldades já existentes no acesso transparente à informação.
+    </string>
+    <string name="sobreSoftwareT">Conta-me Histórias encontra-se disponível no Google Play [colocar depois o link do Google
+        Play], online [http://contamehistorias.pt] e no Github
+        [https://github.com/LIAAD/TemporalSummarizationFramework], plataforma através da qual disponibilizamos uma
+        biblioteca Python do Conta-me Histórias capaz de ser extendida a diferentes conjuntos de dados e línguas.
+    </string>
+    <string name="sobrePremios">Prémios</string>
+    <string name="sobrePremiosT">O Conta-me Histórias [Tell me Stories] foi o vencedor dos prémios Arquivo.pt 2018
+        [https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/] e da Best Demo Presentation no ECIR’19
+        [http://www.ecir2019.org].
+    </string>
+    <string name="sobreReferencias">Referências Bibliográficas</string>
+    <string name="sobreReferenciasT01">O Conta-me Histórias é um produto de investigação científica. Por favor cite os
+        seguintes trabalhos no âmbito de uma publicação científica, projeto de investigação ou produto:
+    </string>
+    <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
+        Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
+        archives. Springer Book.
+    </string>
+    <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
+        Interactive System for Automatically Generating Temporal Narratives. In Azzopardi et al. (Eds.), Lecture Notes
+        in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
+        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255)
+    </string>
+    <string name="sobreContribuicoesT02">O Conta-me Histórias surge neste contexto, como um importante contributo para todos aqueles que pretendem ter acesso rápido a uma visão geral de um dado evento criando narrativas resumidas a partir de um elevado volume de dados. Oferecemos desta forma aos seus utilizadores (estudantes, jornalistas, políticos, investigadores, etc) uma ferramenta privilegiada para o acesso a qualquer tipo de dados que tenha sido objeto de cobertura noticiosa.
+    </string>
 
     <string-array name="country_arrays">
         <item>Last 5 years</item>
