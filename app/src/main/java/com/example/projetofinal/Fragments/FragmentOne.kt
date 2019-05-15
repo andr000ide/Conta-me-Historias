@@ -71,6 +71,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
         view.spin_kit.visibility=View.VISIBLE
         val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
         val call = service?.custom_search(queryPesquisa!!, years)
+        //val call = service?.searchnovo("1dsm62")
         call?.enqueue(object : Callback<Example> {
 
 
@@ -106,7 +107,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                     view.linear_vis.visibility=View.VISIBLE
                     view.spin_kit.visibility=View.INVISIBLE
 
-                    //chamarServico(array!!)
+                    chamarServico(array!!)
                 }
             }
 
@@ -151,7 +152,6 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                 }
             })
         }
-
     }
 
 

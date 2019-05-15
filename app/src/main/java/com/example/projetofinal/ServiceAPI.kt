@@ -17,7 +17,7 @@ interface ServiceAPI {
     fun something(): Call<Example>
 
     @GET("search?")
-    fun custom_search(@Query("query")query : String, @Query("last_years") last_years : String) : Call<Example>
+    fun custom_search(@Query(encoded = true, value="query")query : String, @Query(encoded = true, value="last_years") last_years : String) : Call<Example>
 
     @FormUrlEncoded
     @POST("extract_keywords?")
@@ -25,6 +25,9 @@ interface ServiceAPI {
 
     @GET("?")
     fun search_cloud(@Query("width") width : String,@Query("height") height : String,@Query("json") json : String) : Call<Wordcloud>
+
+    @GET("bins/{algo2}")
+    fun searchnovo(@Path("algo2")algo: String ) : Call<Example>
 
 //    @POST("extract_keywords")
 //    fun addAlgo(@Body newAlgo : String,@Query("max_ngram_size") max_ngram_size : String ,@Query("number_of_keywords" ) number_of_keywords : String) : Call<Example_Yake>
