@@ -21,5 +21,40 @@
     <string name="menu_sobre">About</string>
     <string name="menu_equipa">Team</string>
     <string name="app_name" translatable="false">Tell me stories</string>
-    <string name="sobre01">What is Tell me Stories</string>
+    <string name="sobreConta">What is Tell me Stories</string>
+    <string name="sobreContaT">"Tell me Stories [http://tellmestories.pt] is a temporal summarization framework of news articles that allows users to explore and revisit events in the past. Initially built on top of the Portuguese web archive [http://arquivo.pt], Tell me Stories has been later extended to support different datasets such as Reuters, Bloomberg, Bing or the Signal Media dataset."
+    </string>
+    <string name="sobreFunciona">How does it work?</string>
+    <string name="sobreFuncionaT">Tell me Stories collects information from web archives (such as the Arquivo.pt) or media
+        outlets (such as Reuters, Bloomberg or Bing News) and provides a full-text search service that enables the
+        retrieval of past (to present) information. To select relevant stories of different time-periods, we rely on
+        YAKE! [http://yake.inesctec.pt] a keyword extraction algorithm developed by our research team, which selects the
+        most important excerpts (namely text titles) of a topic over time, to present to the user.
+    </string>
+    <string name="sobreContribuicoes">Contributions</string>
+    <string name="sobreContribuicoesT">"During the last decade, we have been witnessing an ever-growing number of online contents posing new challenges for those who aim to understand a given event. This exponential growth of the volume of data, together with the phenomenon of media bias, fake news and filter bubbles, has contributed to the creation of new challenges in information access and transparency."
+    </string>
+    <string name="sobreSoftwareT">"Tell me Stories is available on Google Play [link do Google Play], online [http://tellmestories.pt] and as an open source Python package [https://github.com/LIAAD/TemporalSummarizationFramework] that can be extended to support different datasets or languages. "
+    </string>
+    <string name="sobrePremios">Awards</string>
+    <string name="sobrePremiosT">Conta-me Histórias / Tell me Stories won the Arquivo.pt 2018 contest [https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/] and has been awarded the Best Demo Presentation at ECIR’19 [http://www.ecir2019.org].
+    </string>
+    <string name="sobreReferenciasT01">Tell me Stories is a research product. If you use it in a work that leads to a
+        scientific publication, research project or product, please cite the following references:
+    </string>
+    <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
+        Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
+        archives. Springer Book.
+    </string>
+    <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
+        Interactive System for Automatically Generating Temporal Narratives. In Azzopardi et al. (Eds.), Lecture Notes
+        in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
+        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255)
+    </string>
+    <string name="sobreReferencias">References</string>
+    <string name="sobreContribuicoesT02">One possible approach to overcome this problem is to automatically summarize large amount of news into consistent narratives. Tell me Stories emerges in this context, as an important contribution for anyone interested in having access to the overall picture of a given event in a quick manner. Our project may be considered as an additional solution that allows the general public (students, journalists, politics, researchers, etc) to better explore any kind of data that has been covered by the media.
+    </string>
+    <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
+        LIAAD INESC TEC, University of Porto and University of Kyoto.
+    </string>
 </resources>

@@ -27,7 +27,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Esta plataforma foi desenvolvida por Ricardo Campos investigador do LIAAD INESC TEC e docente do Instituto Politécnico de Tomar, Arian Pasquali e Vitor Mangaravite, também investigadores do LIAAD INESC TEC, Alípio Jorge, coordenador do LIAAD INESC TEC e docente na Faculdade de Ciências da Universidade do Porto, e Adam Jatwot docente da Universidade de Kyoto."
+                android:text="@string/equipaTexto"
                 android:textAlignment="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
