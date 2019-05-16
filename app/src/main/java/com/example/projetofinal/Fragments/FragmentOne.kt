@@ -107,7 +107,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                     view.linear_vis.visibility=View.VISIBLE
                     view.spin_kit.visibility=View.INVISIBLE
 
-                    chamarServico(array!!)
+                    //chamarServico(array!!)
                 }
             }
 
@@ -172,7 +172,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                 val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
                 val decodedByte = BitmapFactory.decodeByteArray(decodedstring,0,decodedstring.size)
                 val atividade = activity as SecondActivity
-                atividade.imagemtestar.setImageBitmap(decodedByte)
+                //atividade.imagemtestar.setImageBitmap(decodedByte)
             }
 
             override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
@@ -247,5 +247,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
         }
         builder.show()
     }
+
+
 
 }

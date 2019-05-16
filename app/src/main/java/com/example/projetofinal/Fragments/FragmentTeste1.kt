@@ -15,6 +15,7 @@ import com.example.projetofinal.ViewPagerAdapterNarrativas
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.frag_searchview.view.*
+import kotlinx.android.synthetic.main.frag_teste1.*
 import kotlinx.android.synthetic.main.frag_teste1.view.*
 import kotlinx.android.synthetic.main.fragment_fragment_one.*
 import kotlinx.android.synthetic.main.second_activity.view.*
@@ -38,26 +39,30 @@ class FragmentTeste1 : androidx.fragment.app.Fragment(){
 
         val adapter = ViewPagerAdapterNarrativas(childFragmentManager)
 
+        val emptyList = mutableListOf<String>()
+
         for(item in testModel){
             var jsonString = gson.toJson(item.headlines)
             var fragmento = FragmentVistaNarrativas.newInstance(jsonString,item.date_interval_end,item.date_interval_begin)
+            emptyList.add(convertedata(item.date_interval_begin))
             adapter.addFragment(fragmento)
         }
         view.viewpagernarr.adapter = adapter
+        val a = listOf<String>("03/17","23/18","05/19","06/19","06/19")
+        view.step_view.setSteps(emptyList)
+        view.step_view.selectedStep(0)
 
         view.viewpagernarr.addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
                 var aux = view.viewpagernarr.currentItem
                 var tam = view.viewpagernarr.adapter?.count
 
+
+
                 if(aux==0){
-                    view.seek_bar.setProgress(0,true)
+                    step_view.selectedStep(0)
                 }else{
-                    var colocar = 0
-                    tam.let {
-                        colocar= (aux*100/(tam!!-1))
-                    }
-                    view.seek_bar.setProgress(colocar,true)
+                    step_view.selectedStep(aux+1)
                 }
                 println("fijf")
             }
@@ -75,6 +80,13 @@ class FragmentTeste1 : androidx.fragment.app.Fragment(){
 
     }
 
+    fun convertedata(data: String):String{
+        val strs = data.split("/").toTypedArray()
+
+        val aux = strs.get(2)
+        val aux2= aux.takeLast(2)
+        return  strs.get(1)+"/"+aux2
+    }
 
     companion object {
         fun newInstance(timeline:String): FragmentTeste1 {
