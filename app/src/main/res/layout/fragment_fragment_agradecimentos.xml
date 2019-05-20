@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".Fragments.FragmentAgradecimentos">
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            tools:context=".Fragments.FragmentAgradecimentos">
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
@@ -11,30 +11,63 @@
 
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:text="Agradecimentos"
+                  android:text="@string/agradecimentos"
                   android:gravity="center"
                   android:textSize="35sp"
                   android:layout_margin="20dp"/>
 
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:text="Instituições"
+                  android:text="@string/institui_es"
                   android:layout_marginBottom="8dp"
                   android:layout_marginTop="3dp"
                   android:layout_marginLeft="25dp"
                   android:layout_marginRight="25dp"
                   android:textSize="25sp"
         />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginLeft="18dp"
-                  android:layout_marginRight="18dp"
-                  android:textSize="15sp"
-                  android:text="Colocarem os logotipos das instituições envolvidas (podem vê-los no sobre….no fundo da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toStartOf="@id/ola2"
+                       app:layout_constraintBottom_toTopOf="@id/ola3"
+                       android:id="@+id/ola1"
+                       android:background="@drawable/logo_ipt"/>
+
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintStart_toEndOf="@id/ola1"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintBottom_toTopOf="@id/ola3"
+                       android:id="@+id/ola2"
+                       android:background="@drawable/fcup"/>
+
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       app:layout_constraintTop_toBottomOf="@id/ola1"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toStartOf="@id/ola4"
+                       android:id="@+id/ola3"
+                       android:background="@drawable/kyoto"/>
+
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       app:layout_constraintTop_toBottomOf="@id/ola2"
+                       app:layout_constraintStart_toEndOf="@id/ola3"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:id="@+id/ola4"
+                       android:background="@drawable/liaad"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:text="Financiamento"
+                  android:text="@string/financiamento"
                   android:layout_marginBottom="8dp"
                   android:layout_marginTop="15dp"
                   android:layout_marginLeft="25dp"
@@ -46,10 +79,10 @@
                   android:layout_marginLeft="18dp"
                   android:layout_marginRight="18dp"
                   android:textSize="15sp"
-                  android:text="Este projeto foi parcialmente financiado pelo projeto “TEC4Growth - Pervasive Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund (ERDF)."/>
+                  android:text="@string/financiamento_texto"/>
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:text="Outros"
+                  android:text="@string/outros"
                   android:layout_marginTop="15dp"
                   android:layout_marginBottom="8dp"
                   android:layout_marginLeft="25dp"
@@ -61,9 +94,7 @@
                   android:layout_marginLeft="18dp"
                   android:layout_marginRight="18dp"
                   android:textSize="15sp"
-                  android:text="Um agradecimento especial ao arquivo da web Portuguesa [http://arquivo.pt] e à sua equipa que ao longo dos últimos criou uma plataforma ímpar na preservação dos conteúdos digitais portugueses, fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
-
-Um agradecimento também à empresa Signal Media (tenho que dar o link) pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e à Bing pela disponibilização das suas APIs."/>
+                  android:text="@string/outros_texto"/>
 
     </LinearLayout>
 

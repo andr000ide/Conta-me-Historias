@@ -57,4 +57,20 @@
     <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
         LIAAD INESC TEC, University of Porto and University of Kyoto.
     </string>
+    <string name="agradecimentos">Acknowledgements</string>
+    <string name="institui_es">Institutions</string>
+    <string name="instituicao_texto">Colocarem os logotipos das instituições envolvidas (podem vê-los no sobre….no fundo
+        da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir
+    </string>
+    <string name="financiamento">Funding</string>
+    <string name="financiamento_texto">This project was partially funded by Project “TEC4Growth - Pervasive
+        Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” which is
+        financed by the NORTE 2020, under the PORTUGAL 2020 Partnership Agreement, and through the European Regional
+        Development Fund (ERDF).
+    </string>
+    <string name="outros">Others</string>
+    <string name="outros_texto">A special thanks goes to the Portuguese Web Archive [http://arquivo.pt] and to its team
+        for creating an outstanding platform in the purpose of archiving the Portuguese digital contents, through which
+        promote the knowledge sharing and the emergence of new and innovative products.
+    </string>
 </resources>

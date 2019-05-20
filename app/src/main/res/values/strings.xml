@@ -82,6 +82,24 @@
     <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD
         INESC TEC, Universidade do Porto e Universidade de Kyoto.
     </string>
+    <string name="agradecimentos">Agradecimentos</string>
+    <string name="institui_es">Instituições</string>
+    <string name="instituicao_texto">Colocarem os logotipos das instituições envolvidas (podem vê-los no sobre….no fundo
+        da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir
+    </string>
+    <string name="financiamento">Financiamento</string>
+    <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth - Pervasive
+        Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é
+        financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund
+        (ERDF).
+    </string>
+    <string name="outros">Outros</string>
+    <string name="outros_texto">Um agradecimento especial ao arquivo da web Portuguesa [http://arquivo.pt] e à sua
+        equipa que ao longo dos últimos criou uma plataforma ímpar na preservação dos conteúdos digitais portugueses,
+        fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras. Um agradecimento também à empresa
+        Signal Media (tenho que dar o link) pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
+        à Bing pela disponibilização das suas APIs.
+    </string>
 
     <string-array name="country_arrays">
         <item>Last 5 years</item>
