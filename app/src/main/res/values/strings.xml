@@ -8,7 +8,9 @@
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="key_options"><u>Opções Avançandas</u></string>
+    <string name="key_options">
+        <u>Opções Avançandas</u>
+    </string>
 
     <string name="country_prompt" translatable="false">Choose number of years</string>
     <string name="lingua">English</string>
@@ -24,14 +26,16 @@
     <string name="menu_sobre">Sobre</string>
     <string name="menu_equipa">Equipa</string>
     <string name="sobreConta">O que é o Conta-me Histórias?</string>
-    <string name="sobreContaT">Conta-me Histórias [http://contamehistorias.pt] é uma plataforma agregadora de notícias que
+    <string name="sobreContaT">Conta-me Histórias [http://contamehistorias.pt] é uma plataforma agregadora de notícias
+        que
         oferece aos seus utilizadores a possibilidade de navegar e revisitar eventos no passado. Inicialmente
         desenvolvido em cima de notícias preservadas pelo arquivo da web portuguesa [http://arquivo.pt], foi
         posteriormente extendido para suportar diferentes tipos de dados, tais como notícias da Reuters, Bloomberg, Bing
         ou o Signal Media dataset.
     </string>
     <string name="sobreFunciona">Como é que funciona?</string>
-    <string name="sobreFuncionaT">O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e media
+    <string name="sobreFuncionaT">O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e
+        media
         tradicionais (e.g., Reuters, Bloomberg ou Bing News) disponibilizando um serviço de pesquisa “à lá Google” que
         oferece aos seus utilizadores uma contextualização histórica de um dado evento (em alguns casos a partir de
         conteúdos atualmente já inexistentes na web convencional). Para selecionar as melhores estórias ao longo do
@@ -40,9 +44,13 @@
         os seus títulos) ao longo do tempo.
     </string>
     <string name="sobreContribuicoes">Contribuições</string>
-    <string name="sobreContribuicoesT">Ao longo da última década, temos vindo a assistir a um crescente aumento na disponibilização de conteúdos online, colocando novos desafios àqueles que pretendem entender a estória de um dado evento. Mais recentemente, fenómenos como o media bias, as fake news e as filter bubbles, vieram adensar ainda mais as dificuldades já existentes no acesso transparente à informação.
+    <string name="sobreContribuicoesT">Ao longo da última década, temos vindo a assistir a um crescente aumento na
+        disponibilização de conteúdos online, colocando novos desafios àqueles que pretendem entender a estória de um
+        dado evento. Mais recentemente, fenómenos como o media bias, as fake news e as filter bubbles, vieram adensar
+        ainda mais as dificuldades já existentes no acesso transparente à informação.
     </string>
-    <string name="sobreSoftwareT">Conta-me Histórias encontra-se disponível no Google Play [colocar depois o link do Google
+    <string name="sobreSoftwareT">Conta-me Histórias encontra-se disponível no Google Play [colocar depois o link do
+        Google
         Play], online [http://contamehistorias.pt] e no Github
         [https://github.com/LIAAD/TemporalSummarizationFramework], plataforma através da qual disponibilizamos uma
         biblioteca Python do Conta-me Histórias capaz de ser extendida a diferentes conjuntos de dados e línguas.
@@ -65,9 +73,14 @@
         in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
         (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255)
     </string>
-    <string name="sobreContribuicoesT02">O Conta-me Histórias surge neste contexto, como um importante contributo para todos aqueles que pretendem ter acesso rápido a uma visão geral de um dado evento criando narrativas resumidas a partir de um elevado volume de dados. Oferecemos desta forma aos seus utilizadores (estudantes, jornalistas, políticos, investigadores, etc) uma ferramenta privilegiada para o acesso a qualquer tipo de dados que tenha sido objeto de cobertura noticiosa.
+    <string name="sobreContribuicoesT02">O Conta-me Histórias surge neste contexto, como um importante contributo para
+        todos aqueles que pretendem ter acesso rápido a uma visão geral de um dado evento criando narrativas resumidas a
+        partir de um elevado volume de dados. Oferecemos desta forma aos seus utilizadores (estudantes, jornalistas,
+        políticos, investigadores, etc) uma ferramenta privilegiada para o acesso a qualquer tipo de dados que tenha
+        sido objeto de cobertura noticiosa.
     </string>
-    <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD INESC TEC, Universidade do Porto e Universidade de Kyoto.
+    <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD
+        INESC TEC, Universidade do Porto e Universidade de Kyoto.
     </string>
 
     <string-array name="country_arrays">

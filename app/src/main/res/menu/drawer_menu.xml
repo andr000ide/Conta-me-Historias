@@ -22,6 +22,12 @@
 
         </item>
 
+        <item android:id="@+id/nav_six"
+              android:icon="@drawable/ic_flag_black_24dp"
+              android:title="algo">
+
+        </item>
+
         <item android:id="@+id/nav_five"
               android:icon="@drawable/ic_flag_black_24dp"
               android:title="@string/lingua">

@@ -143,6 +143,13 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         refreshApp("en")
                 }
             }
+            R.id.nav_six -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentAgradecimentos()
+                )
+                    .addToBackStack("6").commit()
+                check = R.id.nav_six
+            }
         }
 
         drawer?.closeDrawer(GravityCompat.END)
