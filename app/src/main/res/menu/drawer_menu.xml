@@ -5,25 +5,25 @@
     <!-- faz com que apenas seja possivel clicar num icon da sidebar-->
     <group android:checkableBehavior="single">
         <item android:id="@+id/nav_one"
-              android:icon="@drawable/ic_check_box_black_24dp"
+              android:icon="@drawable/search_examples"
               android:title="@string/menu_exemplos"></item>
 
         <item android:id="@+id/nav_two"
-              android:icon="@drawable/ic_check_box_black_24dp"
+              android:icon="@drawable/ic_search_black_24dp"
               android:title="@string/menu_pesquisar"></item>
 
         <item android:id="@+id/nav_three"
-              android:icon="@drawable/ic_check_box_black_24dp"
+              android:icon="@drawable/ic_info_black_24dp"
               android:title="@string/menu_sobre"></item>
 
         <item android:id="@+id/nav_four"
-              android:icon="@drawable/ic_check_box_black_24dp"
+              android:icon="@drawable/ic_team_24dp"
               android:title="@string/menu_equipa">
 
         </item>
 
         <item android:id="@+id/nav_five"
-              android:icon="@drawable/ic_check_box_black_24dp"
+              android:icon="@drawable/ic_flag_black_24dp"
               android:title="@string/lingua">
 
         </item>
