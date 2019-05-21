@@ -28,19 +28,6 @@ class FragmentThree : androidx.fragment.app.Fragment() {
         var view = inflater.inflate(com.example.projetofinal.R.layout.fragment_fragment_one, container, false)
 
 
-        var carousel_View = view.carouselView
-        var carouse2_View = view.carouselView2
-        var carouse3_View = view.carouselView3
-
-        carouse2_View.pageCount = tema2.size/2
-        carouse2_View.setViewListener(viewListener)
-
-        carousel_View.pageCount = tema.size/2
-        carousel_View.setViewListener(viewListenerTema2)
-
-
-        carouse3_View.pageCount= tema3.size/2
-        carouse3_View.setViewListener(viewListenerTema3)
 
         return view
     }
@@ -132,6 +119,19 @@ class FragmentThree : androidx.fragment.app.Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        var carousel_View = view.carouselView
+        var carouse2_View = view.carouselView2
+        var carouse3_View = view.carouselView3
+
+        carouse2_View.pageCount = tema2.size/2
+        carouse2_View.setViewListener(viewListener)
+
+        carousel_View.pageCount = tema.size/2
+        carousel_View.setViewListener(viewListenerTema2)
+
+
+        carouse3_View.pageCount= tema3.size/2
+        carouse3_View.setViewListener(viewListenerTema3)
 
     }
 

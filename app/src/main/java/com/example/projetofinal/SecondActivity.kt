@@ -85,7 +85,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             override fun onResponse(call: Call<Example>, response: Response<Example>) {
                 val examples = response.body()
                 examples?.let {
-                    println("ijferif")
                     val refresh = Intent(this@SecondActivity, SecondActivity::class.java)
                     //refresh.putExtra("EXTRA_PEOPLE", examples)
                     startActivity(refresh)
@@ -166,7 +165,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        println("jeededj")
         return super.onKeyDown(keyCode, event)
     }
 
@@ -210,7 +208,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         }
 
-        println("rfkofofr")
         if (drawer!!.isDrawerOpen(GravityCompat.START)) {
             drawer!!.closeDrawer(GravityCompat.START)
 

@@ -44,9 +44,7 @@ class FragmentTwo : androidx.fragment.app.Fragment() {
 
         view.searchbar.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                println("iedije")
                 val aux = view.spinner1.selectedItem
-                println(aux)
                 view.searchbar.hideKeyboard()
                 view.constraintclick.requestFocus()
 

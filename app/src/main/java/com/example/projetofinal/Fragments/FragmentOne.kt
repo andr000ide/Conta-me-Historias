@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.example.projetofinal.*
@@ -68,6 +69,11 @@ class FragmentOne : androidx.fragment.app.Fragment(){
         // acaba aqui
 
         view.linear_vis.visibility=View.INVISIBLE
+        // faz com que o utilizador nao consiga carregar enquanto faz load
+        activity!!.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+            WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+        view.view_grayscreen.visibility=View.VISIBLE
+
         view.spin_kit.visibility=View.VISIBLE
         val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
         val call = service?.custom_search(queryPesquisa!!, years)
@@ -85,6 +91,9 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                 if(examples==null){
                     view.linear_vis.visibility=View.VISIBLE
                     view.spin_kit.visibility=View.INVISIBLE
+                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    view.view_grayscreen.visibility=View.GONE
                     // por popup e mandar para o fragmento two
                 }
                 examples?.let {
@@ -108,11 +117,15 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
                     view.linear_vis.visibility=View.VISIBLE
                     view.spin_kit.visibility=View.INVISIBLE
+                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    view.view_grayscreen.visibility=View.GONE
                     //chamarServico(array!!)
                 }
             }
 
             override fun onFailure(call: Call<Example>, t: Throwable) {
+                activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                 withButtonCentered(view)
             }
         })
@@ -128,14 +141,12 @@ class FragmentOne : androidx.fragment.app.Fragment(){
     fun chamarServico(array : List<Timeline>){
 
         thread(start = true) {
-            println(array)
             var teste : String = ""
             for(item in array){
                 for(item2 in item.headlines.orEmpty()){
                     teste+=item2.keyphrase+" "
                 }
             }
-            println(teste)
 
 
             val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
@@ -148,7 +159,6 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                 }
 
                 override fun onFailure(call: Call<Example_Yake>, t: Throwable) {
-                    println("edede")
                 }
             })
         }
@@ -157,17 +167,15 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
     fun outroServico(algo2 : String){
 
-        println(algo2)
+        //println(algo2)
         val service3 = RetrofitWordCloudInstance.retrofitInstance?.create(ServiceAPI::class.java)
         val call3 = service3?.search_cloud("300","300",algo2)
-        println(call3.toString())
+        //println(call3.toString())
         call3?.enqueue(object : Callback<Wordcloud> {
 
 
             override fun onResponse(call: Call<Wordcloud>, response: Response<Wordcloud>) {
-                println(response)
                 val outronome = response.body()
-                println(outronome)
 
                 val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
                 val decodedByte = BitmapFactory.decodeByteArray(decodedstring,0,decodedstring.size)
@@ -176,7 +184,6 @@ class FragmentOne : androidx.fragment.app.Fragment(){
             }
 
             override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
-                println("edede")
             }
         })
     }

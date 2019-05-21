@@ -72,15 +72,12 @@ class FragmentTeste1 : androidx.fragment.app.Fragment(){
                 }else{
                     step_view.selectedStep(aux+1)
                 }
-                println("fijf")
             }
 
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-                println("Iejide")
             }
 
             override fun onPageSelected(position: Int) {
-                println("jeijide")
             }
         })
 

@@ -21,17 +21,14 @@ class AdapterNarrativas(val items : ArrayList<Headline>, val context: Context) :
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val view =  ViewHolder(LayoutInflater.from(context).inflate(R.layout.frag_rowview,p0,false))
 
-        println("kedeo")
         return view
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        println("dekodeokde")
         var aux =  "- "+items.get(p1).keyphrase +"."
         p0.noticia?.text = aux
         p0.noticia.setOnClickListener {
             //items.get(p1).
-            println("dedede")
             var site = items.get(p1).docs?.get(0)?.get(1)
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(site))
             startActivity(context,intent,null)
