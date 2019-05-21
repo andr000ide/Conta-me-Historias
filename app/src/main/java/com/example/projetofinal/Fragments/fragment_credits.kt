@@ -12,9 +12,10 @@ import com.example.projetofinal.R
 import kotlinx.android.synthetic.main.fragment_credits.*
 
 
-class FragmentAgradecimentos : Fragment() {
+class fragment_credits : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -22,13 +23,8 @@ class FragmentAgradecimentos : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        
-
-
-        return inflater.inflate(R.layout.fragment_fragment_agradecimentos, container, false)
+        return inflater.inflate(R.layout.fragment_credits, container, false)
     }
-
-
 
 
 }
