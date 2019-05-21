@@ -32,10 +32,16 @@ class FragmentTeste1 : androidx.fragment.app.Fragment(){
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.frag_teste1, container, false)
         var jsonarray = arguments?.getString("timeline")
+        var jsonarrayDomains = arguments?.getString("domains")
+
+        var years = arguments?.getString("years")
+        var query = arguments?.getString("query")
 
         var gson = Gson()
         val turnsType = object : TypeToken<List<Timeline>>() {}.type
         var testModel = gson.fromJson<List<Timeline>>(jsonarray, turnsType)
+
+
 
         val adapter = ViewPagerAdapterNarrativas(childFragmentManager)
 
@@ -43,7 +49,9 @@ class FragmentTeste1 : androidx.fragment.app.Fragment(){
 
         for(item in testModel){
             var jsonString = gson.toJson(item.headlines)
-            var fragmento = FragmentVistaNarrativas.newInstance(jsonString,item.date_interval_end,item.date_interval_begin)
+            var fragmento = FragmentVistaNarrativas.newInstance(jsonString,item.date_interval_end,item.date_interval_begin,
+                query!!, jsonarrayDomains!!
+            )
             emptyList.add(convertedata(item.date_interval_begin))
             adapter.addFragment(fragmento)
         }
@@ -89,9 +97,12 @@ class FragmentTeste1 : androidx.fragment.app.Fragment(){
     }
 
     companion object {
-        fun newInstance(timeline:String): FragmentTeste1 {
+        fun newInstance(timeline:String, query : String , years : String , domains : String): FragmentTeste1 {
             val args = Bundle()
             args.putString("timeline",timeline)
+            args.putString("query",query)
+            args.putString("years",years)
+            args.putString("domains",domains)
             val fragment = FragmentTeste1()
             fragment.arguments = args
             return fragment

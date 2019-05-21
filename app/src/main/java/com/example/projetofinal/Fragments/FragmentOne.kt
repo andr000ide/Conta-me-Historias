@@ -91,11 +91,13 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
                     var array = examples.result.timeline
 
+                    var arrayDeDomains = examples.result.domains
                     var gson = Gson()
                     var jsonString = gson.toJson(array)
+                    var jsonStringDomains = gson.toJson(arrayDeDomains)
 
 
-                    var fragmento1 = FragmentTeste1.newInstance(jsonString)
+                    var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
                     //var fragmento1 = FragmentTeste1.newInstance(array?.get(0)!!.headlines as ArrayList<Headline>,array?.get(0)!!.date_interval_end,array?.get(0)!!.date_interval_begin )
                     var fragmento2 = FragmentTeste2()
 
@@ -106,7 +108,6 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
                     view.linear_vis.visibility=View.VISIBLE
                     view.spin_kit.visibility=View.INVISIBLE
-
                     //chamarServico(array!!)
                 }
             }
@@ -140,7 +141,6 @@ class FragmentOne : androidx.fragment.app.Fragment(){
             val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
             val call2 = service2?.search_words(teste,"1","20")
             call2?.enqueue(object : Callback<Example_Yake> {
-
 
                 override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {
                     val gson = Gson()
