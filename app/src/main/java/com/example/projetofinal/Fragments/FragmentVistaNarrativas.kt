@@ -2,7 +2,9 @@ package com.example.projetofinal.Fragments
 
 
 
+import android.graphics.Color
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
@@ -14,6 +16,7 @@ import com.example.projetofinal.R
 import com.example.projetofinal.Timeline
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import kotlinx.android.synthetic.main.frag_searchview.*
 import kotlinx.android.synthetic.main.frag_searchview.view.*
 import kotlinx.android.synthetic.main.fragment_fragment_one.*
 import java.io.Serializable
@@ -33,9 +36,36 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
 
         val jsonArray = arguments?.getString("headline")
 
+        val jsonarrayDomains = arguments?.getString("domains")
+
         var gson = Gson()
         val turnsType = object : TypeToken<List<Headline>>() {}.type
         var testModel = gson.fromJson<List<Headline>>(jsonArray, turnsType)
+        var query = arguments?.getString("query")
+
+//something
+        //view.textview_domains.movementMethod=LinkMovementMethod.getInstance()
+        view.textview_domains.highlightColor=Color.TRANSPARENT
+
+        val turnsType2 = object : TypeToken<List<String>>() {}.type
+        var testMode2 = gson.fromJson<List<String>>(jsonarrayDomains, turnsType2)
+
+        view.textview_domains.isClickable=true
+
+        var text : String = "Portais de Notícias : "
+        for (item in testMode2){
+            text= text + " "+"http://"+item + " "
+        }
+        //view.textview_domains.text="Portais de Notícias : <a href=\"http://www.google.com\">Go to Google</a>"
+        //view.textview_domains.text="Portais de Notícias : http://www.google.com"
+        view.textview_domains.text=text
+
+
+        // something
+
+
+
+
 
         var arrayNoticias = ArrayList<String>()
         /*
@@ -55,18 +85,22 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
 
        // view.recycler_view.adapter = AdapterNarrativas(arrayNoticias, context!!)
 
-        view.titulo_narrativa.text= "- Noticias desde "+ inicio + " até " + fim +""
+        view.titulo_narrativa.text= query+" - Noticias desde "+ inicio + " até " + fim +""
+
+
 
         return view
 
     }
 
     companion object {
-        fun newInstance(headline: String,end : String,begin : String): FragmentVistaNarrativas {
+        fun newInstance(headline: String,end : String,begin : String,query :String, domains : String): FragmentVistaNarrativas {
             val args = Bundle()
             args.putString("begin", begin)
             args.putString("end", end)
             args.putString("headline",headline)
+            args.putString("query",query)
+            args.putString("domains",domains)
             val fragment = FragmentVistaNarrativas()
             fragment.arguments = args
             return fragment

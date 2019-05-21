@@ -27,6 +27,16 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="40dp"
+                    android:padding="15dp"
+                    android:autoLink="web"
+                    android:textColorLink="@color/backgroundMain"
+                    android:id="@+id/textview_domains"/>
+
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>
