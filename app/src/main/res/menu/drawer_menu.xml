@@ -27,6 +27,11 @@
               android:title="algo">
 
         </item>
+        <item android:id="@+id/nav_seven"
+              android:icon="@drawable/ic_team_24dp"
+              android:title="Creditos">
+
+        </item>
 
         <item android:id="@+id/nav_five"
               android:icon="@drawable/ic_flag_black_24dp"
