@@ -44,6 +44,5 @@ dependencies {
     implementation "org.jetbrains.anko:anko-common:0.10.1"
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.githang:stepview:0.1'
-    compile 'me.biubiubiu.justifytext:library:1.1'
 
 }

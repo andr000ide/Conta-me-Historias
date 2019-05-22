@@ -2,6 +2,7 @@ package com.example.projetofinal
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,23 +31,25 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
     override fun onBindViewHolder(p0: ViewHoldertwo, p1: Int) {
 
         val sobreTopico: sobreTopico = topicos[p1]
-        p0?.topicoTitulo?.text = topicos.get(p1).titulo
-        p0?.topicoTexto.text = topicos.get(p1).texto
+        p0.topicoTitulo?.text = topicos.get(p1).titulo
+        p0.topicoTexto.text = topicos.get(p1).texto
+        p0.topicoTexto.justificationMode= Layout.JUSTIFICATION_MODE_INTER_WORD
+
         // val uri = Uri.parse(sobreTopico.url)
         //p0?.video_view.setVideoURI(uri)
-        p0?.video_view.settings.javaScriptEnabled = true
+        p0.video_view.settings.javaScriptEnabled = true
         //holder.videoWeb.loadData( youtubeVideoList.get(position).getVideoUrl(), "text/html" , "utf-8" );
         //p0?.video_view.loadUrl(sobreTopico.url)
         if (sobreTopico.url != ""){
-            p0?.video_view.visibility = View.VISIBLE
-            p0?.video_view.loadData(sobreTopico.url, "text/html","utf-8")
+            p0.video_view.visibility = View.VISIBLE
+            p0.video_view.loadData(sobreTopico.url, "text/html","utf-8")
         }else {
-            p0?.video_view.visibility = View.GONE
+            p0.video_view.visibility = View.GONE
         }
 
         p0.bind(sobreTopico)
-        p0?.topicoTitulo.setOnClickListener(){
-            var expanded: Boolean = sobreTopico.isExpanded()
+        p0.topicoTitulo.setOnClickListener(){
+            val expanded: Boolean = sobreTopico.isExpanded()
             sobreTopico.setExpanded(!expanded)
             notifyItemChanged(p1)
         }
