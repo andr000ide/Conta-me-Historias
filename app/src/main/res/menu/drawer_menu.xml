@@ -32,6 +32,11 @@
               android:title="@string/creditos">
 
         </item>
+        <item android:id="@+id/nav_eight"
+              android:icon="@drawable/ic_team_24dp"
+              android:title="@string/contactos_menu">
+
+        </item>
 
         <item android:id="@+id/nav_five"
               android:icon="@drawable/ic_flag_black_24dp"

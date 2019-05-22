@@ -79,4 +79,7 @@
         Polytechnic Institute of Tomar, Portugal.
     </string>
     <string name="creditos">Credits</string>
+    <string name="contactos">contact</string>
+    <string name="contactos_texto">For any inquires please contact us at:</string>
+    <string name="contactos_menu">Contacts</string>
 </resources>

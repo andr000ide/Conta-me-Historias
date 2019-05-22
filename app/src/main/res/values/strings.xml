@@ -96,7 +96,8 @@
     <string name="outros">Outros</string>
     <string name="outros_texto">Um agradecimento especial ao arquivo da web Portuguesa [http://arquivo.pt] e à sua
         equipa que ao longo dos últimos criou uma plataforma ímpar na preservação dos conteúdos digitais portugueses,
-        fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.\nUm agradecimento também à empresa
+        fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.\nUm agradecimento também à
+        empresa
         Signal Media (tenho que dar o link) pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
         à Bing pela disponibilização das suas APIs.
     </string>
@@ -105,6 +106,11 @@
         Instituto Politécnico de Tomar, Portugal
     </string>
     <string name="creditos">Créditos</string>
+    <string name="contactos">contactos</string>
+    <string name="contactos_texto">Para qualquer questão relacionada com o Conta-me Histórias por favor contactar-nos
+        através do seguinte email:
+    </string>
+    <string name="contactos_menu">Contactos</string>
 
 
     <string-array name="country_arrays">

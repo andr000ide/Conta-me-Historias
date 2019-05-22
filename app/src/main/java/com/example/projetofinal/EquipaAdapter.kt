@@ -33,7 +33,7 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
         val sobreTopico: sobreTopico = topicos[p1]
         p0.topicoTitulo?.text = topicos.get(p1).titulo
         p0.topicoTexto.text = topicos.get(p1).texto
-        p0.topicoTexto.justificationMode= Layout.JUSTIFICATION_MODE_INTER_WORD
+        //p0.topicoTexto.justificationMode= Layout.JUSTIFICATION_MODE_INTER_WORD
 
         // val uri = Uri.parse(sobreTopico.url)
         //p0?.video_view.setVideoURI(uri)
