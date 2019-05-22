@@ -21,8 +21,8 @@
                   android:text="@string/institui_es"
                   android:layout_marginBottom="8dp"
                   android:layout_marginTop="3dp"
-                  android:layout_marginLeft="25dp"
-                  android:layout_marginRight="25dp"
+                  android:layout_marginLeft="18dp"
+                  android:layout_marginRight="18dp"
                   android:textSize="25sp"
         />
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -70,8 +70,8 @@
                   android:text="@string/financiamento"
                   android:layout_marginBottom="8dp"
                   android:layout_marginTop="15dp"
-                  android:layout_marginLeft="25dp"
-                  android:layout_marginRight="25dp"
+                  android:layout_marginLeft="18dp"
+                  android:layout_marginRight="18dp"
                   android:textSize="25sp"
         />
         <TextView android:layout_width="match_parent"
@@ -85,14 +85,15 @@
                   android:text="@string/outros"
                   android:layout_marginTop="15dp"
                   android:layout_marginBottom="8dp"
-                  android:layout_marginLeft="25dp"
-                  android:layout_marginRight="25dp"
+                  android:layout_marginLeft="18dp"
+                  android:layout_marginRight="18dp"
                   android:textSize="25sp"
         />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_marginLeft="18dp"
                   android:layout_marginRight="18dp"
+                  android:layout_marginBottom="18dp"
                   android:textSize="15sp"
                   android:text="@string/outros_texto"/>
 

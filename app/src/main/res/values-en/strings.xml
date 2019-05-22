@@ -20,7 +20,10 @@
     <string name="menu_pesquisar">Search</string>
     <string name="menu_sobre">About</string>
     <string name="menu_equipa">Team</string>
-    <string name="sobreConta">What is Tell me Stories</string>
+
+    <string name="app_name" translatable="false">Tell me stories</string>
+    <string name="sobreConta">Tell me Stories</string>
+
     <string name="sobreContaT">"Tell me Stories [http://tellmestories.pt] is a temporal summarization framework of news articles that allows users to explore and revisit events in the past. Initially built on top of the Portuguese web archive [http://arquivo.pt], Tell me Stories has been later extended to support different datasets such as Reuters, Bloomberg, Bing or the Signal Media dataset."
     </string>
     <string name="sobreFunciona">How does it work?</string>
@@ -39,22 +42,22 @@
     <string name="sobrePremiosT">Conta-me Histórias / Tell me Stories won the Arquivo.pt 2018 contest [https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/] and has been awarded the Best Demo Presentation at ECIR’19 [http://www.ecir2019.org].
     </string>
     <string name="sobreReferenciasT01">Tell me Stories is a research product. If you use it in a work that leads to a
-        scientific publication, research project or product, please cite the following references:
+        scientific publication, research project or product, please cite the following references: \n
     </string>
     <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
         Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
-        archives. Springer Book.
+        archives. Springer Book. \n
     </string>
     <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
         Interactive System for Automatically Generating Temporal Narratives. In Azzopardi et al. (Eds.), Lecture Notes
         in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
-        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255)
+        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) \n
     </string>
     <string name="sobreReferencias">References</string>
-    <string name="sobreContribuicoesT02">One possible approach to overcome this problem is to automatically summarize large amount of news into consistent narratives. Tell me Stories emerges in this context, as an important contribution for anyone interested in having access to the overall picture of a given event in a quick manner. Our project may be considered as an additional solution that allows the general public (students, journalists, politics, researchers, etc) to better explore any kind of data that has been covered by the media.
+    <string name="sobreContribuicoesT02">One possible approach to overcome this problem is to automatically summarize large amount of news into consistent narratives. Tell me Stories emerges in this context, as an important contribution for anyone interested in having access to the overall picture of a given event in a quick manner. Our project may be considered as an additional solution that allows the general public (students, journalists, politics, researchers, etc) to better explore any kind of data that has been covered by the media. \n
     </string>
     <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
-        LIAAD INESC TEC, University of Porto and University of Kyoto.
+        LIAAD INESC TEC, University of Porto and University of Kyoto. \n
     </string>
     <string name="agradecimentos">Acknowledgements</string>
     <string name="institui_es">Institutions</string>
