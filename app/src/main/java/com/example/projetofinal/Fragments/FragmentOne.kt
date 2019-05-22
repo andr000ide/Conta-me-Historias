@@ -11,13 +11,10 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.os.StrictMode
+import android.view.*
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.core.content.ContextCompat
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.example.projetofinal.*
@@ -254,6 +251,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
         }
         builder.show()
     }
+
 
 
 

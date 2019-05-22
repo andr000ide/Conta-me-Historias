@@ -17,7 +17,7 @@
             app:svFillRadius="10dp"
             app:svCircleColor="@color/colorPrimaryDark"
             app:svTextColor="@color/colorPrimary"
-            app:svSelectedColor="@color/colorAccent"
+            app:svSelectedColor="@color/colorPrimary"
             app:svStrokeWidth="3dp"
             android:background="@android:color/transparent"/>
 
