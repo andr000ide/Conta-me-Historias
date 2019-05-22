@@ -21,7 +21,6 @@
     <string name="menu_sobre">About</string>
     <string name="menu_equipa">Team</string>
 
-    <string name="app_name" translatable="false">Tell me stories</string>
     <string name="sobreConta">Tell me Stories</string>
 
     <string name="sobreContaT">"Tell me Stories [http://tellmestories.pt] is a temporal summarization framework of news articles that allows users to explore and revisit events in the past. Initially built on top of the Portuguese web archive [http://arquivo.pt], Tell me Stories has been later extended to support different datasets such as Reuters, Bloomberg, Bing or the Signal Media dataset."
