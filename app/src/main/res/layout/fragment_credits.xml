@@ -98,8 +98,8 @@
                         android:layout_marginEnd="100dp"
                         android:id="@+id/img_linkedin"/>
                 <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/img_github"
                         android:layout_marginRight="100dp"
                         android:layout_marginEnd="100dp"
@@ -181,8 +181,8 @@
                         android:layout_marginEnd="100dp"
                         android:id="@+id/img_linkedin2"/>
                 <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/img_github"
                         android:layout_marginRight="100dp"
                         android:layout_marginEnd="100dp"
