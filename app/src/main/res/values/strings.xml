@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">Conta-me histórias</string>
     <string name="key_description">Cria narrativas sobre qualquer assunto</string>
-    <string name="key_title">conta-me historias</string>
+    <string name="key_title">conta-me histórias</string>
     <string name="key_search">Pesquisar</string>
     <string name="key_try">Experimentar</string>
     <string name="key_teste">algo</string>
@@ -100,6 +100,12 @@
         Signal Media (tenho que dar o link) pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
         à Bing pela disponibilização das suas APIs.
     </string>
+    <string name="creditos_texto">A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob
+        supervisão do Professor Ricardo Campos no âmbito do Projeto Final do Curso de Engenharia Informática do
+        Instituto Politécnico de Tomar, Portugal
+    </string>
+    <string name="creditos">Créditos</string>
+
 
     <string-array name="country_arrays">
         <item>Last 5 years</item>

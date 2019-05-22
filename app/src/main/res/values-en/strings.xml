@@ -74,4 +74,9 @@
         for creating an outstanding platform in the purpose of archiving the Portuguese digital contents, through which
         promote the knowledge sharing and the emergence of new and innovative products.\nAlso thanks to Signal Media for the Signal Media 1M articles news dataset, Reuters, Blomberg and Bing for their APIs
     </string>
+    <string name="creditos_texto">Tell me Stories app has been developed by Simão Samouco and João Campos under the
+        supervision of Professor Ricardo Campos in the scope of the Final Project of the Computer Science degree of the
+        Polytechnic Institute of Tomar, Portugal.
+    </string>
+    <string name="creditos">Credits</string>
 </resources>

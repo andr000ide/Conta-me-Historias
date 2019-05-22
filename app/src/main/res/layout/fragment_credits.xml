@@ -21,7 +21,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob supervisão do Professor Ricardo Campos no âmbito do Projeto Final do Curso de Engenharia Informática do Instituto Politécnico de Tomar, Portugal"
+                android:text="@string/creditos_texto"
                 android:textAlignment="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
