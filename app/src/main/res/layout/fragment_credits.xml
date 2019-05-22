@@ -49,7 +49,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/image"
-                    android:src="@drawable/linkdin_image"
+                    android:src="@drawable/joao"
                     android:layout_centerHorizontal="true"
                     app:civ_border_color="#4FC1EA"
                     app:civ_border_width="2dp"
@@ -72,7 +72,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SOFTWARE DEVELOPER AND RESEARCHER"
+                    android:text="MOBILE DEVELOPER"
                     android:layout_below="@id/nome"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
@@ -98,11 +98,12 @@
                         android:layout_marginEnd="100dp"
                         android:id="@+id/img_linkedin"/>
                 <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/img_github"
                         android:layout_marginRight="100dp"
                         android:layout_marginEnd="100dp"
+                        android:layout_marginTop="5dp"
                         android:id="@+id/img_github"/>
 
                 <ImageView
@@ -134,7 +135,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/image2"
-                    android:src="@drawable/linkdin_image"
+                    android:src="@drawable/simao"
                     android:layout_centerHorizontal="true"
                     app:civ_border_color="#4FC1EA"
                     app:civ_border_width="2dp"
@@ -144,7 +145,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Simãos Samouco"
+                    android:text="Simão Samouco"
                     android:layout_below="@id/image2"
                     android:layout_centerHorizontal="true"
                     android:paddingTop="15dp"
@@ -156,7 +157,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SOFTWARE DEVELOPER AND RESEARCHER"
+                    android:text="MOBILE DEVELOPER"
                     android:layout_below="@id/nome2"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
@@ -181,11 +182,12 @@
                         android:layout_marginEnd="100dp"
                         android:id="@+id/img_linkedin2"/>
                 <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/img_github"
                         android:layout_marginRight="100dp"
                         android:layout_marginEnd="100dp"
+                        android:layout_marginTop="5dp"
                         android:id="@+id/img_github2"/>
                 <ImageView
                         android:layout_width="30dp"
@@ -218,7 +220,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/image3"
-                    android:src="@drawable/linkdin_image"
+                    android:src="@drawable/ricardo"
                     android:layout_centerHorizontal="true"
                     app:civ_border_color="#4FC1EA"
                     app:civ_border_width="2dp"

@@ -87,6 +87,7 @@
                    android:background="@drawable/foureyes"
                    android:layout_marginLeft="18dp"
                    android:layout_marginRight="18dp"
+                   android:id="@+id/ola5"
         />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
