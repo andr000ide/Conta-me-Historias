@@ -207,6 +207,18 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 navView?.setCheckedItem(R.id.nav_three)
                 check=R.id.nav_three
             }
+            "4" -> {
+                navView?.setCheckedItem(R.id.nav_four)
+                check=R.id.nav_four
+            }
+            "6" -> {
+                navView?.setCheckedItem(R.id.nav_six)
+                check=R.id.nav_six
+            }
+            "7" -> {
+                navView?.setCheckedItem(R.id.nav_seven)
+                check=R.id.nav_seven
+            }
         }
 
 

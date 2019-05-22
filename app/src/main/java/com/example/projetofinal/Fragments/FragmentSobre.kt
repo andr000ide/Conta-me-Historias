@@ -12,13 +12,12 @@ import kotlinx.android.synthetic.main.fragment_sobre.view.*
 
 class FragmentSobre : androidx.fragment.app.Fragment(){
 
-    val topicoArr : ArrayList<sobreTopico> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_sobre, container, false)
-
+        val topicoArr : ArrayList<sobreTopico> = ArrayList()
         //topicoArr.add(sobreTopico(titulo = getString(R.string.sobre01), texto = "O Conta-me Histórias é um projeto científico, criado no âmbito dos Prémios Arquivo.pt 2018, que permite aos utilizadores a possibilidade de criarem automaticamente uma sumarização temporal das notícias preservadas pelo Arquivo.pt (http://arquivo.pt). Numa era marcada pela pós-verdade e pelas fake news, o Conta-me Histórias é um importante contributo para uma democracia mais transparente. Esta aplicação permite a qualquer cidadão um acesso livre e democrático a informação contextualizada, assente em fatos e tendencialmente livre de filtros, fazendo uso de diversas fontes. Jornalistas, estudantes e investigadores de diversas áreas, tais como a sociologia, a ciência política, as ciências da comunicaçãos, a história e outras humanidades, encontram aqui uma ferramenta poderosa para o seu trabalho.", url = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/DrX1PjpyNHw\" frameborder=\"0\" allowfullscreen></iframe>"))
         topicoArr.add(sobreTopico(titulo = getString(R.string.sobreConta), texto = getString(R.string.sobreContaT), url = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/DrX1PjpyNHw\" frameborder=\"0\" allowfullscreen></iframe>"))
         topicoArr.add(sobreTopico(titulo = "Software", texto = getString(R.string.sobreSoftwareT), url = ""))
