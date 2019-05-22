@@ -16,6 +16,14 @@ import android.view.KeyEvent
 import android.view.MenuItem
 import com.example.projetofinal.Fragments.*
 import kotlinx.android.synthetic.main.second_activitynew.*
+import android.app.AlarmManager
+import android.content.Context.ALARM_SERVICE
+import androidx.core.content.ContextCompat.getSystemService
+import android.app.PendingIntent
+import android.content.Context
+
+
+
 
 
 class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -30,6 +38,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         setContentView(R.layout.second_activitynew)
         setSupportActionBar(toolbar)
         val actionbar = supportActionBar
+        actionbar?.title=getString(R.string.key_title)
         actionbar?.setDisplayHomeAsUpEnabled(true)
 
         val indicator:String = intent.getStringExtra("indicacao")
@@ -239,9 +248,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     fun refreshApp(lang: String) {
         val context = langHelper.setNewLocale(this, lang)
         val refresh = Intent(context, MainActivity::class.java)
-        refresh.putExtra("SECONDTIME", false)
+        refresh.putExtra("FIRSTTIME", false)
         finish()
         startActivity(refresh)
+
     }
 
 

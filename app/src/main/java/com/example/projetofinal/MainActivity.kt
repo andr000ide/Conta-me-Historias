@@ -3,6 +3,9 @@ package com.example.projetofinal
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.Manifest
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.core.content.ContextCompat
@@ -26,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         val checkIfFirstTime = intent.getBooleanExtra("FIRSTTIME", true)
         val checkIfFirstTime2 = intent.getBooleanExtra("SECONDTIME", false)
         langHelper = LangHelper(applicationContext)
+
 
         if (checkIfFirstTime == true) {
             refreshApp(langHelper.getLanguageSaved())
@@ -87,6 +91,13 @@ class MainActivity : AppCompatActivity() {
         refresh.putExtra("FIRSTTIME", false)
         finish()
         startActivity(refresh)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed();
+        finishAffinity(); // or finish();
+        //super.onBackPressed()
+
     }
 }
 
