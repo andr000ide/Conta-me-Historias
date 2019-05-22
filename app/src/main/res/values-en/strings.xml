@@ -72,6 +72,6 @@
     <string name="outros">Others</string>
     <string name="outros_texto">A special thanks goes to the Portuguese Web Archive [http://arquivo.pt] and to its team
         for creating an outstanding platform in the purpose of archiving the Portuguese digital contents, through which
-        promote the knowledge sharing and the emergence of new and innovative products.
+        promote the knowledge sharing and the emergence of new and innovative products.\nAlso thanks to Signal Media for the Signal Media 1M articles news dataset, Reuters, Blomberg and Bing for their APIs
     </string>
 </resources>

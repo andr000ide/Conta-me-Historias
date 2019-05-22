@@ -3,6 +3,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent" android:layout_height="match_parent"
+            android:background="#ffffff"
             tools:context=".Fragments.FragmentAgradecimentos">
 
     <LinearLayout android:layout_width="match_parent"
@@ -36,7 +37,7 @@
                        app:layout_constraintEnd_toStartOf="@id/ola2"
                        app:layout_constraintBottom_toTopOf="@id/ola3"
                        android:id="@+id/ola1"
-                       android:background="@drawable/logo_ipt"/>
+                       android:background="@drawable/ipt_tamanho"/>
 
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                        app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +45,7 @@
                        app:layout_constraintEnd_toEndOf="parent"
                        app:layout_constraintBottom_toTopOf="@id/ola3"
                        android:id="@+id/ola2"
-                       android:background="@drawable/fcup"/>
+                       android:background="@drawable/fcup_tamanho"/>
 
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                        app:layout_constraintTop_toBottomOf="@id/ola1"
@@ -52,7 +53,7 @@
                        app:layout_constraintBottom_toBottomOf="parent"
                        app:layout_constraintEnd_toStartOf="@id/ola4"
                        android:id="@+id/ola3"
-                       android:background="@drawable/kyoto"/>
+                       android:background="@drawable/kyoto_tamanho"/>
 
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                        app:layout_constraintTop_toBottomOf="@id/ola2"
@@ -60,7 +61,7 @@
                        app:layout_constraintEnd_toEndOf="parent"
                        app:layout_constraintBottom_toBottomOf="parent"
                        android:id="@+id/ola4"
-                       android:background="@drawable/liaad"/>
+                       android:background="@drawable/liaad_tamanho"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -80,6 +81,13 @@
                   android:layout_marginRight="18dp"
                   android:textSize="15sp"
                   android:text="@string/financiamento_texto"/>
+
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/foureyes"
+                   android:layout_marginLeft="18dp"
+                   android:layout_marginRight="18dp"
+        />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:text="@string/outros"
@@ -95,6 +103,8 @@
                   android:layout_marginRight="18dp"
                   android:layout_marginBottom="18dp"
                   android:textSize="15sp"
+                  android:autoLink="web"
+                  android:textColorLink="@color/backgroundMain"
                   android:text="@string/outros_texto"/>
 
     </LinearLayout>
