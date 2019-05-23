@@ -52,7 +52,8 @@ class EquipaAdapter2(val membros : ArrayList<MembroEquipa>, val context: Context
             val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("copy text", mail)
             clipboard.primaryClip = clip
-            context.toast(mail + "\n O email foi copiado.")
+            context!!.toast(mail +"\n"+ context.getString(R.string.mail_foi_copiado))
+
         }
 
 

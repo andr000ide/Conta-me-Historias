@@ -67,21 +67,21 @@ class fragment_credits : Fragment() {
             val clipboard = context!!.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("copy text", mail)
             clipboard.primaryClip = clip
-            context!!.toast(mail + "\n O email foi copiado.")
+            context!!.toast(mail +"\n"+ getString(R.string.mail_foi_copiado))
         }
         view.img_mail2.setOnClickListener(){
             var mail = "simao.samouco@hotmail.com"
             val clipboard = context!!.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("copy text", mail)
             clipboard.primaryClip = clip
-            context!!.toast(mail + "\n O email foi copiado.")
+            context!!.toast(mail +"\n"+ getString(R.string.mail_foi_copiado))
         }
         view.img_mail3.setOnClickListener(){
             var mail = "ricardo.campos@ipt.pt"
             val clipboard = context!!.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("copy text", mail)
             clipboard.primaryClip = clip
-            context!!.toast(mail + "\n O email foi copiado.")
+            context!!.toast(mail +"\n"+ getString(R.string.mail_foi_copiado))
         }
 
 

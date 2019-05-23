@@ -102,4 +102,5 @@
         <item>Last 20 years</item>
     </string-array>
     <string name="origem_nome">esconder</string>
+    <string name="mail_foi_copiado">" Mail has been copied"</string>
 </resources>
