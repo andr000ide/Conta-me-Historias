@@ -96,9 +96,9 @@
     <string name="outros">Outros</string>
     <string name="outros_texto">Um agradecimento especial ao arquivo da web Portuguesa [http://arquivo.pt] e à sua
         equipa que ao longo dos últimos criou uma plataforma ímpar na preservação dos conteúdos digitais portugueses,
-        fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.\nUm agradecimento também à
-        empresa
-        Signal Media (tenho que dar o link) pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
+        fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
+        \n \nUm agradecimento também à
+        empresa Signal Media [https://www.signal-ai.com/] pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
         à Bing pela disponibilização das suas APIs.
     </string>
     <string name="creditos_texto">A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob
@@ -111,13 +111,26 @@
         através do seguinte email:
     </string>
     <string name="contactos_menu">Contactos</string>
+    <string name="cargo_resea_prof">PROFESSOR E INVESTIGADOR</string>
+    <string name="cargo_soft_resea">DESENVOLVEDOR DE SOFTWARE E INVESTIGADOR</string>
+    <string name="cargo_commuticaions">COMUNICAÇÕES</string>
+    <string name="mobile_developer">DESENVOLVEDOR MÓVEL</string>
+    <string name="creditos_frag">créditos</string>
+    <string name="copiar_mail">Copiar Mail</string>
+    <string name="liaad_url">https://www.inesctec.pt/pt</string>
+    <string name="search_box">Pesquisar</string>
 
 
     <string-array name="country_arrays">
-        <item>Last 5 years</item>
-        <item>Last 10 years</item>
-        <item>Last 15 years</item>
-        <item>Last 20 years</item>
+        <item>Últimos 5 anos</item>
+        <item>Últimos 10 anos</item>
+        <item>Últimos 15 anos</item>
+        <item>Últimos 20 anos</item>
     </string-array>
+    <string name="five_years">Últimos 5 anos</string>
+    <string name="ten_years">Últimos 10 anos</string>
+    <string name="fifteen_years">Últimos 15 anos</string>
+    <string name="twenty_years">Últimos 20 anos</string>
+    <string name="origem_nome">Origem do nome</string>
 </resources>
 

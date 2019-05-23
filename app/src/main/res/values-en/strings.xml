@@ -72,7 +72,8 @@
     <string name="outros">Others</string>
     <string name="outros_texto">A special thanks goes to the Portuguese Web Archive [http://arquivo.pt] and to its team
         for creating an outstanding platform in the purpose of archiving the Portuguese digital contents, through which
-        promote the knowledge sharing and the emergence of new and innovative products.\nAlso thanks to Signal Media for the Signal Media 1M articles news dataset, Reuters, Blomberg and Bing for their APIs
+        promote the knowledge sharing and the emergence of new and innovative products.
+        \n \nAlso thanks to Signal Media [https://www.signal-ai.com/] for the Signal Media 1M articles news dataset, Reuters, Blomberg and Bing for their APIs
     </string>
     <string name="creditos_texto">Tell me Stories app has been developed by Simão Samouco and João Campos under the
         supervision of Professor Ricardo Campos in the scope of the Final Project of the Computer Science degree of the
@@ -82,4 +83,23 @@
     <string name="contactos">contact</string>
     <string name="contactos_texto">For any inquires please contact us at:</string>
     <string name="contactos_menu">Contacts</string>
+    <string name="cargo_resea_prof">RESEARCHER AND PROFESSOR</string>
+    <string name="cargo_soft_resea">SOFTWARE DEVELOPER AND RESEARCHER</string>
+    <string name="cargo_commuticaions">COMMUNICATIONS</string>
+    <string name="mobile_developer">MOBILE DEVELOPER</string>
+    <string name="creditos_frag">credits</string>
+    <string name="copiar_mail">Copy Mail</string>
+    <string name="liaad_url">https://www.inesctec.pt/en</string>
+    <string name="search_box">Search</string>
+    <string name="five_years">Last 5 years</string>
+    <string name="ten_years">Last 10 years</string>
+    <string name="fifteen_years">Last 15 years</string>
+    <string name="twenty_years">Last 20 years</string>
+    <string-array name="country_arrays">
+        <item>Last 5 years</item>
+        <item>Last 10 years</item>
+        <item>Last 15 years</item>
+        <item>Last 20 years</item>
+    </string-array>
+    <string name="origem_nome">esconder</string>
 </resources>

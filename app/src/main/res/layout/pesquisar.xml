@@ -72,7 +72,7 @@
                   android:inputType="text"
                   android:gravity="center_vertical"
                   app:layout_constraintTop_toTopOf="parent"
-                  android:hint="Search"
+                  android:hint="@string/search_box"
         />
 
         <ImageView

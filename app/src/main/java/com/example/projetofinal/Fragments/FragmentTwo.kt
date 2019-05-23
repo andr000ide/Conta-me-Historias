@@ -56,7 +56,8 @@ class FragmentTwo : androidx.fragment.app.Fragment() {
         })
 
 
-        val listItemsTxt = arrayOf("Last 5 years", "Last 10 years", "Last 15 years", "Last 20 years")
+        val listItemsTxt = arrayOf(getString(R.string.five_years), getString(R.string.ten_years), getString(R.string.fifteen_years), getString(
+                    R.string.twenty_years))
         val spinnerAdapter = CustomDropDownAdapter(context!!, listItemsTxt)
         view.spinner1.adapter = spinnerAdapter
         //(view.spinner1.adapter as CustomDropDownAdapter).setSelection(1)

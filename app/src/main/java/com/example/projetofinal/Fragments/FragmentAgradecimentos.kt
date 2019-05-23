@@ -47,7 +47,13 @@ class FragmentAgradecimentos() : Fragment() {
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)
         }
         view.ola4.setOnClickListener {
-            var link: String = "https://www.inesctec.pt/en/centres/liaad"
+            var link: String = getString(R.string.liaad_url)
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+
+            ContextCompat.startActivity(activity!!.applicationContext, intent, null)
+        }
+        view.ola5.setOnClickListener {
+            var link: String = "http://foureyes.inesctec.pt/"
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
 
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)

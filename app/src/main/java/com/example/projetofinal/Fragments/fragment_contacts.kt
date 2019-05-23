@@ -1,5 +1,7 @@
 package com.example.projetofinal.Fragments
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -9,6 +11,9 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.projetofinal.R
+import kotlinx.android.synthetic.main.fragment_contacts.*
+import kotlinx.android.synthetic.main.fragment_contacts.view.*
+import org.jetbrains.anko.toast
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +40,16 @@ class fragment_contacts : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contacts, container, false)
+        var view =  inflater.inflate(R.layout.fragment_contacts, container, false)
+
+        view.copiar_mail.setOnClickListener {
+            var mail = "admin@contamehistorias.pt"
+            val clipboard = context!!.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clip = ClipData.newPlainText("copy text", mail)
+            clipboard.primaryClip = clip
+            context!!.toast(mail + "\n O email foi copiado.")
+        }
+
+        return view
     }
 }

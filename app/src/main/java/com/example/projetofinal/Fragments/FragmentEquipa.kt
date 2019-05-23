@@ -25,17 +25,17 @@ class FragmentEquipa : androidx.fragment.app.Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        membrosArr.add(MembroEquipa(nome = "Ricardo Campos", linkedin = "https://www.linkedin.com/in/camposricardo/", mail = "ricardo.campos@ipt.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.ricardo), cargo = "RESEARCHER AND PROFESSOR"))
+        membrosArr.add(MembroEquipa(nome = "Ricardo Campos", linkedin = "https://www.linkedin.com/in/camposricardo/", mail = "ricardo.campos@ipt.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.ricardo), cargo = getString(R.string.cargo_resea_prof)))
+        membrosArr.add(MembroEquipa(nome = "Alípio Jorge", linkedin = "https://www.linkedin.com/in/al%C3%ADpio-jorge-29085813/", mail = "amjorge@fc.up.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.alipio), cargo = getString(R.string.cargo_resea_prof)))
 
-        membrosArr.add(MembroEquipa(nome = "Arian Pasquali", linkedin = "https://www.linkedin.com/in/arianpasquali/", mail = "arrp@inesctec.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.arian), cargo = "SOFTWARE DEVELOPER AND RESEARCHER"))
-        membrosArr.add(MembroEquipa(nome = "Vitor Mangaravite", linkedin = "https://www.linkedin.com/in/v%C3%ADtor-mangaravite-81998222/", mail = "vima@inesctec.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.vitor), cargo = "SOFTWARE DEVELOPER AND RESEARCHER"))
+        membrosArr.add(MembroEquipa(nome = "Vitor Mangaravite", linkedin = "https://www.linkedin.com/in/v%C3%ADtor-mangaravite-81998222/", mail = "vima@inesctec.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.vitor), cargo = getString(R.string.cargo_soft_resea)))
+
+        membrosArr.add(MembroEquipa(nome = "Arian Pasquali", linkedin = "https://www.linkedin.com/in/arianpasquali/", mail = "arrp@inesctec.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.arian), cargo = getString(R.string.cargo_soft_resea)))
 
 
-        membrosArr.add(MembroEquipa(nome = "Alípio Jorge", linkedin = "https://www.linkedin.com/in/al%C3%ADpio-jorge-29085813/", mail = "amjorge@fc.up.pt", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.alipio), cargo = "RESEARCHER AND PROFESSOR"))
+        membrosArr.add(MembroEquipa(nome = "Adam Jatowt", linkedin = "https://www.linkedin.com/in/adam-jatowt-a1869b4/", mail = "adam@dl.kuis.kyoti-u.ac.jp", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.adam), cargo = getString(R.string.cargo_resea_prof)))
 
-        membrosArr.add(MembroEquipa(nome = "Adam Jatowt", linkedin = "https://www.linkedin.com/in/adam-jatowt-a1869b4/", mail = "adam@dl.kuis.kyoti-u.ac.jp", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.adam), cargo = "RESEARCHER AND PROFESSOR"))
-
-        membrosArr.add(MembroEquipa(nome = "Livia Stroschoen", linkedin = "https://www.linkedin.com/in/liviastroschoen/", mail = "liviapinent@gmail.com", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.livia), cargo = "COMMUNICATIONS"))
+        membrosArr.add(MembroEquipa(nome = "Livia Stroschoen", linkedin = "https://www.linkedin.com/in/liviastroschoen/", mail = "liviapinent@gmail.com", imagemUrl = BitmapFactory.decodeResource(this.resources,R.drawable.livia), cargo = getString(R.string.cargo_commuticaions)))
 
 
 

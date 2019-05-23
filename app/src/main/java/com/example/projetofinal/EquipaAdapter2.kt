@@ -62,8 +62,7 @@ class EquipaAdapter2(val membros : ArrayList<MembroEquipa>, val context: Context
 }
 
 class ViewHolderThree (view: View) : RecyclerView.ViewHolder(view) {
-    // Holds the TextView that will add each animal to
-    //val tvAnimalType = view.tv_animal_type
+
     val membroNome = view.nome
     val membroImagem = view.image
     val membroCargo = view.cargo

@@ -57,8 +57,7 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
 }
 
 class ViewHoldertwo (view: View) : RecyclerView.ViewHolder(view) {
-    // Holds the TextView that will add each animal to
-    //val tvAnimalType = view.tv_animal_type
+
     val topicoTitulo = view.topico_titulo
     val topicoTexto = view.topico_texto
     val sub_item = view.sub_item
@@ -68,8 +67,6 @@ class ViewHoldertwo (view: View) : RecyclerView.ViewHolder(view) {
 
         sub_item.setVisibility(if (expanded) View.VISIBLE else View.GONE)
 
-        //tipo.setText(sobreTopico.getNameType())
-        // desc.setText(sobreTopico.getDescription())
     }
 
-}
+ }
