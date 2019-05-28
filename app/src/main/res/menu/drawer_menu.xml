@@ -27,11 +27,12 @@
               android:title="@string/agradecimentos">
 
         </item>
+
         <item android:id="@+id/nav_seven"
               android:icon="@drawable/ic_team_24dp"
               android:title="@string/creditos">
-
         </item>
+
         <item android:id="@+id/nav_eight"
               android:icon="@drawable/ic_import_contacts_black_24dp"
               android:title="@string/contactos_menu">
@@ -41,7 +42,6 @@
         <item android:id="@+id/nav_five"
               android:icon="@drawable/ic_flag_black_24dp"
               android:title="@string/lingua">
-
         </item>
 
     </group>

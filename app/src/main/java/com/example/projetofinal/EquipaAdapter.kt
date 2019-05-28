@@ -50,8 +50,22 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
         p0.bind(sobreTopico)
         p0.topicoTitulo.setOnClickListener(){
             val expanded: Boolean = sobreTopico.isExpanded()
-            sobreTopico.setExpanded(!expanded)
-            notifyItemChanged(p1)
+            if(expanded){
+                sobreTopico.setExpanded(!expanded)
+                notifyItemChanged(p1)
+            }
+            else{
+                for((index, item) in topicos.withIndex()){
+                    if(item.isExpanded()){
+                        item.setExpanded(false)
+                        notifyItemChanged(index)
+                    }
+                }
+                sobreTopico.setExpanded(!expanded)
+                notifyItemChanged(p1)
+            }
+            //sobreTopico.setExpanded(!expanded)
+            //notifyItemChanged(p1)
         }
     }
 }
