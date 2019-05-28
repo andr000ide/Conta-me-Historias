@@ -158,13 +158,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     .addToBackStack("6").commit()
                 check = R.id.nav_six
             }
-            R.id.nav_seven  -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                    fragment_credits()
-                )
-                    .addToBackStack("7").commit()
-                check = R.id.nav_seven
-            }
             R.id.nav_eight  -> {
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                     fragment_contacts()
@@ -231,9 +224,9 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 navView?.setCheckedItem(R.id.nav_six)
                 check=R.id.nav_six
             }
-            "7" -> {
-                navView?.setCheckedItem(R.id.nav_seven)
-                check=R.id.nav_seven
+            "8" -> {
+                navView?.setCheckedItem(R.id.nav_eight)
+                check=R.id.nav_eight
             }
         }
 
