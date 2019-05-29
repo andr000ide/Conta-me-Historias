@@ -21,15 +21,15 @@ import android.content.Context.ALARM_SERVICE
 import androidx.core.content.ContextCompat.getSystemService
 import android.app.PendingIntent
 import android.content.Context
-
-
-
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 
 
 class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private var drawer: androidx.drawerlayout.widget.DrawerLayout? = null
     private var navView: NavigationView? = null
+    private lateinit var imagem : Bitmap
     private var check: Int = 0
     private lateinit var langHelper: LangHelper
 
@@ -51,6 +51,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         viewpager.adapter = adapter
         tabs.setupWithViewPager(viewpager)
         */
+        imagem= BitmapFactory.decodeResource(applicationContext.resources,R.drawable.fcup)
 
         drawer = drawerlayout
         val toggle = EndDrawerToggle(
@@ -252,6 +253,14 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         finish()
         startActivity(refresh)
 
+    }
+
+    fun setImagem(imag : Bitmap){
+        imagem=imag
+    }
+
+    fun getImagem():Bitmap {
+        return imagem
     }
 
 

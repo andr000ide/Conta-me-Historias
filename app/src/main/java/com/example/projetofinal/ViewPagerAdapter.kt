@@ -22,6 +22,11 @@ class ViewPagerAdapter(manager: androidx.fragment.app.FragmentManager) : android
         return fragmentList.size
       }
 
+
+    override fun getItemPosition(`object`: Any): Int {
+        return PagerAdapter.POSITION_NONE
+    }
+
     fun addFragment (fragment : androidx.fragment.app.Fragment, title : String){
         fragmentList.add(fragment)
         titleList.add(title)

@@ -1,6 +1,7 @@
 package com.example.projetofinal.Fragments
 
 
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
 import androidx.annotation.Dimension
@@ -8,15 +9,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.projetofinal.*
+import com.example.projetofinal.modelclass.Example_Yake
+import com.example.projetofinal.modelclass.Wordcloud
 import com.example.projetofinal.wordcloud.ColorTemplate
 import com.example.projetofinal.wordcloud.WordCloud
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import kotlinx.android.synthetic.main.fragment_layout_wordcloud.*
 import kotlinx.android.synthetic.main.fragment_layout_wordcloud.view.*
+import kotlinx.android.synthetic.main.second_activity.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.*
+import kotlin.concurrent.thread
 
 
 class FragmentTeste2 : androidx.fragment.app.Fragment() {
 
-
+    lateinit var call2: Call<Example_Yake>
+    lateinit var call3: Call<Wordcloud>
     val colors: IntArray = intArrayOf(
         Color.parseColor("#7f9650"),
         Color.parseColor("#d6812f"),
@@ -32,41 +45,104 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
         // Inflate the layout for this fragment
         var view = inflater.inflate(com.example.projetofinal.R.layout.fragment_layout_wordcloud, container, false)
 
-        var random = Random()
-        val mutableList: ArrayList<WordCloud> = arrayListOf()
-        mutableList.add(WordCloud("brexit", 5))
-        mutableList.add(WordCloud("unido", 8))
-        mutableList.add(WordCloud("reino", 2))
-        mutableList.add(WordCloud("europeia", 4))
-        mutableList.add(WordCloud("uniao", 2))
-        mutableList.add(WordCloud("positive", 5))
-        mutableList.add(WordCloud("bruxelas", 8))
-        mutableList.add(WordCloud("acordo", 6))
-        mutableList.add(WordCloud("cameron", 2))
-        mutableList.add(WordCloud("negociacoes", 4))
-        mutableList.add(WordCloud("londres", 5))
-        mutableList.add(WordCloud("may", 2))
-        mutableList.add(WordCloud("europeus", 1))
-        mutableList.add(WordCloud("hotorrinalrdejei", 9))
-        mutableList.add(WordCloud("negative", 8))
-        mutableList.add(WordCloud("banco", 7))
-        mutableList.add(WordCloud("britanico", 4))
-        mutableList.add(WordCloud("saida", 7))
-        mutableList.add(WordCloud("admite", 5))
-        mutableList.add(WordCloud("juncker", 4))
+
+        var jsonarray = arguments?.getString("timeline")
+        var gson = Gson()
+        val turnsType = object : TypeToken<List<Timeline>>() {}.type
+        var testModel = gson.fromJson<List<Timeline>>(jsonarray, turnsType)
+
+        thread(start = true) {
+            var teste : String = ""
+            for(item in testModel){
+                for(item2 in item.headlines.orEmpty()){
+                    teste+=item2.keyphrase+" "
+                }
+            }
 
 
-        val wordCloud = view.wordCloud
-        wordCloud.setScale(35, 20)
-        wordCloud.setColors(colors)
-        wordCloud.setDataSet(mutableList)
-        wordCloud.notifyDataSetChanged()
+            val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
+            call2 = service2!!.search_words(teste,"1","20")
+            call2?.enqueue(object : Callback<Example_Yake> {
+
+                override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {
+                    val gson = Gson()
+                    val service3 = RetrofitWordCloudInstance.retrofitInstance?.create(ServiceAPI::class.java)
+
+                    var width = resources.displayMetrics.widthPixels
+                    var height = resources.displayMetrics.heightPixels
+                    height=height-300
+//                    val resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android")
+//                    if (resourceId > 0) {
+//                        val navigationBarHeight = resources.getDimensionPixelSize(resourceId)
+//                    }
+
+
+                    call3 = service3!!.search_cloud(width.toString()  ,height.toString(),gson.toJson(response.body()))
+                    //println(call3.toString())
+                    call3!!.enqueue(object : Callback<Wordcloud> {
+
+
+                        override fun onResponse(call: Call<Wordcloud>, response: Response<Wordcloud>) {
+                            val outronome = response.body()
+
+                            val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
+                            val decodedByte = BitmapFactory.decodeByteArray(decodedstring,0,decodedstring.size)
+                            val atividade = activity as SecondActivity
+                            //atividade.imagemtestar.setImageBitmap(decodedByte)
+                            view.wordCloud.setImageBitmap(decodedByte)
+
+                        }
+                        override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
+                            println("onerror")
+                        }
+                    })
+                }
+
+                override fun onFailure(call: Call<Example_Yake>, t: Throwable) {
+                }
+            })
+        }
+
+
+
+            //val activity = activity as SecondActivity
+
+
 
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val activity = activity as SecondActivity
+        wordCloud.setImageBitmap(activity.getImagem())
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if(::call2.isInitialized){
+
+            call2.cancel()
+        }
+
+        if(::call3.isInitialized){
+            call3.cancel()
+        }
 
     }
 
+    fun outroServico(algo2 : String){
+
+        //println(algo2)
+
+    }
+
+    companion object {
+        fun newInstance(jsonString: String): FragmentTeste2 {
+            val args = Bundle()
+            args.putString("timeline",jsonString)
+            val fragment = FragmentTeste2()
+            fragment.arguments = args
+            return fragment
+        }
+    }
 }

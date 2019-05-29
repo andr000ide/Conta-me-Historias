@@ -8,6 +8,12 @@ import java.util.concurrent.TimeUnit
 object RetrofitWordCloudInstance {
 
 
+    var okHttpClient = OkHttpClient.Builder()
+        .connectTimeout(1, TimeUnit.MINUTES)
+        .readTimeout(300, TimeUnit.SECONDS)
+        .writeTimeout(15, TimeUnit.SECONDS)
+        .build()
+
 
     private var retrofit: Retrofit? = null
 
@@ -15,7 +21,8 @@ object RetrofitWordCloudInstance {
         get() {
             if (retrofit == null) {
                 retrofit = retrofit2.Retrofit.Builder()
-                    .baseUrl("http://10.0.2.2:5000/")
+                    .baseUrl("https://yake-wordcloud.herokuapp.com/")
+                    .client(okHttpClient)
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build()
             }

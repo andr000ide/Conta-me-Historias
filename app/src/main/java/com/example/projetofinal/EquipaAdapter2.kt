@@ -1,6 +1,7 @@
 package com.example.projetofinal
 
 import android.annotation.SuppressLint
+import android.app.VoiceInteractor
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -12,6 +13,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetofinal.modelclass.MembroEquipa
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_listitem.view.*
 import org.jetbrains.anko.toast
 
@@ -41,7 +43,8 @@ class EquipaAdapter2(val membros : ArrayList<MembroEquipa>, val context: Context
     override fun onBindViewHolder(p0: ViewHolderThree, p1: Int) {
         p0.membroNome?.text = membros.get(p1).nome
         p0.membroCargo.text = membros.get(p1).cargo
-        p0.membroImagem.setImageBitmap(membros.get(p1).imagemUrl)
+        //p0.membroImagem.setImageBitmap(membros.get(p1).imagemUrl)
+        Picasso.get().load(membros.get(p1).imagemUrl).into(p0.membroImagem)
         p0.membrolinkedin.setOnClickListener(){
             var lindin: String = membros.get(p1).linkedin
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse(lindin))
