@@ -67,6 +67,14 @@
                 android:layout_marginEnd="100dp"
                 android:id="@+id/img_linkedin"/>
         <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_github"
+                android:layout_marginRight="100dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_github"/>
+        <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/mail_image"

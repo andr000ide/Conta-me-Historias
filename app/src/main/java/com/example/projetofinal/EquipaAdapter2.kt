@@ -56,6 +56,17 @@ class EquipaAdapter2(val membros : ArrayList<MembroEquipa>, val context: Context
 
         }
 
+        if (membros.get(p1).github != ""){
+            p0.membroGithub.setOnClickListener {
+                var git: String = membros.get(p1).github
+                var intent = Intent(Intent.ACTION_VIEW, Uri.parse(git))
+                startActivity(context,intent, null)
+            }
+            p0.membroGithub.visibility = View.VISIBLE
+        }else{
+            p0.membroGithub.visibility = View.GONE
+        }
+
 
 
     }
@@ -69,4 +80,5 @@ class ViewHolderThree (view: View) : RecyclerView.ViewHolder(view) {
     val membroCargo = view.cargo
     val membrolinkedin = view.img_linkedin
     val membroMail = view.img_mail
+    val membroGithub = view.img_github
 }
