@@ -85,7 +85,8 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
                         override fun onResponse(call: Call<Wordcloud>, response: Response<Wordcloud>) {
                             val outronome = response.body()
 
-                            val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
+                            //val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
+                            val decodedstring = android.util.Base64.decode(outronome?.wordcloudb64, android.util.Base64.DEFAULT)
                             val decodedByte = BitmapFactory.decodeByteArray(decodedstring,0,decodedstring.size)
                             val atividade = activity as SecondActivity
                             //atividade.imagemtestar.setImageBitmap(decodedByte)
