@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import com.example.projetofinal.EquipaAdapter2
 import com.example.projetofinal.modelclass.MembroEquipa
 import com.example.projetofinal.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_equipa_layout.view.*
 import kotlinx.android.synthetic.main.fragment_sobre.view.*
+import kotlinx.android.synthetic.main.fragment_sobre.view.rec_view
 
 
 class FragmentEquipa : androidx.fragment.app.Fragment() {
@@ -40,6 +43,19 @@ class FragmentEquipa : androidx.fragment.app.Fragment() {
             // set the custom adapter to the RecyclerView
             adapter = EquipaAdapter2(membrosArr, context!!)
         }
+
+        Picasso.get().load(R.drawable.joao).into(view.image)
+        Picasso.get().load(R.drawable.simao).into(view.image2)
+
+        Picasso.get().load(R.drawable.img_github).into(view.img_github_joao)
+        Picasso.get().load(R.drawable.linkdin_image).into(view.img_linkedin_joao)
+        Picasso.get().load(R.drawable.mail_image).into(view.img_mail_joao)
+
+        Picasso.get().load(R.drawable.img_github).into(view.img_github2_simao)
+        Picasso.get().load(R.drawable.linkdin_image).into(view.img_linkedin2_simao)
+        Picasso.get().load(R.drawable.mail_image).into(view.img_mail2_simao)
+
+        view.linearlayout.isNestedScrollingEnabled=false
 
 
         view.rec_view.isNestedScrollingEnabled = false

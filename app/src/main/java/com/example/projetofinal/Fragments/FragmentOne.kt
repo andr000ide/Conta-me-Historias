@@ -37,6 +37,8 @@ import kotlin.concurrent.thread
 class FragmentOne : androidx.fragment.app.Fragment(){
     private lateinit var helper: NarrativasHelper
     private var sharePath = "no"
+    private var aux = 0
+    lateinit var call: Call<Example>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -74,7 +76,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
         view.spin_kit.visibility=View.VISIBLE
         val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
-        val call = service?.custom_search(queryPesquisa!!, years)
+        call = service!!.custom_search(queryPesquisa!!, years)
         //val call = service?.searchnovo("1dsm62")
         call?.enqueue(object : Callback<Example> {
 
@@ -122,8 +124,10 @@ class FragmentOne : androidx.fragment.app.Fragment(){
             }
 
             override fun onFailure(call: Call<Example>, t: Throwable) {
-                activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                withButtonCentered(view)
+                if(aux!=1){
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    withButtonCentered(view)
+                }
             }
         })
 
@@ -136,6 +140,14 @@ class FragmentOne : androidx.fragment.app.Fragment(){
     }
 
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if(::call.isInitialized){
+            aux=1
+            activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+            call.cancel()
+        }
+    }
 
 
 

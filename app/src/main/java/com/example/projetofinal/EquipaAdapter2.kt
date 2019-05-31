@@ -41,10 +41,17 @@ class EquipaAdapter2(val membros : ArrayList<MembroEquipa>, val context: Context
 
     @SuppressLint("ServiceCast")
     override fun onBindViewHolder(p0: ViewHolderThree, p1: Int) {
+
+
         p0.membroNome?.text = membros.get(p1).nome
         p0.membroCargo.text = membros.get(p1).cargo
         //p0.membroImagem.setImageBitmap(membros.get(p1).imagemUrl)
         Picasso.get().load(membros.get(p1).imagemUrl).into(p0.membroImagem)
+        Picasso.get().load(R.drawable.linkdin_image).into(p0.membrolinkedin)
+        Picasso.get().load(R.drawable.mail_image).into(p0.membroMail)
+        Picasso.get().load(R.drawable.img_github).into(p0.membroGithub)
+
+
         p0.membrolinkedin.setOnClickListener(){
             var lindin: String = membros.get(p1).linkedin
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse(lindin))

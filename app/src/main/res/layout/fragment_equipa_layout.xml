@@ -7,13 +7,11 @@
         android:layout_height="match_parent"
         android:focusableInTouchMode="true"
         android:id="@+id/nested"
-        tools:context=".MainActivity"
-
->
-
+        tools:context=".MainActivity">
 
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:id="@+id/linearlayout"
                   android:orientation="vertical">
         <TextView
                 android:layout_width="match_parent"
@@ -83,7 +81,6 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:id="@+id/image"
-                        android:src="@drawable/joao"
                         android:layout_centerHorizontal="true"
                         app:civ_border_color="#4FC1EA"
                         app:civ_border_width="2dp"
@@ -127,24 +124,21 @@
                     <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/linkdin_image"
                             android:layout_marginRight="100dp"
                             android:layout_marginEnd="100dp"
-                            android:id="@+id/img_linkedin"/>
+                            android:id="@+id/img_linkedin_joao"/>
                     <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:src="@drawable/img_github"
                             android:layout_marginRight="100dp"
                             android:layout_marginEnd="100dp"
                             android:layout_marginTop="5dp"
-                            android:id="@+id/img_github"/>
+                            android:id="@+id/img_github_joao"/>
 
                     <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/mail_image"
-                            android:id="@+id/img_mail"
+                            android:id="@+id/img_mail_joao"
                     />
 
 
@@ -169,7 +163,6 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:id="@+id/image2"
-                        android:src="@drawable/simao"
                         android:layout_centerHorizontal="true"
                         app:civ_border_color="#4FC1EA"
                         app:civ_border_width="2dp"
@@ -211,23 +204,20 @@
                     <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/linkdin_image"
                             android:layout_marginRight="100dp"
                             android:layout_marginEnd="100dp"
-                            android:id="@+id/img_linkedin2"/>
+                            android:id="@+id/img_linkedin2_simao"/>
                     <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:src="@drawable/img_github"
                             android:layout_marginRight="100dp"
                             android:layout_marginEnd="100dp"
                             android:layout_marginTop="5dp"
-                            android:id="@+id/img_github2"/>
+                            android:id="@+id/img_github2_simao"/>
                     <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/mail_image"
-                            android:id="@+id/img_mail2"
+                            android:id="@+id/img_mail2_simao"
                     />
 
                 </LinearLayout>

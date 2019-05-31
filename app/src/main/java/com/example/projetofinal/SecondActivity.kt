@@ -111,6 +111,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+
         when (p0.itemId) {
             R.id.nav_one -> {
                 if (check != R.id.nav_one) {
