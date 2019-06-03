@@ -21,6 +21,7 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHoldertwo {
         val view = ViewHoldertwo(LayoutInflater.from(context).inflate(R.layout.sobre_layout, p0, false))
 
+        view.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
 
         return view
     }
@@ -38,11 +39,10 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
         p0.topicoTitulo?.text = topicos.get(p1).titulo
         //p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
 
-        //p0.topicoTexto.texto_aux.text = topicos.get(p1).texto
+        p0.topicoTexto.text = topicos.get(p1).texto
 
-        //p0.topicoTexto.
 
-        //p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
+        p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
         //p0.topicoTexto.justificationMode= Layout.JUSTIFICATION_MODE_INTER_WORD
 
         // val uri = Uri.parse(sobreTopico.url)
@@ -86,9 +86,14 @@ class ViewHoldertwo (view: View) : RecyclerView.ViewHolder(view) {
     val topicoTexto = view.topico_texto
     val sub_item = view.sub_item
     val video_view = view.video_view
+    init {
+        view.topico_texto.movementMethod = LinkMovementMethod.getInstance()
+        topicoTexto.movementMethod = LinkMovementMethod.getInstance()
+    }
     fun bind(sobreTopico: sobreTopico) {
         val expanded = sobreTopico.isExpanded()
         sub_item.setVisibility(if (expanded) View.VISIBLE else View.GONE)
+        topicoTexto.movementMethod = LinkMovementMethod.getInstance()
         //topicoTexto.movementMethod = LinkMovementMethod.getInstance()
 
     }

@@ -16,7 +16,11 @@
             android:roundIcon="@mipmap/ic_launcher_foreground"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:theme="@style/AppThemeMain">
+
+        <activity android:name=".MainActivity"
+                  android:theme="@style/AppThemeMain"
+                  android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -25,7 +29,8 @@
         </activity>
         <activity android:theme="@style/AppThemeMain"
                   android:hardwareAccelerated="true"
-                  android:name=".SecondActivity" android:parentActivityName=".MainActivity"></activity>
+                  android:name=".SecondActivity" android:parentActivityName=".MainActivity"
+                  android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
