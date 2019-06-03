@@ -44,7 +44,8 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(com.example.projetofinal.R.layout.fragment_layout_wordcloud, container, false)
-
+        view.textowordcloud.visibility=View.VISIBLE
+        view.wordCloud.visibility=View.INVISIBLE
 
         var jsonarray = arguments?.getString("timeline")
         var gson = Gson()
@@ -91,6 +92,8 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
                             val atividade = activity as SecondActivity
                             //atividade.imagemtestar.setImageBitmap(decodedByte)
                             view.wordCloud.setImageBitmap(decodedByte)
+                            view.textowordcloud.visibility=View.GONE
+                            view.wordCloud.visibility=View.VISIBLE
 
                         }
                         override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
