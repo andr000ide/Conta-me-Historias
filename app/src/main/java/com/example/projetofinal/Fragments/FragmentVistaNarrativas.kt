@@ -20,6 +20,8 @@ import kotlinx.android.synthetic.main.frag_searchview.*
 import kotlinx.android.synthetic.main.frag_searchview.view.*
 import kotlinx.android.synthetic.main.fragment_fragment_one.*
 import java.io.Serializable
+import androidx.core.view.ViewCompat
+import kotlinx.android.synthetic.main.second_activitynew.*
 
 
 class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
@@ -61,7 +63,21 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
         view.textview_domains.text=text
 
 
-        // something
+       //button para mostrar domains
+
+        view.buttonshowdomains.setOnClickListener {
+            if(view.textview_domains.visibility==View.GONE){
+                view.textview_domains.visibility=View.VISIBLE
+                view.buttonshowdomains.text="-"
+
+
+            }
+
+            else{
+                view.textview_domains.visibility=View.GONE
+                view.buttonshowdomains.text="+"
+            }
+        }
 
 
 
@@ -78,7 +94,7 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
         view.recycler_view.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
-            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
+            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
             // set the custom adapter to the RecyclerView
             adapter = AdapterNarrativas(testModel as ArrayList<Headline>, context!!)
         }

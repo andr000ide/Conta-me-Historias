@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
-             android:layout_height="wrap_content">
+             android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
                                            android:scrollbars="vertical"
+                                           android:id="@+id/nestedscrollview"
                                            android:layout_height="wrap_content">
+
+
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:descendantFocusability="blocksDescendants"
                       android:focusableInTouchMode="true"
                       android:orientation="vertical">
 
@@ -27,15 +31,39 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="40dp"
-                    android:padding="15dp"
-                    android:autoLink="web"
-                    android:textColorLink="@color/backgroundMain"
-                    android:id="@+id/textview_domains"/>
+                    android:layout_height="wrap_content">
 
+            <Button
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/buttonshowdomains"
+                    android:text="+"
+                    android:background="@drawable/initial_page_button"
+                    android:textSize="30sp"
+                    android:textColor="#ffffff"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/buttonshowdomains"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="40dp"
+                        android:padding="15dp"
+                        android:autoLink="web"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        android:textColorLink="@color/backgroundMain"
+                        android:id="@+id/textview_domains"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
