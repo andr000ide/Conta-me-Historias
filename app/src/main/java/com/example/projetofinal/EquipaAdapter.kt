@@ -2,12 +2,16 @@ package com.example.projetofinal
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.ColorStateList
 import android.text.Layout
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetofinal.modelclass.sobreTopico
+import kotlinx.android.synthetic.main.second_activitynew.view.*
 import kotlinx.android.synthetic.main.sobre_layout.view.*
 
 
@@ -17,7 +21,6 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHoldertwo {
         val view = ViewHoldertwo(LayoutInflater.from(context).inflate(R.layout.sobre_layout, p0, false))
 
-        //view.topicoTexto.visibility = View.INVISIBLE
 
         return view
     }
@@ -31,8 +34,15 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
     override fun onBindViewHolder(p0: ViewHoldertwo, p1: Int) {
 
         val sobreTopico: sobreTopico = topicos[p1]
+
         p0.topicoTitulo?.text = topicos.get(p1).titulo
-        p0.topicoTexto.text = topicos.get(p1).texto
+        //p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
+
+        //p0.topicoTexto.texto_aux.text = topicos.get(p1).texto
+
+        //p0.topicoTexto.
+
+        //p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
         //p0.topicoTexto.justificationMode= Layout.JUSTIFICATION_MODE_INTER_WORD
 
         // val uri = Uri.parse(sobreTopico.url)
@@ -78,8 +88,8 @@ class ViewHoldertwo (view: View) : RecyclerView.ViewHolder(view) {
     val video_view = view.video_view
     fun bind(sobreTopico: sobreTopico) {
         val expanded = sobreTopico.isExpanded()
-
         sub_item.setVisibility(if (expanded) View.VISIBLE else View.GONE)
+        //topicoTexto.movementMethod = LinkMovementMethod.getInstance()
 
     }
 

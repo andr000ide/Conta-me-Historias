@@ -4,6 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.Html
+import android.text.Layout
+import android.text.method.LinkMovementMethod
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -59,7 +62,8 @@ class FragmentAgradecimentos() : Fragment() {
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)
         }
 
-
+       // view.texto_outros.setText(Html.fromHtml(getString(R.string.outros_texto),3))
+        view.texto_outros.movementMethod = LinkMovementMethod.getInstance()
 
         return view
     }

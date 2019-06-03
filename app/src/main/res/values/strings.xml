@@ -26,10 +26,9 @@
     <string name="menu_sobre">Sobre</string>
     <string name="menu_equipa">Equipa</string>
     <string name="sobreConta">Conta-me Histórias</string>
-    <string name="sobreContaT">Conta-me Histórias [http://contamehistorias.pt] é uma plataforma agregadora de notícias
-        que
-        oferece aos seus utilizadores a possibilidade de navegar e revisitar eventos no passado. Inicialmente
-        desenvolvido em cima de notícias preservadas pelo arquivo da web portuguesa [http://arquivo.pt], foi
+    <string name="sobreContaT"><a href="http://contamehistorias.pt">Conta-me Histórias</a> é uma plataforma agregadora de notícias
+        que oferece aos seus utilizadores a possibilidade de navegar e revisitar eventos no passado. Inicialmente
+        desenvolvido em cima de notícias preservadas pelo <a href="http://arquivo.pt">arquivo da web Portuguesa</a>, foi
         posteriormente extendido para suportar diferentes tipos de dados, tais como notícias da Reuters, Bloomberg, Bing
         ou o Signal Media dataset.
     </string>
@@ -94,13 +93,14 @@
         (ERDF).
     </string>
     <string name="outros">Outros</string>
-    <string name="outros_texto">Um agradecimento especial ao arquivo da web Portuguesa [http://arquivo.pt] e à sua
+    <string name="outros_texto"> Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e à sua
         equipa que ao longo dos últimos criou uma plataforma ímpar na preservação dos conteúdos digitais portugueses,
         fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
         \n \nUm agradecimento também à
-        empresa Signal Media [https://www.signal-ai.com/] pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
+        empresa <a href="https://www.signal-ai.com//">Signal Media</a> pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
         à Bing pela disponibilização das suas APIs.
     </string>
+
     <string name="creditos_texto">A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob
         supervisão do Professor Ricardo Campos no âmbito do Projeto Final do Curso de Engenharia Informática do
         Instituto Politécnico de Tomar, Portugal

@@ -1,14 +1,18 @@
 package com.example.projetofinal.Fragments
 
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.projetofinal.EquipaAdapter
 import com.example.projetofinal.LangHelper
 import com.example.projetofinal.modelclass.sobreTopico
 import com.example.projetofinal.R
 import kotlinx.android.synthetic.main.fragment_sobre.view.*
+import kotlinx.android.synthetic.main.sobre_layout.*
+import kotlinx.android.synthetic.main.sobre_layout.view.*
 
 
 class FragmentSobre : androidx.fragment.app.Fragment(){
