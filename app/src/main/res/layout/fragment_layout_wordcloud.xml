@@ -12,7 +12,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="World Cloud está a carregar"
+            android:text="@string/loading_wordcloud"
             android:textColor="#000000"
             android:textSize="50sp"
             android:textAlignment="center"
