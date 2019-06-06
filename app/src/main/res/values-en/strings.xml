@@ -8,7 +8,7 @@
         <u>Advanced Options</u>
     </string>
     <string name="lingua">Português</string>
-    <string name="key_title" >tell me stories</string>
+    <string name="key_title">tell me stories</string>
     <string name="know_team">know the team</string>
     <string name="exemplos1">Economy and Present</string>
     <string name="exemplos2">" Politics, Justice and Journalism"</string>
@@ -23,22 +23,47 @@
 
     <string name="sobreConta">Tell me Stories</string>
 
-    <string name="sobreContaT">"Tell me Stories [http://tellmestories.pt] is a temporal summarization framework of news articles that allows users to explore and revisit events in the past. Initially built on top of the Portuguese web archive [http://arquivo.pt], Tell me Stories has been later extended to support different datasets such as Reuters, Bloomberg, Bing or the Signal Media dataset."
+    <string name="sobreContaT">
+        &lt;a href="http://tellmestories.pt">Tell me Stories&lt;/a> <a>is a temporal summarization framework of news
+        articles that allows
+        users to explore and revisit events in the past. Built on top of the
+    </a> &lt;a href="http://arquivo.pt">Portuguese web archive&lt;/a>
+        <a>,
+            it can be extended to support different datasets, including traditional media such as Reuters, Bloomberg,
+            etc.
+            Unlike, the Portuguese version (which runs on top of the Portuguese Web Archive), the English version of
+            this
+            App uses Bing News Search API to create narratives.
+        </a>
     </string>
     <string name="sobreFunciona">How does it work?</string>
-    <string name="sobreFuncionaT">Tell me Stories collects information from web archives (such as the Arquivo.pt) or media
-        outlets (such as Reuters, Bloomberg or Bing News) and provides a full-text search service that enables the
-        retrieval of past (to present) information. To select relevant stories of different time-periods, we rely on
-        YAKE! [http://yake.inesctec.pt] a keyword extraction algorithm developed by our research team, which selects the
-        most important excerpts (namely text titles) of a topic over time, to present to the user.
+    <string name="sobreFuncionaT">
+        <a>Tell me Stories collects information from web archives (such as the Arquivo.pt) or media
+            outlets (such as Reuters, Bloomberg or Bing News) and provides a full-text search service that enables the
+            retrieval of past (to present) information. To select relevant stories of different time-periods, we rely on
+        </a> &lt;a href="http://yake.inesctec.pt">YAKE!&lt;/a>
+        <a>a keyword extraction algorithm developed by our research team, which selects the
+            most important excerpts (namely text titles) of a topic over time, to present to the user.
+        </a>
     </string>
     <string name="sobreContribuicoes">Contributions</string>
-    <string name="sobreContribuicoesT">"During the last decade, we have been witnessing an ever-growing number of online contents posing new challenges for those who aim to understand a given event. This exponential growth of the volume of data, together with the phenomenon of media bias, fake news and filter bubbles, has contributed to the creation of new challenges in information access and transparency."
+    <string name="sobreContribuicoesT">"During the last decade, we have been witnessing an ever-growing number of online
+        contents posing new challenges for those who aim to understand a given event. This exponential growth of the
+        volume of data, together with the phenomenon of media bias, fake news and filter bubbles, has contributed to the
+        creation of new challenges in information access and transparency."
     </string>
-    <string name="sobreSoftwareT">"Tell me Stories is available on Google Play [link do Google Play], online [http://tellmestories.pt] and as an open source Python package [https://github.com/LIAAD/TemporalSummarizationFramework] that can be extended to support different datasets or languages. "
+    <string name="sobreSoftwareT">
+        <a>Tell me Stories is available on</a> &lt;a
+        href="http://tellmestories.pt">Google Play (em falta)&lt;/a> <a>,</a>  &lt;a
+        href="http://tellmestories.pt">online&lt;/a> <a>
+        and as an open source </a> &lt;a
+        href="https://github.com/LIAAD/TemporalSummarizationFramework">Python package&lt;/a>
+        <a>that can be extended to support different datasets or languages.</a>
     </string>
     <string name="sobrePremios">Awards</string>
-    <string name="sobrePremiosT">Conta-me Histórias / Tell me Stories won the Arquivo.pt 2018 contest [https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/] and has been awarded the Best Demo Presentation at ECIR’19 [http://www.ecir2019.org].
+    <string name="sobrePremiosT"><a> Conta-me Histórias / Tell me Stories won the </a> &lt;a href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018 contest&lt;/a>
+        <a> and has been awarded the </a>&lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a> <a> at
+        ECIR’19.</a>
     </string>
     <string name="sobreReferenciasT01">Tell me Stories is a research product. If you use it in a work that leads to a
         scientific publication, research project or product, please cite the following references: \n
@@ -53,7 +78,11 @@
         (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) \n
     </string>
     <string name="sobreReferencias">References</string>
-    <string name="sobreContribuicoesT02">One possible approach to overcome this problem is to automatically summarize large amount of news into consistent narratives. Tell me Stories emerges in this context, as an important contribution for anyone interested in having access to the overall picture of a given event in a quick manner. Our project may be considered as an additional solution that allows the general public (students, journalists, politics, researchers, etc) to better explore any kind of data that has been covered by the media. \n
+    <string name="sobreContribuicoesT02">One possible approach to overcome this problem is to automatically summarize
+        large amount of news into consistent narratives. Tell me Stories emerges in this context, as an important
+        contribution for anyone interested in having access to the overall picture of a given event in a quick manner.
+        Our project may be considered as an additional solution that allows the general public (students, journalists,
+        politics, researchers, etc) to better explore any kind of data that has been covered by the media. \n
     </string>
     <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
         LIAAD INESC TEC, University of Porto and University of Kyoto. \n
@@ -73,7 +102,8 @@
     <string name="outros_texto">A special thanks goes to the Portuguese Web Archive [http://arquivo.pt] and to its team
         for creating an outstanding platform in the purpose of archiving the Portuguese digital contents, through which
         promote the knowledge sharing and the emergence of new and innovative products.
-        \n \nAlso thanks to Signal Media [https://www.signal-ai.com/] for the Signal Media 1M articles news dataset, Reuters, Blomberg and Bing for their APIs
+        \n \nAlso thanks to Signal Media [https://www.signal-ai.com/] for the Signal Media 1M articles news dataset,
+        Reuters, Blomberg and Bing for their APIs
     </string>
     <string name="creditos_texto">Tell me Stories app has been developed by Simão Samouco and João Campos under the
         supervision of Professor Ricardo Campos in the scope of the Final Project of the Computer Science degree of the
@@ -104,4 +134,7 @@
     <string name="origem_nome">esconder</string>
     <string name="mail_foi_copiado">" Mail has been copied"</string>
     <string name="loading_wordcloud">The Wordcloud is loading...</string>
+    <string name="helpere">
+        <string name="link">&lt;a href="http://www.google.com">Google&lt;/a></string>
+    </string>
 </resources>

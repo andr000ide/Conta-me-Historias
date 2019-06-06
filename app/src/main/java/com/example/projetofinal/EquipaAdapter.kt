@@ -2,15 +2,23 @@ package com.example.projetofinal
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
+import android.net.Uri
+import android.text.Html
 import android.text.Layout
+import android.text.SpannableStringBuilder
 import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.text.style.URLSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetofinal.modelclass.sobreTopico
+import kotlinx.android.synthetic.main.frag_searchview.view.*
 import kotlinx.android.synthetic.main.second_activitynew.view.*
 import kotlinx.android.synthetic.main.sobre_layout.view.*
 
@@ -37,12 +45,14 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
         val sobreTopico: sobreTopico = topicos[p1]
 
         p0.topicoTitulo?.text = topicos.get(p1).titulo
-        //p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
 
-        p0.topicoTexto.text = topicos.get(p1).texto
-
+        //p0.topicoTexto.text = topicos.get(p1).texto
 
         p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
+        val aux = topicos.get(p1).texto
+        setTextViewHTML(p0.topicoTexto,aux)
+
+
         //p0.topicoTexto.justificationMode= Layout.JUSTIFICATION_MODE_INTER_WORD
 
         // val uri = Uri.parse(sobreTopico.url)
@@ -78,7 +88,34 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
             //notifyItemChanged(p1)
         }
     }
+
+    protected fun setTextViewHTML(text: TextView, html: String) {
+        val sequence = Html.fromHtml(html)
+        val strBuilder = SpannableStringBuilder(sequence)
+        val urls = strBuilder.getSpans(0, sequence.length, URLSpan::class.java)
+        for (span in urls) {
+            makeLinkClickable(strBuilder, span)
+        }
+        text.text = strBuilder
+        text.movementMethod = LinkMovementMethod.getInstance()
+    }
+
+    protected fun makeLinkClickable(strBuilder: SpannableStringBuilder, span: URLSpan) {
+        val start = strBuilder.getSpanStart(span)
+        val end = strBuilder.getSpanEnd(span)
+        val flags = strBuilder.getSpanFlags(span)
+        val clickable = object : ClickableSpan() {
+            override fun onClick(view: View) {
+                var intent = Intent(Intent.ACTION_VIEW, Uri.parse(span.url))
+                ContextCompat.startActivity(context!!, intent, null)
+            }
+        }
+        strBuilder.setSpan(clickable, start, end, flags)
+        strBuilder.removeSpan(span)
+    }
 }
+
+
 
 class ViewHoldertwo (view: View) : RecyclerView.ViewHolder(view) {
 
@@ -99,3 +136,4 @@ class ViewHoldertwo (view: View) : RecyclerView.ViewHolder(view) {
     }
 
  }
+

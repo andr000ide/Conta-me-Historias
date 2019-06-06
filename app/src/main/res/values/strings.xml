@@ -26,21 +26,23 @@
     <string name="menu_sobre">Sobre</string>
     <string name="menu_equipa">Equipa</string>
     <string name="sobreConta">Conta-me Histórias</string>
-    <string name="sobreContaT"><a href="http://contamehistorias.pt">Conta-me Histórias</a> é uma plataforma agregadora de notícias
-        que oferece aos seus utilizadores a possibilidade de navegar e revisitar eventos no passado. Inicialmente
-        desenvolvido em cima de notícias preservadas pelo <a href="http://arquivo.pt">arquivo da web Portuguesa</a>, foi
-        posteriormente extendido para suportar diferentes tipos de dados, tais como notícias da Reuters, Bloomberg, Bing
-        ou o Signal Media dataset.
+    <string name="sobreContaT">
+        &lt;a href="http://contamehistorias.pt">Conta-me Histórias&lt;/a> <a> é uma plataforma agregadora de notícias que oferece aos seus
+        utilizadores a possibilidade de navegar e revisitar eventos no passado. Desenvolvido tendo por base as notícias
+        preservadas pelo</a> &lt;a href="http://arquivo.pt">arquivo da web Portuguesa&lt;/a> <a>, o Conta-me Histórias pode ser extendido a outros
+        conjunto de dados tais como media tradicionais (e.g., Reuters, Bloomberg, etc) ou mesmo social media (e.g.,
+        Facebook, Twitter).</a>
     </string>
     <string name="sobreFunciona">Como é que funciona?</string>
-    <string name="sobreFuncionaT">O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e
+    <string name="sobreFuncionaT"><a>O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e
         media
         tradicionais (e.g., Reuters, Bloomberg ou Bing News) disponibilizando um serviço de pesquisa “à lá Google” que
         oferece aos seus utilizadores uma contextualização histórica de um dado evento (em alguns casos a partir de
         conteúdos atualmente já inexistentes na web convencional). Para selecionar as melhores estórias ao longo do
-        tempo, recorremos ao YAKE! um extrator de palavras relevantes desenvolvido pela nossa equipa de investigação, e
+        tempo, recorremos ao </a> &lt;a href="http://yake.inesctec.pt">YAKE!&lt;/a>
+    <a> um extrator de palavras relevantes desenvolvido pela nossa equipa de investigação, e
         que neste contexto é utilizado para selecionar os excertos mais importantes de uma notícia (mais concretamente
-        os seus títulos) ao longo do tempo.
+        os seus títulos) ao longo do tempo.</a>
     </string>
     <string name="sobreContribuicoes">Contribuições</string>
     <string name="sobreContribuicoesT">Ao longo da última década, temos vindo a assistir a um crescente aumento na
@@ -48,16 +50,20 @@
         dado evento. Mais recentemente, fenómenos como o media bias, as fake news e as filter bubbles, vieram adensar
         ainda mais as dificuldades já existentes no acesso transparente à informação.
     </string>
-    <string name="sobreSoftwareT">Conta-me Histórias encontra-se disponível no Google Play [colocar depois o link do
-        Google
-        Play], online [http://contamehistorias.pt] e no Github
-        [https://github.com/LIAAD/TemporalSummarizationFramework], plataforma através da qual disponibilizamos uma
-        biblioteca Python do Conta-me Histórias capaz de ser extendida a diferentes conjuntos de dados e línguas.
+    <string name="sobreSoftwareT">
+        <a>Conta-me Histórias encontra-se disponível no</a> &lt;a
+        href="http://tellmestories.pt">Google Play (em falta)&lt;/a> <a>,</a>  &lt;a
+        href="http://tellmestories.pt">online&lt;/a> <a>
+        e no </a> &lt;a
+        href="https://github.com/LIAAD/TemporalSummarizationFramework">Github&lt;/a>
+        <a>, plataforma através da qual disponibilizamos uma
+            biblioteca Python do Conta-me Histórias capaz de ser extendida a diferentes conjuntos de dados e línguas.</a>
+
+
     </string>
     <string name="sobrePremios">Prémios</string>
-    <string name="sobrePremiosT">O Conta-me Histórias [Tell me Stories] foi o vencedor dos prémios Arquivo.pt 2018
-        [https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/] e da Best Demo Presentation no ECIR’19
-        [http://www.ecir2019.org].
+    <string name="sobrePremiosT"><a>O Conta-me Histórias [Tell me Stories] foi o vencedor dos prémios </a> &lt;a href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018&lt;/a>
+        <a>e da</a> &lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a> <a> no ECIR’19 </a>
     </string>
     <string name="sobreReferencias">Referências Bibliográficas</string>
     <string name="sobreReferenciasT01">O Conta-me Histórias é um produto de investigação científica. Por favor cite os
@@ -93,11 +99,13 @@
         (ERDF).
     </string>
     <string name="outros">Outros</string>
-    <string name="outros_texto"> Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e à sua
+    <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
+        à sua
         equipa que ao longo dos últimos criou uma plataforma ímpar na preservação dos conteúdos digitais portugueses,
         fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
         \n \nUm agradecimento também à
-        empresa <a href="https://www.signal-ai.com//">Signal Media</a> pela disponibilização do dataset Signal Media 1M, e à Reuters, à Blomberg e
+        empresa <a href="https://www.signal-ai.com//">Signal Media</a> pela disponibilização do dataset Signal Media 1M,
+        e à Reuters, à Blomberg e
         à Bing pela disponibilização das suas APIs.
     </string>
 
@@ -134,6 +142,9 @@
     <string name="origem_nome">Origem do nome</string>
     <string name="mail_foi_copiado">" O email foi copiado."</string>
     <string name="loading_wordcloud">A Worldcloud está a carregar...</string>
+    <string name="helpere">
+        <a href="http://www.google.com">Google</a>
+    </string>
 
 </resources>
 

@@ -2,7 +2,9 @@ package com.example.projetofinal.Fragments
 
 
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import androidx.fragment.app.Fragment
@@ -22,6 +24,12 @@ import kotlinx.android.synthetic.main.fragment_fragment_one.*
 import java.io.Serializable
 import androidx.core.view.ViewCompat
 import kotlinx.android.synthetic.main.second_activitynew.*
+import android.text.style.URLSpan
+import android.text.SpannableStringBuilder
+import android.text.Html
+import android.widget.TextView
+import android.text.style.ClickableSpan
+import androidx.core.content.ContextCompat
 
 
 class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
@@ -40,6 +48,16 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
 
         val jsonarrayDomains = arguments?.getString("domains")
 
+
+        //val aux = "<a href=\"http://www.google.com\">Google</a><a href=\"http://www.google.com\">Google</a>"
+        //val aux = getString(R.string.helpere)
+        val aux = "<a >This is cliclable text  5   </a>" +
+                "<a href=\"http://www.xyz-zyyx.com\">This is cliclable text</a> "
+
+        //view.algo.text=Html.fromHtml(aux)
+        //setTextViewHTML(view.algo,aux)
+
+
         var gson = Gson()
         val turnsType = object : TypeToken<List<Headline>>() {}.type
         var testModel = gson.fromJson<List<Headline>>(jsonArray, turnsType)
@@ -47,7 +65,7 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
 
 //something
         //view.textview_domains.movementMethod=LinkMovementMethod.getInstance()
-        view.textview_domains.highlightColor=Color.TRANSPARENT
+       view.textview_domains.highlightColor=Color.TRANSPARENT
 
         val turnsType2 = object : TypeToken<List<String>>() {}.type
         var testMode2 = gson.fromJson<List<String>>(jsonarrayDomains, turnsType2)
@@ -58,8 +76,7 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
         for (item in testMode2){
             text= text + " "+"http://"+item + " "
         }
-        //view.textview_domains.text="Portais de Notícias : <a href=\"http://www.google.com\">Go to Google</a>"
-        //view.textview_domains.text="Portais de Notícias : http://www.google.com"
+
         view.textview_domains.text=text
 
 
@@ -69,8 +86,8 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
             if(view.textview_domains.visibility==View.GONE){
                 view.textview_domains.visibility=View.VISIBLE
                 view.buttonshowdomains.text="-"
-
-
+                //view.textview_domains.movementMethod = LinkMovementMethod.getInstance()
+                //view.textview_domains.text = getString(R.string.helpere)
             }
 
             else{
@@ -121,6 +138,31 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
             fragment.arguments = args
             return fragment
         }
+    }
+
+    protected fun setTextViewHTML(text: TextView, html: String) {
+        val sequence = Html.fromHtml(html)
+        val strBuilder = SpannableStringBuilder(sequence)
+        val urls = strBuilder.getSpans(0, sequence.length, URLSpan::class.java)
+        for (span in urls) {
+            makeLinkClickable(strBuilder, span)
+        }
+        text.text = strBuilder
+        text.movementMethod = LinkMovementMethod.getInstance()
+    }
+
+    protected fun makeLinkClickable(strBuilder: SpannableStringBuilder, span: URLSpan) {
+        val start = strBuilder.getSpanStart(span)
+        val end = strBuilder.getSpanEnd(span)
+        val flags = strBuilder.getSpanFlags(span)
+        val clickable = object : ClickableSpan() {
+            override fun onClick(view: View) {
+                var intent = Intent(Intent.ACTION_VIEW, Uri.parse(span.url))
+                ContextCompat.startActivity(activity!!.applicationContext, intent, null)
+            }
+        }
+        strBuilder.setSpan(clickable, start, end, flags)
+        strBuilder.removeSpan(span)
     }
 
 
