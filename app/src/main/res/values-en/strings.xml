@@ -56,14 +56,19 @@
         <a>Tell me Stories is available on</a> &lt;a
         href="http://tellmestories.pt">Google Play (em falta)&lt;/a> <a>,</a>  &lt;a
         href="http://tellmestories.pt">online&lt;/a> <a>
-        and as an open source </a> &lt;a
+        and as an open source
+    </a> &lt;a
         href="https://github.com/LIAAD/TemporalSummarizationFramework">Python package&lt;/a>
         <a>that can be extended to support different datasets or languages.</a>
     </string>
     <string name="sobrePremios">Awards</string>
-    <string name="sobrePremiosT"><a> Conta-me Histórias / Tell me Stories won the </a> &lt;a href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018 contest&lt;/a>
-        <a> and has been awarded the </a>&lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a> <a> at
-        ECIR’19.</a>
+    <string name="sobrePremiosT">
+        <a>Conta-me Histórias / Tell me Stories won the</a> &lt;a
+        href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018 contest&lt;/a>
+        <a>and has been awarded the</a>&lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a>
+        <a>at
+            ECIR’19.
+        </a>
     </string>
     <string name="sobreReferenciasT01">Tell me Stories is a research product. If you use it in a work that leads to a
         scientific publication, research project or product, please cite the following references: \n
@@ -99,11 +104,16 @@
         Development Fund (ERDF).
     </string>
     <string name="outros">Others</string>
-    <string name="outros_texto">A special thanks goes to the Portuguese Web Archive [http://arquivo.pt] and to its team
-        for creating an outstanding platform in the purpose of archiving the Portuguese digital contents, through which
-        promote the knowledge sharing and the emergence of new and innovative products.
-        \n \nAlso thanks to Signal Media [https://www.signal-ai.com/] for the Signal Media 1M articles news dataset,
-        Reuters, Blomberg and Bing for their APIs
+    <string name="outros_texto">
+        A special thanks goes to the <a href="http://arquivo.pt">Portuguese Web Archive</a> and to its team for creating an
+        outstanding platform that aims to archive the Portuguese digital contents, thus providing not only the share of
+        knowledge but also the emergence of new and innovative products.
+        \n\n
+        Also thanks to <a href="https://www.signal-ai.com/">Signal Media</a>for the Signal Media 1M articles news dataset,
+        Reuters and Blomberg for their APIs
+        \n\n
+        Also thanks to <a href="https://www.bing.com/">Bing</a> search engine for their API (Bing News Search) which is used in the English version of this App.
+
     </string>
     <string name="creditos_texto">Tell me Stories app has been developed by Simão Samouco and João Campos under the
         supervision of Professor Ricardo Campos in the scope of the Final Project of the Computer Science degree of the
@@ -113,7 +123,7 @@
     <string name="contactos">contact</string>
     <string name="contactos_texto">For any inquires please contact us at:</string>
     <string name="contactos_menu">Contacts</string>
-    <string name="cargo_resea_prof">RESEARCHER AND PROFESSOR</string>
+    <string name="cargo_resea_prof">PROFESSOR AND RESEARCHER</string>
     <string name="cargo_soft_resea">SOFTWARE DEVELOPER AND RESEARCHER</string>
     <string name="cargo_commuticaions">COMMUNICATIONS</string>
     <string name="mobile_developer">MOBILE DEVELOPER</string>
@@ -137,4 +147,6 @@
     <string name="helpere">
         <string name="link">&lt;a href="http://www.google.com">Google&lt;/a></string>
     </string>
+    <string name="narrativa">Narrative</string>
+    <string name="termos_relacionas">Word Cloud</string>
 </resources>

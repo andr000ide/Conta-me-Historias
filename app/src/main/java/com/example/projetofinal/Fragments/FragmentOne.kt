@@ -110,8 +110,8 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                     //var fragmento1 = FragmentTeste1.newInstance(array?.get(0)!!.headlines as ArrayList<Headline>,array?.get(0)!!.date_interval_end,array?.get(0)!!.date_interval_begin )
                     var fragmento2 = FragmentTeste2.newInstance(jsonString)
 
-                    adapter.addFragment(fragmento1, "Narrativa")
-                    adapter.addFragment(fragmento2, "Termos Relacionados")
+                    adapter.addFragment(fragmento1, getString(R.string.narrativa))
+                    adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))
                     view.viewpager.adapter = adapter
                     view.tabs.setupWithViewPager(view.viewpager)
 
