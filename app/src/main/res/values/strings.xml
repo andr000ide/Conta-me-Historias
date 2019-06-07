@@ -27,22 +27,31 @@
     <string name="menu_equipa">Equipa</string>
     <string name="sobreConta">Conta-me Histórias</string>
     <string name="sobreContaT">
-        &lt;a href="http://contamehistorias.pt">Conta-me Histórias&lt;/a> <a> é uma plataforma agregadora de notícias que oferece aos seus
+        &lt;a href="http://contamehistorias.pt">Conta-me Histórias&lt;/a> <a>é uma plataforma agregadora de notícias que
+        oferece aos seus
         utilizadores a possibilidade de navegar e revisitar eventos no passado. Desenvolvido tendo por base as notícias
-        preservadas pelo</a> &lt;a href="http://arquivo.pt">arquivo da web Portuguesa&lt;/a> <a>, o Conta-me Histórias pode ser extendido a outros
-        conjunto de dados tais como media tradicionais (e.g., Reuters, Bloomberg, etc) ou mesmo social media (e.g.,
-        Facebook, Twitter).</a>
+        preservadas pelo
+    </a> &lt;a href="http://arquivo.pt">arquivo da web Portuguesa&lt;/a>
+        <a>, o Conta-me Histórias pode ser extendido a outros
+            conjunto de dados tais como media tradicionais (e.g., Reuters, Bloomberg, etc) ou mesmo social media (e.g.,
+            Facebook, Twitter).
+        </a>
     </string>
     <string name="sobreFunciona">Como é que funciona?</string>
-    <string name="sobreFuncionaT"><a>O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e
-        media
-        tradicionais (e.g., Reuters, Bloomberg ou Bing News) disponibilizando um serviço de pesquisa “à lá Google” que
-        oferece aos seus utilizadores uma contextualização histórica de um dado evento (em alguns casos a partir de
-        conteúdos atualmente já inexistentes na web convencional). Para selecionar as melhores estórias ao longo do
-        tempo, recorremos ao </a> &lt;a href="http://yake.inesctec.pt">YAKE!&lt;/a>
-    <a> um extrator de palavras relevantes desenvolvido pela nossa equipa de investigação, e
-        que neste contexto é utilizado para selecionar os excertos mais importantes de uma notícia (mais concretamente
-        os seus títulos) ao longo do tempo.</a>
+    <string name="sobreFuncionaT">
+        <a>O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e
+            media
+            tradicionais (e.g., Reuters, Bloomberg ou Bing News) disponibilizando um serviço de pesquisa “à lá Google”
+            que
+            oferece aos seus utilizadores uma contextualização histórica de um dado evento (em alguns casos a partir de
+            conteúdos atualmente já inexistentes na web convencional). Para selecionar as melhores estórias ao longo do
+            tempo, recorremos ao
+        </a> &lt;a href="http://yake.inesctec.pt">YAKE!&lt;/a>
+        <a>um extrator de palavras relevantes desenvolvido pela nossa equipa de investigação, e
+            que neste contexto é utilizado para selecionar os excertos mais importantes de uma notícia (mais
+            concretamente
+            os seus títulos) ao longo do tempo.
+        </a>
     </string>
     <string name="sobreContribuicoes">Contribuições</string>
     <string name="sobreContribuicoesT">Ao longo da última década, temos vindo a assistir a um crescente aumento na
@@ -54,16 +63,21 @@
         <a>Conta-me Histórias encontra-se disponível no</a> &lt;a
         href="http://tellmestories.pt">Google Play (em falta)&lt;/a> <a>,</a>  &lt;a
         href="http://tellmestories.pt">online&lt;/a> <a>
-        e no </a> &lt;a
+        e no
+    </a> &lt;a
         href="https://github.com/LIAAD/TemporalSummarizationFramework">Github&lt;/a>
         <a>, plataforma através da qual disponibilizamos uma
-            biblioteca Python do Conta-me Histórias capaz de ser extendida a diferentes conjuntos de dados e línguas.</a>
+            biblioteca Python do Conta-me Histórias capaz de ser extendida a diferentes conjuntos de dados e línguas.
+        </a>
 
 
     </string>
     <string name="sobrePremios">Prémios</string>
-    <string name="sobrePremiosT"><a>O Conta-me Histórias [Tell me Stories] foi o vencedor dos prémios </a> &lt;a href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018&lt;/a>
-        <a>e da</a> &lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a> <a> no ECIR’19 </a>
+    <string name="sobrePremiosT">
+        <a>O Conta-me Histórias [Tell me Stories] foi o vencedor dos prémios</a> &lt;a
+        href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018&lt;/a>
+        <a>e da</a> &lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a>
+        <a>no ECIR’19</a>
     </string>
     <string name="sobreReferencias">Referências Bibliográficas</string>
     <string name="sobreReferenciasT01">O Conta-me Histórias é um produto de investigação científica. Por favor cite os
@@ -101,14 +115,16 @@
     <string name="outros">Outros</string>
     <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
         à sua
-        equipa que ao longo dos últimos criou uma plataforma de reconhecimento de valor na preservação dos conteúdos digitais portugueses,
+        equipa que ao longo dos últimos criou uma plataforma de reconhecimento de valor na preservação dos conteúdos
+        digitais portugueses,
         fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
         \n\nUm agradecimento também à
         empresa <a href="https://www.signal-ai.com//">Signal Media</a> pela disponibilização do dataset Signal Media 1M,
         e à Reuters, à Blomberg e
         à Bing pela disponibilização das suas APIs.
         \n\n
-        Um agradecimento também ao <a href="https://www.bing.com/">Bing</a> pela disponibilização da sua API (Bing News Search) usada na versão inglesa desta App.
+        Um agradecimento também ao <a href="https://www.bing.com/">Bing</a> pela disponibilização da sua API (Bing News
+        Search) usada na versão inglesa desta App.
     </string>
 
     <string name="creditos_texto">A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob

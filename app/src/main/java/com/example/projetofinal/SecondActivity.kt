@@ -167,6 +167,13 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     .addToBackStack("8").commit()
                 check = R.id.nav_eight
             }
+            R.id.nav_nine  -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    Media()
+                )
+                    .addToBackStack("9").commit()
+                check = R.id.nav_nine
+            }
         }
 
         drawer?.closeDrawer(GravityCompat.END)

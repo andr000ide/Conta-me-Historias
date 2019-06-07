@@ -24,13 +24,6 @@ class EquipaAdapter2(val membros : ArrayList<MembroEquipa>, val context: Context
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolderThree {
         val view = ViewHolderThree(LayoutInflater.from(context).inflate(R.layout.layout_listitem, p0, false))
-/*
-        view.membrolinkedin.setOnClickListener(){
-            var lindin: String = membros.get(p1).linkedin
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse(lindin))
-            startActivity(context,intent, null)
-        }*/
-
 
         return view
     }
