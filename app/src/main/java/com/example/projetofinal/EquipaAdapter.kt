@@ -41,25 +41,15 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onBindViewHolder(p0: ViewHoldertwo, p1: Int) {
-
         val sobreTopico: sobreTopico = topicos[p1]
 
         p0.topicoTitulo?.text = topicos.get(p1).titulo
 
-        //p0.topicoTexto.text = topicos.get(p1).texto
-
         p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
         val aux = topicos.get(p1).texto
         setTextViewHTML(p0.topicoTexto,aux)
-
-
-        //p0.topicoTexto.justificationMode= Layout.JUSTIFICATION_MODE_INTER_WORD
-
-        // val uri = Uri.parse(sobreTopico.url)
-        //p0?.video_view.setVideoURI(uri)
         p0.video_view.settings.javaScriptEnabled = true
-        //holder.videoWeb.loadData( youtubeVideoList.get(position).getVideoUrl(), "text/html" , "utf-8" );
-        //p0?.video_view.loadUrl(sobreTopico.url)
+
         if (sobreTopico.url != ""){
             p0.video_view.visibility = View.VISIBLE
             p0.video_view.loadData(sobreTopico.url, "text/html","utf-8")

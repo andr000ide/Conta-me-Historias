@@ -16,12 +16,42 @@
                 android:textSize="35dp"
                 android:textStyle="bold"
         />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Áudio"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="15dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+        />
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rec_view">
         </androidx.recyclerview.widget.RecyclerView>
-
+        <View
+                style="@style/InputBorder"
+                android:id="@+id/breaLine"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+        />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jornais"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+        />
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rec_view2"
+                android:layout_marginBottom="25dp">
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
 

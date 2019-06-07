@@ -13,35 +13,43 @@
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:text="Antena 1"
-              android:textSize="30sp"
-              android:layout_marginStart="10dp"
+              android:textSize="18sp"
+              android:layout_marginStart="20dp"
+              android:textStyle="bold"
               android:id="@+id/organizacao"
     />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Ep. 580 Ricardo Campos – “Conta-me histórias”, o arquivo de notícias que permite viajar pelo tempo"
-              android:textSize="18sp"
-              android:layout_marginStart="10dp"
-              android:layout_marginEnd="10dp"
-              android:id="@+id/titulo"/>
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Mais que um arquivo de sites e notícias em português, esta plataforma permite ao utilizador pesquisar por um certo tema e acompanhar a sua evolução ao longo do tempo."
-              android:layout_marginStart="10dp"
-              android:layout_marginEnd="10dp"
-              android:layout_marginTop="5dp"
-              android:id="@+id/texto"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="http://www.90segundosdeciencia.pt/episodes/ep-580-ricardo-campos/"
-              android:layout_marginStart="10dp"
-              android:layout_marginEnd="10dp"
-              android:layout_marginTop="5dp"
-              android:autoLink="web"
-              android:textColorLink="@color/backgroundMain"
-              android:id="@+id/link"
-    />
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:id="@+id/sub_item">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Ep. 580 Ricardo Campos – “Conta-me histórias”, o arquivo de notícias que permite viajar pelo tempo"
+                  android:textSize="16sp"
+                  android:layout_marginStart="20dp"
+                  android:layout_marginEnd="20dp"
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/titulo"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Mais que um arquivo de sites e notícias em português, esta plataforma permite ao utilizador pesquisar por um certo tema e acompanhar a sua evolução ao longo do tempo."
+                  android:layout_marginStart="20dp"
+                  android:layout_marginEnd="20dp"
+                  android:layout_marginTop="5dp"
+                  android:id="@+id/texto"
+        />
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="http://www.90segundosdeciencia.pt/episodes/ep-580-ricardo-campos/"
+                  android:layout_marginStart="20dp"
+                  android:layout_marginEnd="20dp"
+                  android:layout_marginTop="5dp"
+                  android:autoLink="web"
+                  android:textColorLink="@color/backgroundMain"
+                  android:id="@+id/link"
+        />
+    </LinearLayout>
 
 
 </LinearLayout>
