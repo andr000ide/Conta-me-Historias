@@ -2,6 +2,7 @@ package com.example.projetofinal
 
 import com.example.projetofinal.modelclass.Algo
 import com.example.projetofinal.modelclass.Example_Yake
+import com.example.projetofinal.modelclass.Ingles.BingResponse
 import com.example.projetofinal.modelclass.Wordcloud
 import retrofit2.Call
 import retrofit2.http.*
@@ -28,6 +29,9 @@ interface ServiceAPI {
 
     @GET("bins/{algo2}")
     fun searchnovo(@Path("algo2")algo: String ) : Call<Example>
+
+    @GET("search?")
+    fun custom_search_bing(@Query(encoded = true, value="query")query : String) : Call<BingResponse>
 
 //    @POST("extract_keywords")
 //    fun addAlgo(@Body newAlgo : String,@Query("max_ngram_size") max_ngram_size : String ,@Query("number_of_keywords" ) number_of_keywords : String) : Call<Example_Yake>

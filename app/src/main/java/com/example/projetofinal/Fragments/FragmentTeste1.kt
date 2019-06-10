@@ -56,7 +56,7 @@ class FragmentTeste1 : androidx.fragment.app.Fragment(){
             adapter.addFragment(fragmento)
         }
         view.viewpagernarr.adapter = adapter
-        val a = listOf<String>("03/17","23/18","05/19","06/19","06/19")
+        //val a = listOf<String>("03/17","23/18","05/19","06/19","06/19")
         view.step_view.setSteps(emptyList)
         view.step_view.selectedStep(0)
 
