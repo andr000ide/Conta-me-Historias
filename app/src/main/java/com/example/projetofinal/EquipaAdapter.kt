@@ -27,9 +27,7 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
 
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHoldertwo {
-        val view = ViewHoldertwo(LayoutInflater.from(context).inflate(R.layout.sobre_layout, p0, false))
-
-        view.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
+        val view = ViewHoldertwo(LayoutInflater.from(context).inflate(R.layout.about_layout, p0, false))
 
         return view
     }
@@ -45,17 +43,16 @@ class EquipaAdapter(val topicos : ArrayList<sobreTopico>, val context: Context) 
 
         p0.topicoTitulo?.text = topicos.get(p1).titulo
 
-        p0.topicoTexto.movementMethod = LinkMovementMethod.getInstance()
         val aux = topicos.get(p1).texto
         setTextViewHTML(p0.topicoTexto,aux)
-        p0.video_view.settings.javaScriptEnabled = true
+        //p0.video_view.settings.javaScriptEnabled = true
 
-        if (sobreTopico.url != ""){
-            p0.video_view.visibility = View.VISIBLE
-            p0.video_view.loadData(sobreTopico.url, "text/html","utf-8")
-        }else {
-            p0.video_view.visibility = View.GONE
-        }
+//        if (sobreTopico.url != ""){
+//            p0.video_view.visibility = View.VISIBLE
+//            p0.video_view.loadData(sobreTopico.url, "text/html","utf-8")
+//        }else {
+//            p0.video_view.visibility = View.GONE
+//        }
 
         p0.bind(sobreTopico)
         p0.topicoTitulo.setOnClickListener(){
@@ -112,17 +109,10 @@ class ViewHoldertwo (view: View) : RecyclerView.ViewHolder(view) {
     val topicoTitulo = view.topico_titulo
     val topicoTexto = view.topico_texto
     val sub_item = view.sub_item
-    val video_view = view.video_view
-    init {
-        view.topico_texto.movementMethod = LinkMovementMethod.getInstance()
-        topicoTexto.movementMethod = LinkMovementMethod.getInstance()
-    }
+    //val video_view = view.video_view
     fun bind(sobreTopico: sobreTopico) {
         val expanded = sobreTopico.isExpanded()
         sub_item.setVisibility(if (expanded) View.VISIBLE else View.GONE)
-        topicoTexto.movementMethod = LinkMovementMethod.getInstance()
-        //topicoTexto.movementMethod = LinkMovementMethod.getInstance()
-
     }
 
  }

@@ -20,6 +20,7 @@ import android.widget.Toast
 import com.example.projetofinal.*
 import com.example.projetofinal.modelclass.Algo
 import com.example.projetofinal.modelclass.Example_Yake
+import com.example.projetofinal.modelclass.Ingles.BingResponse
 import com.example.projetofinal.modelclass.Wordcloud
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.frag_teste1.view.*
@@ -39,6 +40,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
     private var sharePath = "no"
     private var aux = 0
     lateinit var call: Call<Example>
+    lateinit var call2 : Call<BingResponse>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -75,61 +77,126 @@ class FragmentOne : androidx.fragment.app.Fragment(){
         view.view_grayscreen.visibility=View.VISIBLE
 
         view.spin_kit.visibility=View.VISIBLE
-        val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
-        call = service!!.custom_search(queryPesquisa!!, years)
+
         //val call = service?.searchnovo("1dsm62")
-        call?.enqueue(object : Callback<Example> {
+
+        var langHelper : LangHelper = LangHelper(activity!!.applicationContext)
+        if(langHelper.getLanguageSaved().equals("en")){
+            val service = RetrofitClientInstanceBing.retrofitInstance?.create(ServiceAPI::class.java)
+            call2 = service!!.custom_search_bing(queryPesquisa!!)
+            call2?.enqueue(object : Callback<BingResponse> {
 
 
-            override fun onResponse(call: Call<Example>, response: Response<Example>) {
-                val examples = response.body()
-                if(response.message().equals("INTERNAL SERVER ERROR")){
-                    withButtonCentered(view)
-                    //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
-                    //activity!!.onBackPressed()
+                override fun onResponse(call: Call<BingResponse>, response: Response<BingResponse>) {
+                    val examples = response.body()
+                    println(examples)
+                    if(response.message().equals("INTERNAL SERVER ERROR")){
+                        withButtonCentered(view)
+                        //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
+                        //activity!!.onBackPressed()
+                    }
+                    if(examples==null){
+                        view.linear_vis.visibility=View.VISIBLE
+                        view.spin_kit.visibility=View.INVISIBLE
+                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        view.view_grayscreen.visibility=View.GONE
+                        // por popup e mandar para o fragmento two
+                    }
+                    examples?.let {
+
+                        var gson = Gson()
+                        var jsonString = gson.toJson(examples)
+//                        var array = examples.result.timeline
+//                        var arrayDeDomains = examples.result.domains
+//                        var gson = Gson()
+//                        var jsonString = gson.toJson(array)
+//                        var jsonStringDomains = gson.toJson(arrayDeDomains)
+
+
+                        //var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
+                        var fragmento1 = FragmentBing.newInstance(jsonString,name1!!)
+                        var fragmento2 = FragmentWCBing.newInstance(jsonString)
+
+                        adapter.addFragment(fragmento1, getString(R.string.narrativa))
+                        adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))
+                        view.viewpager.adapter = adapter
+                        view.tabs.setupWithViewPager(view.viewpager)
+
+                        view.linear_vis.visibility=View.VISIBLE
+                        view.spin_kit.visibility=View.INVISIBLE
+                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        view.view_grayscreen.visibility=View.GONE
+                    }
                 }
-                if(examples==null){
-                    view.linear_vis.visibility=View.VISIBLE
-                    view.spin_kit.visibility=View.INVISIBLE
-                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
-                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                    view.view_grayscreen.visibility=View.GONE
-                    // por popup e mandar para o fragmento two
+
+                override fun onFailure(call: Call<BingResponse>, t: Throwable) {
+                    if(aux!=1){
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        withButtonCentered(view)
+                    }
                 }
-                examples?.let {
-
-                    var array = examples.result.timeline
-
-                    var arrayDeDomains = examples.result.domains
-                    var gson = Gson()
-                    var jsonString = gson.toJson(array)
-                    var jsonStringDomains = gson.toJson(arrayDeDomains)
+            })
+        }
+        else{
+            val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
+            call = service!!.custom_search(queryPesquisa!!, years)
+            call?.enqueue(object : Callback<Example> {
 
 
-                    var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
-                    //var fragmento1 = FragmentTeste1.newInstance(array?.get(0)!!.headlines as ArrayList<Headline>,array?.get(0)!!.date_interval_end,array?.get(0)!!.date_interval_begin )
-                    var fragmento2 = FragmentTeste2.newInstance(jsonString)
+                override fun onResponse(call: Call<Example>, response: Response<Example>) {
+                    val examples = response.body()
+                    if(response.message().equals("INTERNAL SERVER ERROR")){
+                        withButtonCentered(view)
+                        //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
+                        //activity!!.onBackPressed()
+                    }
+                    if(examples==null){
+                        view.linear_vis.visibility=View.VISIBLE
+                        view.spin_kit.visibility=View.INVISIBLE
+                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        view.view_grayscreen.visibility=View.GONE
+                        // por popup e mandar para o fragmento two
+                    }
+                    examples?.let {
 
-                    adapter.addFragment(fragmento1, getString(R.string.narrativa))
-                    adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))
-                    view.viewpager.adapter = adapter
-                    view.tabs.setupWithViewPager(view.viewpager)
+                        var array = examples.result.timeline
 
-                    view.linear_vis.visibility=View.VISIBLE
-                    view.spin_kit.visibility=View.INVISIBLE
-                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
-                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                    view.view_grayscreen.visibility=View.GONE
+                        var arrayDeDomains = examples.result.domains
+                        var gson = Gson()
+                        var jsonString = gson.toJson(array)
+                        var jsonStringDomains = gson.toJson(arrayDeDomains)
+
+
+                        var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
+                        //var fragmento1 = FragmentTeste1.newInstance(array?.get(0)!!.headlines as ArrayList<Headline>,array?.get(0)!!.date_interval_end,array?.get(0)!!.date_interval_begin )
+                        var fragmento2 = FragmentTeste2.newInstance(jsonString)
+
+                        adapter.addFragment(fragmento1, getString(R.string.narrativa))
+                        adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))
+                        view.viewpager.adapter = adapter
+                        view.tabs.setupWithViewPager(view.viewpager)
+
+                        view.linear_vis.visibility=View.VISIBLE
+                        view.spin_kit.visibility=View.INVISIBLE
+                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        view.view_grayscreen.visibility=View.GONE
+                    }
                 }
-            }
 
-            override fun onFailure(call: Call<Example>, t: Throwable) {
-                if(aux!=1){
-                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                    withButtonCentered(view)
+                override fun onFailure(call: Call<Example>, t: Throwable) {
+                    if(aux!=1){
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        withButtonCentered(view)
+                    }
                 }
-            }
-        })
+            })
+        }
+
+
 
         view.shareButton.setOnClickListener {
             val bitmap = loadBitmapFromView(activity!!.window.decorView.rootView)
@@ -146,6 +213,11 @@ class FragmentOne : androidx.fragment.app.Fragment(){
             aux=1
             activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
             call.cancel()
+        }
+        if(::call2.isInitialized){
+            aux=1
+            activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+            call2.cancel()
         }
     }
 

@@ -20,5 +20,4 @@ class sobreTopico(titulo: String, texto: String, url: String) {
     fun isExpanded() : Boolean{
         return expanded
     }
-
 }

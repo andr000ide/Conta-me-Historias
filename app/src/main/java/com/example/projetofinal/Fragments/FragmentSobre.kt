@@ -10,6 +10,7 @@ import com.example.projetofinal.EquipaAdapter
 import com.example.projetofinal.LangHelper
 import com.example.projetofinal.modelclass.sobreTopico
 import com.example.projetofinal.R
+import com.example.projetofinal.modelclass.Media
 import kotlinx.android.synthetic.main.fragment_sobre.view.*
 import kotlinx.android.synthetic.main.sobre_layout.*
 import kotlinx.android.synthetic.main.sobre_layout.view.*
@@ -23,11 +24,13 @@ class FragmentSobre : androidx.fragment.app.Fragment(){
     ): View? {
         val view = inflater.inflate(R.layout.fragment_sobre, container, false)
         val topicoArr : ArrayList<sobreTopico> = ArrayList()
+        val topicoArr2 : ArrayList<sobreTopico> = ArrayList()
 
-
+        topicoArr2.add(sobreTopico(titulo = "dedede", texto = "dede", url = "dede"))
 
 
         //topicoArr.add(sobreTopico(titulo = getString(R.string.sobre01), texto = "O Conta-me Histórias é um projeto científico, criado no âmbito dos Prémios Arquivo.pt 2018, que permite aos utilizadores a possibilidade de criarem automaticamente uma sumarização temporal das notícias preservadas pelo Arquivo.pt (http://arquivo.pt). Numa era marcada pela pós-verdade e pelas fake news, o Conta-me Histórias é um importante contributo para uma democracia mais transparente. Esta aplicação permite a qualquer cidadão um acesso livre e democrático a informação contextualizada, assente em fatos e tendencialmente livre de filtros, fazendo uso de diversas fontes. Jornalistas, estudantes e investigadores de diversas áreas, tais como a sociologia, a ciência política, as ciências da comunicaçãos, a história e outras humanidades, encontram aqui uma ferramenta poderosa para o seu trabalho.", url = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/DrX1PjpyNHw\" frameborder=\"0\" allowfullscreen></iframe>"))
+
         topicoArr.add(sobreTopico(titulo = getString(R.string.sobreConta), texto = getString(R.string.sobreContaT), url = ""))
         topicoArr.add(sobreTopico(titulo = "Software", texto = getString(R.string.sobreSoftwareT), url = ""))
         topicoArr.add(sobreTopico(titulo = getString(R.string.sobreContribuicoes), texto = getString(R.string.sobreContribuicoesT)+"\n"+getString(R.string.sobreContribuicoesT02), url = ""))
@@ -54,12 +57,8 @@ class FragmentSobre : androidx.fragment.app.Fragment(){
             // RecyclerView behavior
             layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
             // set the custom adapter to the RecyclerView
-            adapter = EquipaAdapter(topicoArr, context!!)
+            adapter = EquipaAdapter(topicoArr, context)
         }
-
-
-        view.rec_view.isNestedScrollingEnabled = false
-        view.rec_view.isFocusable=false
 
         return view
     }
