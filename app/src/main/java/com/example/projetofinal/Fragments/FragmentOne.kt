@@ -116,7 +116,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
                         //var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
                         var fragmento1 = FragmentBing.newInstance(jsonString,name1!!)
-                        var fragmento2 = FragmentWCBing.newInstance(jsonString)
+                        var fragmento2 = FragmentWCBing.newInstance(jsonString,name1!!)
 
                         adapter.addFragment(fragmento1, getString(R.string.narrativa))
                         adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))
@@ -172,7 +172,7 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
                         var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
                         //var fragmento1 = FragmentTeste1.newInstance(array?.get(0)!!.headlines as ArrayList<Headline>,array?.get(0)!!.date_interval_end,array?.get(0)!!.date_interval_begin )
-                        var fragmento2 = FragmentTeste2.newInstance(jsonString)
+                        var fragmento2 = FragmentTeste2.newInstance(jsonString,name1!!)
 
                         adapter.addFragment(fragmento1, getString(R.string.narrativa))
                         adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))

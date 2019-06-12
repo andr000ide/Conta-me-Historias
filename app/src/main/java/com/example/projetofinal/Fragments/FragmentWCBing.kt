@@ -25,6 +25,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.concurrent.thread
 
 
@@ -47,11 +48,29 @@ class FragmentWCBing : androidx.fragment.app.Fragment() {
         val turnsType = object : TypeToken<BingResponse>() {}.type
         var testModel = gson.fromJson<BingResponse>(jsonarray, turnsType)
 
+        var pesquisa = arguments?.getString("pesquisa")
+        var queryPesquisa = pesquisa?.replace("\\s".toRegex(),"+")
+
+
+
+
+
+
         thread(start = true) {
             var teste : String = ""
             for(item in testModel.results!!){
                 for(item2 in item.keyphrases){
                     teste+=item2.docs!!.get(0)+" "
+                }
+            }
+
+
+            val array = queryPesquisa?.split("+")?.toTypedArray()
+
+            array?.let {
+                for (item in it){
+                    teste=teste.toLowerCase()
+                    teste =teste.replace(item.toLowerCase(),"")
                 }
             }
 
@@ -71,6 +90,7 @@ class FragmentWCBing : androidx.fragment.app.Fragment() {
 //                    if (resourceId > 0) {
 //                        val navigationBarHeight = resources.getDimensionPixelSize(resourceId)
 //                    }
+
 
 
                     call3 = service3!!.search_cloud(width.toString()  ,height.toString(),gson.toJson(response.body()))
@@ -136,9 +156,10 @@ class FragmentWCBing : androidx.fragment.app.Fragment() {
     }
 
     companion object {
-        fun newInstance(jsonString: String): FragmentWCBing {
+        fun newInstance(jsonString: String,pesquisa : String ): FragmentWCBing {
             val args = Bundle()
             args.putString("timeline",jsonString)
+            args.putString("pesquisa",pesquisa)
             val fragment = FragmentWCBing()
             fragment.arguments = args
             return fragment

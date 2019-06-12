@@ -31,7 +31,6 @@ class AdapterNarrativasBing(val items : ArrayList<KeyPhrases>, val context: Cont
             startActivity(context,intent,null)
         }
 
-
     }
 
     // Gets the number of animals in the list

@@ -52,11 +52,25 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
         val turnsType = object : TypeToken<List<Timeline>>() {}.type
         var testModel = gson.fromJson<List<Timeline>>(jsonarray, turnsType)
 
+        var pesquisa = arguments?.getString("pesquisa")
+        var queryPesquisa = pesquisa?.replace("\\s".toRegex(),"+")
+
+
         thread(start = true) {
             var teste : String = ""
             for(item in testModel){
                 for(item2 in item.headlines.orEmpty()){
                     teste+=item2.keyphrase+" "
+                }
+            }
+
+
+            val array = queryPesquisa?.split("+")?.toTypedArray()
+
+            array?.let {
+                for (item in it){
+                    teste=teste.toLowerCase()
+                    teste =teste.replace(item.toLowerCase(),"")
                 }
             }
 
@@ -141,9 +155,10 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
     }
 
     companion object {
-        fun newInstance(jsonString: String): FragmentTeste2 {
+        fun newInstance(jsonString: String,pesquisa : String ): FragmentTeste2 {
             val args = Bundle()
             args.putString("timeline",jsonString)
+            args.putString("pesquisa",pesquisa)
             val fragment = FragmentTeste2()
             fragment.arguments = args
             return fragment
