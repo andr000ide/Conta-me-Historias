@@ -10,7 +10,7 @@
     <string name="lingua">Português</string>
     <string name="key_title">tell me stories</string>
     <string name="know_team">know the team</string>
-    <string name="exemplos1">Economy and Present</string>
+    <string name="exemplos1">Economy and Society</string>
     <string name="exemplos2">" Politics, Justice and Journalism"</string>
     <string name="exemplos3">Sports and Culture</string>
     <string name="sobre">about</string>
@@ -31,9 +31,6 @@
         <a>,
             it can be extended to support different datasets, including traditional media such as Reuters, Bloomberg,
             etc.
-            Unlike, the Portuguese version (which runs on top of the Portuguese Web Archive), the English version of
-            this
-            App uses Bing News Search API to create narratives.
         </a>
     </string>
     <string name="sobreFunciona">How does it work?</string>
@@ -65,13 +62,14 @@
     <string name="sobrePremiosT">
         <a>Conta-me Histórias / Tell me Stories won the</a> &lt;a
         href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018 contest&lt;/a>
-        <a>and has been awarded the</a>&lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a>
+        <a>and has been awarded the </a>
         <a>at
-            ECIR’19.
-        </a>
+            Best Demo Representation
+        </a>&lt;a href="http://www.ecir2019.org"> ECIR’19.&lt;/a>
     </string>
     <string name="sobreReferenciasT01">Tell me Stories is a research product. If you use it in a work that leads to a
-        scientific publication, research project or product, please cite the following references: \n
+        scientific publication, research project or product, please cite the following references:
+
     </string>
     <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
         Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
@@ -108,8 +106,6 @@
         A special thanks goes to the <a href="http://arquivo.pt">Portuguese Web Archive</a> and to its team for creating an
         outstanding platform that aims to archive the Portuguese digital contents, thus providing not only the share of
         knowledge but also the emergence of new and innovative products.
-        \n\n
-        Also thanks to <a href="https://www.bing.com/">Bing</a> search engine for their API (Bing News Search) which is used in the English version of this App.
 
     </string>
     <string name="creditos_texto">Tell me Stories app has been developed by Simão Samouco and João Campos under the

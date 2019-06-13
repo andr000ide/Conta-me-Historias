@@ -71,7 +71,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                     FragmentThree()
                 )
-                    .addToBackStack("3").commit()
+                    .addToBackStack("1").commit()
                 navView?.setCheckedItem(R.id.nav_one)
                 check = R.id.nav_one
             }
@@ -236,6 +236,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             "8" -> {
                 navView?.setCheckedItem(R.id.nav_eight)
                 check=R.id.nav_eight
+            }
+            "9" -> {
+                navView?.setCheckedItem(R.id.nav_nine)
+                check=R.id.nav_nine
             }
         }
 

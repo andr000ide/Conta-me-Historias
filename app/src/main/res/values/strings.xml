@@ -76,8 +76,8 @@
     <string name="sobrePremiosT">
         <a>O Conta-me Histórias [Tell me Stories] foi o vencedor dos prémios</a> &lt;a
         href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018&lt;/a>
-        <a>e da</a> &lt;a href="http://www.ecir2019.org">Best Demo Presentation&lt;/a>
-        <a>no ECIR’19</a>
+        <a>e da</a>
+        <a>Best Demo Presentation no </a>&lt;a href="http://www.ecir2019.org" >ECIR’19&lt;/a>
     </string>
     <string name="sobreReferencias">Referências Bibliográficas</string>
     <string name="sobreReferenciasT01">O Conta-me Histórias é um produto de investigação científica. Por favor cite os
@@ -118,9 +118,6 @@
         equipa que ao longo dos últimos anos criou uma plataforma de reconhecido de valor na preservação dos conteúdos
         digitais portugueses,
         fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
-        \n\n
-        Um agradecimento também ao <a href="https://www.bing.com/">Bing</a> pela disponibilização da sua API (Bing News
-        Search) usada na versão inglesa desta App.
     </string>
 
     <string name="creditos_texto">A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob
