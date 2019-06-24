@@ -11,6 +11,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Media"
+                android:textColor="@color/colorPrimaryDark"
                 android:textAlignment="center"
                 android:paddingTop="15dp"
                 android:textSize="35dp"
@@ -26,9 +27,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Áudio"
+                android:textColor="@color/backgroundMainCoiso"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
         />
         <androidx.recyclerview.widget.RecyclerView
@@ -46,9 +48,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jornais"
+                android:textColor="@color/backgroundMainCoiso"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
         />
         <androidx.recyclerview.widget.RecyclerView

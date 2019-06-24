@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetofinal.modelclass.Media
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_equipa_layout.view.*
 import kotlinx.android.synthetic.main.media_item.view.*
 
 class MediaAdapter(val mediaEle : ArrayList<Media>, val context: Context) : RecyclerView.Adapter<ViewHolderFour>(){
@@ -28,6 +30,8 @@ class MediaAdapter(val mediaEle : ArrayList<Media>, val context: Context) : Recy
         p0.mediaTexto.text = mediaEle.get(p1).texto
         p0.mediaOrganizacao.text = mediaEle.get(p1).organizacao
         p0.mediaLink.text = mediaEle.get(p1).link
+        //p0.mediaImg.image = mediaEle.get(p1).img
+        Picasso.get().load(mediaEle.get(p1).img).into(p0.mediaImg)
 
         p0.bind(mediaEle.get(p1))
         p0.mediaOrganizacao.setOnClickListener(){
@@ -58,6 +62,7 @@ class ViewHolderFour (view: View) : RecyclerView.ViewHolder(view) {
     val mediaTexto = view.texto
     val mediaLink = view.link
     val sub_item = view.sub_item
+    val mediaImg = view.media_img
 
     fun bind(mediaEl: Media) {
         val expanded = mediaEl.isExpanded()
