@@ -47,7 +47,7 @@
     <string name="sobreContribuicoesT">"During the last decade, we have been witnessing an ever-growing number of online
         contents posing new challenges for those who aim to understand a given event. This exponential growth of the
         volume of data, together with the phenomenon of media bias, fake news and filter bubbles, has contributed to the
-        creation of new challenges in information access and transparency."
+        creation of new challenges in information access and transparency."&lt;br/>
     </string>
     <string name="sobreSoftwareT">
         <a>Tell me Stories is available on</a> &lt;a
@@ -68,24 +68,24 @@
         </a>&lt;a href="http://www.ecir2019.org"> ECIR’19.&lt;/a>
     </string>
     <string name="sobreReferenciasT01">Tell me Stories is a research product. If you use it in a work that leads to a
-        scientific publication, research project or product, please cite the following references:
+        scientific publication, research project or product, please cite the following references:&lt;br/>&lt;br/>
 
     </string>
     <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
         Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
-        archives. Springer Book. \n
+        archives. Springer Book. &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
         Interactive System for Automatically Generating Temporal Narratives. In Azzopardi et al. (Eds.), Lecture Notes
         in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
-        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) \n
+        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) &lt;br/>
     </string>
     <string name="sobreReferencias">References</string>
     <string name="sobreContribuicoesT02">One possible approach to overcome this problem is to automatically summarize
         large amount of news into consistent narratives. Tell me Stories emerges in this context, as an important
         contribution for anyone interested in having access to the overall picture of a given event in a quick manner.
         Our project may be considered as an additional solution that allows the general public (students, journalists,
-        politics, researchers, etc) to better explore any kind of data that has been covered by the media. \n
+        politics, researchers, etc) to better explore any kind of data that has been covered by the media.
     </string>
     <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
         LIAAD INESC TEC, University of Porto and University of Kyoto. \n

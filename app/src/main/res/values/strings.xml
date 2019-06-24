@@ -57,7 +57,7 @@
     <string name="sobreContribuicoesT">Ao longo da última década, temos vindo a assistir a um crescente aumento na
         disponibilização de conteúdos online, colocando novos desafios àqueles que pretendem entender a estória de um
         dado evento. Mais recentemente, fenómenos como o media bias, as fake news e as filter bubbles, vieram adensar
-        ainda mais as dificuldades já existentes no acesso transparente à informação.
+        ainda mais as dificuldades já existentes no acesso transparente à informação.&lt;br/>
     </string>
     <string name="sobreSoftwareT">
         <a>Conta-me Histórias encontra-se disponível no</a> &lt;a
@@ -81,22 +81,22 @@
     </string>
     <string name="sobreReferencias">Referências Bibliográficas</string>
     <string name="sobreReferenciasT01">O Conta-me Histórias é um produto de investigação científica. Por favor cite os
-        seguintes trabalhos no âmbito de uma publicação científica, projeto de investigação ou produto: \n
+        seguintes trabalhos no âmbito de uma publicação científica, projeto de investigação ou produto: &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
         Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
-        archives. Springer Book. \n
+        archives. Springer Book. &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
         Interactive System for Automatically Generating Temporal Narratives. In Azzopardi et al. (Eds.), Lecture Notes
         in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
-        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) \n
+        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) &lt;br/>
     </string>
     <string name="sobreContribuicoesT02">O Conta-me Histórias surge neste contexto, como um importante contributo para
         todos aqueles que pretendem ter acesso rápido a uma visão geral de um dado evento criando narrativas resumidas a
         partir de um elevado volume de dados. Oferecemos desta forma aos seus utilizadores (estudantes, jornalistas,
         políticos, investigadores, etc) uma ferramenta privilegiada para o acesso a qualquer tipo de dados que tenha
-        sido objeto de cobertura noticiosa. \n
+        sido objeto de cobertura noticiosa.
     </string>
     <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD
         INESC TEC, Universidade do Porto e Universidade de Kyoto.
