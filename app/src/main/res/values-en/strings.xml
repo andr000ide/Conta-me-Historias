@@ -50,13 +50,14 @@
         creation of new challenges in information access and transparency."&lt;br/>
     </string>
     <string name="sobreSoftwareT">
+
         <a>Tell me Stories is available on</a> &lt;a
-        href="http://tellmestories.pt">Google Play (em falta)&lt;/a> <a>,</a>  &lt;a
+        href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a>  &lt;a
         href="http://tellmestories.pt">online&lt;/a> <a>
-        and as an open source
+        and on
     </a> &lt;a
-        href="https://github.com/LIAAD/TemporalSummarizationFramework">Python package&lt;/a>
-        <a>that can be extended to support different datasets or languages.</a>
+        href="https://github.com/LIAAD/TemporalSummarizationFramework">Github&lt;/a>
+        <a>through which we make available a Python package that can be extended to support different datasets or languages.</a>
     </string>
     <string name="sobrePremios">Awards</string>
     <string name="sobrePremiosT">
@@ -76,7 +77,7 @@
         archives. Springer Book. &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
-        Interactive System for Automatically Generating Temporal Narratives. In Azzopardi et al. (Eds.), Lecture Notes
+        &lt;a href=" https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Interactive System for Automatically Generating Temporal Narratives&lt;/a>. In Azzopardi et al. (Eds.), Lecture Notes
         in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
         (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) &lt;br/>
     </string>

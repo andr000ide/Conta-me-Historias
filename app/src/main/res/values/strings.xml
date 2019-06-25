@@ -61,7 +61,7 @@
     </string>
     <string name="sobreSoftwareT">
         <a>Conta-me Histórias encontra-se disponível no</a> &lt;a
-        href="http://tellmestories.pt">Google Play (em falta)&lt;/a> <a>,</a>  &lt;a
+        href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a>  &lt;a
         href="http://tellmestories.pt">online&lt;/a> <a>
         e no
     </a> &lt;a
@@ -81,16 +81,16 @@
     </string>
     <string name="sobreReferencias">Referências Bibliográficas</string>
     <string name="sobreReferenciasT01">O Conta-me Histórias é um produto de investigação científica. Por favor cite os
-        seguintes trabalhos no âmbito de uma publicação científica, projeto de investigação ou produto: &lt;br/>&lt;br/>
+        seguintes trabalhos  se usar os Conta-me Histórias no âmbito de uma publicação científica, projeto de investigação ou produto: &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
         Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
         archives. Springer Book. &lt;br/>&lt;br/>
     </string>
-    <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
-        Interactive System for Automatically Generating Temporal Narratives. In Azzopardi et al. (Eds.), Lecture Notes
+    <string name="sobreReferenciasT03"><a>Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
+        &lt;a href=" https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Interactive System for Automatically Generating Temporal Narratives&lt;/a>. In Azzopardi et al. (Eds.), Lecture Notes
         in Computer Science - Advances in Information Retrieval - 41st European Conference on Information Retrieval
-        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) &lt;br/>
+        (ECIR\'19). Cologne, Germany. April 14 – 18. (Vol. 11438 (2019), pp. 251 - 255) </a> &lt;br/>
     </string>
     <string name="sobreContribuicoesT02">O Conta-me Histórias surge neste contexto, como um importante contributo para
         todos aqueles que pretendem ter acesso rápido a uma visão geral de um dado evento criando narrativas resumidas a
