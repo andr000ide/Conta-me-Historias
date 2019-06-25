@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_marginStart="30dp"
+              android:layout_marginEnd="30dp"
+              android:layout_marginTop="100dp"
+              android:layout_marginBottom="100dp"
+              android:background="#AFD9E7"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="300dp" android:layout_height="300dp"
+            android:src="@drawable/contamehistorias_error"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+    />
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="Sistema com muita procura"
+              android:textAlignment="center"
+              android:textColor="#000000"
+    />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Já estamos a trablhar nisso e esperamos que seja temporário.\n
+Por favor tente novamente mais tarde"
+            android:textAlignment="center"
+    />
+
+    <Button
+            android:id="@+id/buttonOk"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_error"
+            android:layout_gravity="center"
+            android:text="voltar ao início"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

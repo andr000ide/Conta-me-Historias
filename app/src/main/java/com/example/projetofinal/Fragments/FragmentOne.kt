@@ -3,6 +3,7 @@ package com.example.projetofinal.Fragments
 
 import android.Manifest
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -12,6 +13,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.StrictMode
 import android.view.*
+import android.widget.Button
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.core.content.ContextCompat
@@ -80,66 +82,6 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
         //val call = service?.searchnovo("1dsm62")
 
-        var langHelper : LangHelper = LangHelper(activity!!.applicationContext)
-        if(langHelper.getLanguageSaved().equals("en")){
-            val service = RetrofitClientInstanceBing.retrofitInstance?.create(ServiceAPI::class.java)
-            call2 = service!!.custom_search_bing(queryPesquisa!!)
-            call2?.enqueue(object : Callback<BingResponse> {
-
-
-                override fun onResponse(call: Call<BingResponse>, response: Response<BingResponse>) {
-                    val examples = response.body()
-                    println(examples)
-                    if(response.message().equals("INTERNAL SERVER ERROR")){
-                        withButtonCentered(view)
-                        //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
-                        //activity!!.onBackPressed()
-                    }
-                    if(examples==null){
-                        view.linear_vis.visibility=View.VISIBLE
-                        view.spin_kit.visibility=View.INVISIBLE
-                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
-                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        view.view_grayscreen.visibility=View.GONE
-                        // por popup e mandar para o fragmento two
-                    }
-                    examples?.let {
-
-                        var gson = Gson()
-                        var jsonString = gson.toJson(examples)
-//                        var array = examples.result.timeline
-//                        var arrayDeDomains = examples.result.domains
-//                        var gson = Gson()
-//                        var jsonString = gson.toJson(array)
-//                        var jsonStringDomains = gson.toJson(arrayDeDomains)
-
-
-                        //var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
-                        var fragmento1 = FragmentBing.newInstance(jsonString,name1!!)
-                        var fragmento2 = FragmentWCBing.newInstance(jsonString,name1!!)
-
-                        adapter.addFragment(fragmento1, getString(R.string.narrativa))
-                        adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))
-                        view.viewpager.adapter = adapter
-                        view.tabs.setupWithViewPager(view.viewpager)
-
-                        view.linear_vis.visibility=View.VISIBLE
-                        view.spin_kit.visibility=View.INVISIBLE
-                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
-                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        view.view_grayscreen.visibility=View.GONE
-                    }
-                }
-
-                override fun onFailure(call: Call<BingResponse>, t: Throwable) {
-                    if(aux!=1){
-                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        withButtonCentered(view)
-                    }
-                }
-            })
-        }
-        else{
             val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
             call = service!!.custom_search(queryPesquisa!!, years)
             call?.enqueue(object : Callback<Example> {
@@ -194,7 +136,6 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                     }
                 }
             })
-        }
 
 
 
@@ -279,15 +220,32 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
     fun withButtonCentered(view: View) {
 
-        val builder = AlertDialog.Builder(context)
-        builder.setTitle("Error")
-        builder.setMessage("Não foram encontrados resultados suficientes para a pesquisa efetuada. Tente novamente com outra pesquisa.")
-        //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
+        val dialog = Dialog(activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_mensagem_erro)
+        dialog.window.setBackgroundDrawableResource(android.R.color.transparent)
 
-        builder.setNeutralButton("Ok") { dialog, which ->
+        val button = dialog.findViewById(R.id.buttonOk) as Button
+
+        button.setOnClickListener {
+            dialog.dismiss()
             activity!!.onBackPressed()
         }
-        builder.show()
+        dialog.show()
+
+
+
+
+//        val builder = AlertDialog.Builder(context)
+//        builder.setTitle("Error")
+//        builder.setMessage("Não foram encontrados resultados suficientes para a pesquisa efetuada. Tente novamente com outra pesquisa.")
+//        //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
+//
+//        builder.setNeutralButton("Ok") { dialog, which ->
+//            activity!!.onBackPressed()
+//        }
+//        builder.show()
     }
 
 
