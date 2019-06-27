@@ -143,4 +143,8 @@
     </string>
     <string name="narrativa">Narrative</string>
     <string name="termos_relacionas">Word Cloud</string>
+    <string name="error_main_text">System is currently busy</string>
+    <string name="error_text_secondary">We are currently working on that and hope its temporary. \n Please try again later
+    </string>
+    <string name="button_voltar">back to beginning</string>
 </resources>

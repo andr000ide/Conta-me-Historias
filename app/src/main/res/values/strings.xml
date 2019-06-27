@@ -158,6 +158,11 @@
     </string>
     <string name="narrativa">Narrativa</string>
     <string name="termos_relacionas">Termos Relacionados</string>
+    <string name="error_main_text">Sistema com muita procura</string>
+    <string name="error_text_secondary">Já estamos a trabalhar nisso e esperamos que seja temporário. Por favor tente
+        novamente mais tarde
+    </string>
+    <string name="button_voltar">voltar ao início</string>
 
 </resources>
 
