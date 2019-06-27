@@ -82,6 +82,62 @@ class FragmentOne : androidx.fragment.app.Fragment(){
 
         //val call = service?.searchnovo("1dsm62")
 
+        if (android.os.Build.VERSION.SDK_INT >= 28){
+            val service = RetrofitClientInstanceFor9.retrofitInstance?.create(ServiceAPI::class.java)
+            call = service!!.custom_search(queryPesquisa!!, years)
+            call?.enqueue(object : Callback<Example> {
+
+
+                override fun onResponse(call: Call<Example>, response: Response<Example>) {
+                    val examples = response.body()
+                    if(response.message().equals("INTERNAL SERVER ERROR")){
+                        withButtonCentered(view)
+                        //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
+                        //activity!!.onBackPressed()
+                    }
+                    if(examples==null){
+                        view.linear_vis.visibility=View.VISIBLE
+                        view.spin_kit.visibility=View.INVISIBLE
+                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        view.view_grayscreen.visibility=View.GONE
+                        // por popup e mandar para o fragmento two
+                    }
+                    examples?.let {
+
+                        var array = examples.result.timeline
+
+                        var arrayDeDomains = examples.result.domains
+                        var gson = Gson()
+                        var jsonString = gson.toJson(array)
+                        var jsonStringDomains = gson.toJson(arrayDeDomains)
+
+
+                        var fragmento1 = FragmentTeste1.newInstance(jsonString, name1!!,years,jsonStringDomains)
+                        //var fragmento1 = FragmentTeste1.newInstance(array?.get(0)!!.headlines as ArrayList<Headline>,array?.get(0)!!.date_interval_end,array?.get(0)!!.date_interval_begin )
+                        var fragmento2 = FragmentTeste2.newInstance(jsonString,name1!!)
+
+                        adapter.addFragment(fragmento1, getString(R.string.narrativa))
+                        adapter.addFragment(fragmento2, getString(R.string.termos_relacionas))
+                        view.viewpager.adapter = adapter
+                        view.tabs.setupWithViewPager(view.viewpager)
+
+                        view.linear_vis.visibility=View.VISIBLE
+                        view.spin_kit.visibility=View.INVISIBLE
+                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        view.view_grayscreen.visibility=View.GONE
+                    }
+                }
+
+                override fun onFailure(call: Call<Example>, t: Throwable) {
+                    if(aux!=1){
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        withButtonCentered(view)
+                    }
+                }
+            })
+        } else{
             val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
             call = service!!.custom_search(queryPesquisa!!, years)
             call?.enqueue(object : Callback<Example> {
@@ -136,6 +192,10 @@ class FragmentOne : androidx.fragment.app.Fragment(){
                     }
                 }
             })
+
+        }
+
+
 
 
 

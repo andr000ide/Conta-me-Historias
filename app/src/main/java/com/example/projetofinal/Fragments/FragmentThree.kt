@@ -21,7 +21,11 @@ class FragmentThree : androidx.fragment.app.Fragment() {
 
     val tema3 = arrayOf("José Saramago", "Acordo Ortográfico", "Carlos Queiroz","Bruno de Carvalho","Cristiano Ronaldo","Jorge Jesus","Neymar e Barcelona","Iker CasilLas","José Mourinho")
 
+    val temaSubtitulo = arrayOf("Economia","Economia","Economia","Justiça e Economia","Economia","Economia","Atualidade","Atualidade","Política e Economia","Economia","Economia","Economia","Economia","Justiça e Economia","Política Internacional","Política Internacional","Política Internacional","Política Internacional","História")
 
+    val tema2Subtitulo = arrayOf("Política","Política","Política","Política","Política","Política","Política","Política","Política","Política","Política","Política")
+
+    val tema3Subtitulo = arrayOf("Cultura","Cultura","Desporto","Desporto","Desporto","Desporto","Desporto","Desporto","Desporto")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -59,6 +63,7 @@ class FragmentThree : androidx.fragment.app.Fragment() {
 
             }
             view.titulo_noticia1.text = tema2.get(position*2)
+            view.tema_noticia1.text = tema2Subtitulo.get(position*2)
 
             view.parte2.setOnClickListener {
                 val aux = view.titulo_noticia2.text.toString()
@@ -68,6 +73,7 @@ class FragmentThree : androidx.fragment.app.Fragment() {
             }
 
             view.titulo_noticia2.text = tema2.get(position*2+1)
+            view.tema_noticia2.text = tema2Subtitulo.get(position*2+1)
 
 
             return view
@@ -85,6 +91,7 @@ class FragmentThree : androidx.fragment.app.Fragment() {
                 (activity as SecondActivity).replaceFragment(kotlinFragment)
             }
             view.titulo_noticia1.text = tema.get(position*2)
+            view.tema_noticia1.text = temaSubtitulo.get(position*2)
 
             view.parte2.setOnClickListener {
                 val aux = view.titulo_noticia2.text.toString()
@@ -94,6 +101,7 @@ class FragmentThree : androidx.fragment.app.Fragment() {
             }
 
             view.titulo_noticia2.text = tema.get(position*2+1)
+            view.tema_noticia2.text = temaSubtitulo.get(position*2+1)
 
             return view
         }
@@ -110,6 +118,7 @@ class FragmentThree : androidx.fragment.app.Fragment() {
                 (activity as SecondActivity).replaceFragment(kotlinFragment)
             }
             view.titulo_noticia1.text = tema3.get(position*2)
+            view.tema_noticia1.text = tema3Subtitulo.get(position*2)
 
             view.parte2.setOnClickListener {
                 val aux = view.titulo_noticia2.text.toString()
@@ -119,6 +128,7 @@ class FragmentThree : androidx.fragment.app.Fragment() {
             }
 
             view.titulo_noticia2.text = tema3.get(position*2+1)
+            view.tema_noticia2.text = tema3Subtitulo.get(position*2+1)
 
             return view
         }
