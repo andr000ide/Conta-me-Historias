@@ -51,7 +51,7 @@
     </string>
     <string name="sobreSoftwareT">
 
-        <a>Tell me Stories is available on</a> &lt;a
+        <a>Tell me Stories is available at</a> &lt;a
         href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a>  &lt;a
         href="http://tellmestories.pt">online&lt;/a> <a>
         and on
@@ -61,20 +61,18 @@
     </string>
     <string name="sobrePremios">Awards</string>
     <string name="sobrePremiosT">
-        <a>Conta-me Histórias / Tell me Stories won the</a> &lt;a
+        <a>Conta-me Histórias / Winner of the</a> &lt;a
         href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018 contest&lt;/a>
-        <a>and has been awarded the </a>
-        <a>at
-            Best Demo Representation
-        </a>&lt;a href="http://www.ecir2019.org"> ECIR’19.&lt;/a>
+        <a>and of the Best Demo Presentation at the 41st  European Conference on Information Retrieval (</a>
+       &lt;a href="http://www.ecir2019.org"> ECIR’19&lt;/a> <a>).</a>
     </string>
     <string name="sobreReferenciasT01">Tell me Stories is a research product. If you use it in a work that leads to a
         scientific publication, research project or product, please cite the following references:&lt;br/>&lt;br/>
 
     </string>
-    <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
-        Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
-        archives. Springer Book. &lt;br/>&lt;br/>
+    <string name="sobreReferenciasT02"><a>Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).</a>
+        &lt;a href="https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Automatic generation of timelines for past events&lt;/a><a>. In Gomes, D., et al. (Eds.), The Past Web: exploring web
+        archives. Springer Book.</a> &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
         &lt;a href=" https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Interactive System for Automatically Generating Temporal Narratives&lt;/a>. In Azzopardi et al. (Eds.), Lecture Notes

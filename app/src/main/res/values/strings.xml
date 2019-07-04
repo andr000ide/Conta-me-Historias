@@ -74,18 +74,19 @@
     </string>
     <string name="sobrePremios">Prémios</string>
     <string name="sobrePremiosT">
-        <a>O Conta-me Histórias [Tell me Stories] foi o vencedor dos prémios</a> &lt;a
-        href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018&lt;/a>
-        <a>e da</a>
-        <a>Best Demo Presentation no </a>&lt;a href="http://www.ecir2019.org" >ECIR’19&lt;/a>
+        <a>Vencedor dos</a> &lt;a
+        href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">prémios Arquivo.pt 2018&lt;/a>
+        <a>e da Best Demo Presentation na 41st European Conference on Information Retrieval (</a>
+        &lt;a href="http://www.ecir2019.org" >ECIR’19&lt;/a><a>).</a>
     </string>
     <string name="sobreReferencias">Referências Bibliográficas</string>
     <string name="sobreReferenciasT01">O Conta-me Histórias é um produto de investigação científica. Por favor cite os
-        seguintes trabalhos  se usar os Conta-me Histórias no âmbito de uma publicação científica, projeto de investigação ou produto: &lt;br/>&lt;br/>
+        seguintes trabalhos  se usar o conta-me Histórias no âmbito de uma publicação científica, projeto de investigação ou produto: &lt;br/>&lt;br/>
     </string>
-    <string name="sobreReferenciasT02">Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).
-        Automatic generation of timelines for past events. In Gomes, D., et al. (Eds.), The Past Web: exploring web
-        archives. Springer Book. &lt;br/>&lt;br/>
+    <string name="sobreReferenciasT02"><a>Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).</a>
+        &lt;a href="https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Automatic generation of timelines for past events&lt;/a>
+        <a>. In Gomes, D., et al. (Eds.), The Past Web: exploring web
+        archives. Springer Book.</a> &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT03"><a>Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
         &lt;a href=" https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Interactive System for Automatically Generating Temporal Narratives&lt;/a>. In Azzopardi et al. (Eds.), Lecture Notes
@@ -163,6 +164,20 @@
         novamente mais tarde
     </string>
     <string name="button_voltar">voltar ao início</string>
-
+    <string name="media_pt_titulo1" translatable="false"> &lt;a href="https://www.tsf.pt/sociedade/ciencia-e-tecnologia/interior/conta-me-historias-xutos-inspiram-projeto-premiado-9554297.html" >\"Conta-me Histórias.\" Xutos inspiram projeto premiado&lt;/a></string>
+    <string name="media_pt_titulo2" translatable="false"> &lt;a href="http://www.90segundosdeciencia.pt/episodes/ep-580-ricardo-campos/" > Ep. 580 Ricardo Campos – “Conta-me histórias”, o arquivo de notícias que permite viajar pelo tempo &lt;/a></string>
+    <string name="media_pt_titulo3" translatable="false"> &lt;a href="https://soundcloud.com/user-985956038/daniel-gomes-explica-como-participar-no-premio" > Conta-me Histórias na Rádio Comercial by Daniel Gomes (Gestor Arquivo.pt) &lt;/a></string>
+    <string name="media_pt_titulo4" translatable="false"> &lt;a href="https://www.fccn.pt/conhecidos-os-vencedores-dos-premios-arquivo-pt" > Conhecidos os Vencedores dos Prémios Arquivo.pt 2018 &lt;/a></string>
+    <string name="media_pt_titulo5" translatable="false"> &lt;a href="https://24.sapo.pt/tecnologia/artigos/conta-me-historias-uma-plataforma-onde-as-noticias-tem-memoria" > Conta-me Histórias. Uma plataforma onde as notícias têm memória  &lt;/a></string>
+    <string name="media_pt_titulo6" translatable="false"> &lt;a href="https://www.publico.pt/2019/01/24/ciencia/noticia/arquivopt-viagem-web-portuguesa-premeia-projectos-inovadores-1858823" > Arquivo.pt: uma viagem pela Web portuguesa que premeia projectos inovadores &lt;/a></string>
+    <string name="media_pt_titulo7" translatable="false"> &lt;a href="http://www.pt.cision.com/cp2013/ClippingDetails.aspx?id=f9d421e3-0621-4918-ac05-5b732b964877&amp;analises=1&amp;cp=1" > Docente do IPT é o responsável da equipa de investigação que venceu a primeira edição dos Prémios Arquivo.pt &lt;/a></string>
+    <string name="media_pt_titulo8" translatable="false"> &lt;a href="http://portal2.ipt.pt/pt/noticias/cursos/docente_do_ipt_vencedor_da_1_edicao_dos_premios_arquivo_pt_2018_2018_07_04" > Docente do IPT vencedor da 1.ª Edição dos Prémios Arquivo.pt 2018 &lt;/a></string>
+    <string name="media_pt_titulo9" translatable="false"> &lt;a href="http://bip.inesctec.pt/195/destaque.html" > Plataforma de notícias premiada com 10 mil euros tem know-how português &lt;/a></string>
+    <string name="media_pt_titulo10" translatable="false"> &lt;a href="http://bip.inesctec.pt/197/noticia-ev07.html" > Conta-me Histórias e Unexmin na Noite Europeia dos Investigadores &lt;/a></string>
+    <string name="media_pt_titulo11" translatable="false"> &lt;a href="https://www.fccn.pt/premio-arquivo-pt-esta-de-volta-em-2019/" > Prémio Arquivo.pt está de volta em 2019! &lt;/a></string>
+    <string name="media_en_titulo1" translatable="false"> &lt;a href="https://www.fccn.pt/en/premio-arquivo-pt-esta-de-volta-em-2019/" > Arquivo.pt prize is back in 2019! &lt;/a></string>
+    <string name="media_en_titulo2" translatable="false"> &lt;a href="http://bip.inesctec.pt/en/197/noticia-ev07.html" > \"Conta-me Histórias” and Unexmin projects presented in the European Researchers\' Night &lt;/a></string>
+    <string name="media_en_titulo3" translatable="false"> &lt;a href="http://bip.inesctec.pt/en/195/destaque.html" > News platform awarded with EUR 10 000 has Portuguese know-how &lt;/a></string>
+    <string name="media_en_titulo4" translatable="false"> &lt;a href="https://www.inesctec.pt/en/news/news-platform-with-inesc-tecs-know-how-rewarded-with-eur-10m?platform=hootsuite#intro" > News platform with INESC TEC\'s know-how rewarded with EUR 10M &lt;/a></string>
 </resources>
 
