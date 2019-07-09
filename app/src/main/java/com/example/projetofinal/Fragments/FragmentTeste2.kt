@@ -60,7 +60,7 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
             var teste : String = ""
             for(item in testModel){
                 for(item2 in item.headlines.orEmpty()){
-                    teste+=item2.keyphrase+" "
+                    teste+=item2.keyphrase+". "
                 }
             }
 
@@ -69,11 +69,12 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
 
             array?.let {
                 for (item in it){
-                    teste=teste.toLowerCase()
-                    teste =teste.replace(item.toLowerCase(),"")
+                    if(item.length > 3){
+                        teste=teste.toLowerCase()
+                        teste =teste.replace(item.toLowerCase(),"")
+                    }
                 }
             }
-
 
             val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
             call2 = service2!!.search_words(teste,"3","20")

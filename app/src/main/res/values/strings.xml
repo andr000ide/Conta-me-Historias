@@ -108,11 +108,7 @@
         da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir
     </string>
     <string name="financiamento">Financiamento</string>
-    <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth - Pervasive
-        Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é
-        financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund
-        (ERDF).
-    </string>
+    <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth – Pervasive Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund (ERDF) através do programa COMPETE 2020 no âmbito do projeto POCI-01-0145-FEDER-006961, e por fundos nacionais da FCT – Fundação da Ciência e Tecnologia ao abrigo do UID/EEA/50014/2013.</string>
     <string name="outros">Outros</string>
     <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
         à sua
@@ -127,7 +123,7 @@
     </string>
     <string name="creditos">Créditos</string>
     <string name="contactos">contactos</string>
-    <string name="contactos_texto">Para qualquer questão relacionada com o Conta-me Histórias por favor contactar-nos
+    <string name="contactos_texto">Para qualquer questão relacionada com o Conta-me Histórias por favor contacte-nos
         através do seguinte email:
     </string>
     <string name="contactos_menu">Contactos</string>
