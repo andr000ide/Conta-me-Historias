@@ -76,7 +76,7 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
 
 
             val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
-            call2 = service2!!.search_words(teste,"1","20")
+            call2 = service2!!.search_words(teste,"3","20")
             call2?.enqueue(object : Callback<Example_Yake> {
 
                 override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {

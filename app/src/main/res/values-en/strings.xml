@@ -27,11 +27,8 @@
         &lt;a href="http://tellmestories.pt">Tell me Stories&lt;/a> <a>is a temporal summarization framework of news
         articles that allows
         users to explore and revisit events in the past. Built on top of the
-    </a> &lt;a href="http://arquivo.pt">Portuguese web archive&lt;/a>
-        <a>,
-            it can be extended to support different datasets, including traditional media such as Reuters, Bloomberg,
-            etc.
-        </a>
+    </a> &lt;a href="http://arquivo.pt">Portuguese web archive&lt;/a><a>,</a>
+        <a> it can be extended to support different datasets, including traditional media such as Reuters, Bloomberg, etc.</a>
     </string>
     <string name="sobreFunciona">How does it work?</string>
     <string name="sobreFuncionaT">
@@ -52,7 +49,7 @@
     <string name="sobreSoftwareT">
 
         <a>Tell me Stories is available at</a> &lt;a
-        href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a>  &lt;a
+        href="https://play.google.com/store/apps">Google Play&lt;/a><a>,</a>  &lt;a
         href="http://tellmestories.pt">online&lt;/a> <a>
         and on
     </a> &lt;a
@@ -61,7 +58,7 @@
     </string>
     <string name="sobrePremios">Awards</string>
     <string name="sobrePremiosT">
-        <a>Conta-me Histórias / Winner of the</a> &lt;a
+        <a>Winner of the</a> &lt;a
         href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Arquivo.pt 2018 contest&lt;/a>
         <a>and of the Best Demo Presentation at the 41st  European Conference on Information Retrieval (</a>
        &lt;a href="http://www.ecir2019.org"> ECIR’19&lt;/a> <a>).</a>
@@ -70,9 +67,9 @@
         scientific publication, research project or product, please cite the following references:&lt;br/>&lt;br/>
 
     </string>
-    <string name="sobreReferenciasT02"><a>Campos, R., Pasquali, A., Mangaravite, V., Jorge, A., and Jatowt, A. (2020).</a>
-        &lt;a href="https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Automatic generation of timelines for past events&lt;/a><a>. In Gomes, D., et al. (Eds.), The Past Web: exploring web
-        archives. Springer Book.</a> &lt;br/>&lt;br/>
+    <string name="sobreReferenciasT02"><a>Campos, R., Pasquali, A., Jatowt, A., Mangaravite, V., and Jorge, A. (2020).</a>
+        <a>Automatic generation of timelines for past events</a><a>. In Gomes, D., et al. (Eds.), The Past Web: exploring web
+        archives. Springer Book. To appear.</a> &lt;br/>&lt;br/>
     </string>
     <string name="sobreReferenciasT03">Pasquali, A., Mangaravite, V., Campos, R., Jorge, A., and Jatowt, A. (2019).
         &lt;a href=" https://link.springer.com/chapter/10.1007/978-3-030-15719-7_34">Interactive System for Automatically Generating Temporal Narratives&lt;/a>. In Azzopardi et al. (Eds.), Lecture Notes
@@ -86,7 +83,7 @@
         Our project may be considered as an additional solution that allows the general public (students, journalists,
         politics, researchers, etc) to better explore any kind of data that has been covered by the media.
     </string>
-    <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
+    <string name="equipaTexto">This project was developed by researchers affiliated to the Polytechnic Institute of Tomar,
         LIAAD INESC TEC, University of Porto and University of Kyoto. \n
     </string>
     <string name="agradecimentos">Acknowledgements</string>
@@ -145,4 +142,5 @@
     <string name="error_text_secondary">We are currently working on that and hope its temporary. \n Please try again later
     </string>
     <string name="button_voltar">back to beginning</string>
+    <string name="key_media_title">Institutions</string>
 </resources>

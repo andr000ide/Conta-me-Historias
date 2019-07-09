@@ -48,9 +48,11 @@ class Media : androidx.fragment.app.Fragment() {
             mediaArr.add(Media(organizacao="INESCTEC", titulo = getString(R.string.media_en_titulo4), texto = "The new Portuguese news aggregation platform is called “Conta-me histórias” and received EUR 10 million for the first place under the Arquivo.pt Prizes 2018", link = "https://www.inesctec.pt/en/news/news-platform-with-inesc-tecs-know-how-rewarded-with-eur-10m?platform=hootsuite#intro", img = R.drawable.inesctec))
 
         }else{
-            mediaArr.add(Media(organizacao="Antena 1", titulo = getString(R.string.media_pt_titulo1), texto = "Uma nova plataforma agregadora de notícias portuguesas recebeu um prémio no valor de 10 mil euros.", link = "https://www.tsf.pt/sociedade/ciencia-e-tecnologia/interior/conta-me-historias-xutos-inspiram-projeto-premiado-9554297.html", img = R.drawable.antena1))
 
-            mediaArr.add(Media(organizacao="TSF", titulo =  getString(R.string.media_pt_titulo2), texto = "Mais que um arquivo de sites e notícias em português, esta plataforma permite ao utilizador pesquisar por um certo tema e acompanhar a sua evolução ao longo do tempo.", link = "http://www.90segundosdeciencia.pt/episodes/ep-580-ricardo-campos/", img = R.drawable.tsf))
+            mediaArr.add(Media(organizacao="Antena 1", titulo =  getString(R.string.media_pt_titulo2),  texto = "Mais que um arquivo de sites e notícias em português, esta plataforma permite ao utilizador pesquisar por um certo tema e acompanhar a sua evolução ao longo do tempo.", link = "http://www.90segundosdeciencia.pt/episodes/ep-580-ricardo-campos/", img = R.drawable.antena1))
+
+            mediaArr.add(Media(organizacao="TSF", titulo = getString(R.string.media_pt_titulo1), texto = "Uma nova plataforma agregadora de notícias portuguesas recebeu um prémio no valor de 10 mil euros.", link = "https://www.tsf.pt/sociedade/ciencia-e-tecnologia/interior/conta-me-historias-xutos-inspiram-projeto-premiado-9554297.html", img = R.drawable.tsf))
+
             mediaArr.add(Media("Rádio Comercial", getString(R.string.media_pt_titulo3),"","https://soundcloud.com/user-985956038/daniel-gomes-explica-como-participar-no-premio", img = R.drawable.radio_comercial))
 
 
@@ -66,6 +68,8 @@ class Media : androidx.fragment.app.Fragment() {
             mediaArr2.add(Media("FCT", getString(R.string.media_pt_titulo11),"O grande vencedor da primeira edição do prémio Arquivo.pt foi o projeto “Conta-me Histórias”, liderado pelo investigador do INESC TEC, Ricardo Campos.\n" +
                     "\n" +
                     "A plataforma [http://contamehistorias.pt] oferece uma narrativa temporal a partir das notícias publicadas online sobre um determinado tema.","https://www.fccn.pt/premio-arquivo-pt-esta-de-volta-em-2019/", img = R.drawable.fct))
+
+            mediaArr2.add(Media("UP - FCUP - DCC", getString(R.string.media_pt_titulo12),"","https://www.dcc.fc.up.pt/site/noticias/ecir-2019", img = R.drawable.faculdade_ciencias_porto))
 
         }
 

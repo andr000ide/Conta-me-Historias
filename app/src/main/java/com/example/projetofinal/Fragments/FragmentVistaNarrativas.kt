@@ -12,10 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.projetofinal.AdapterNarrativas
-import com.example.projetofinal.Headline
-import com.example.projetofinal.R
-import com.example.projetofinal.Timeline
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.frag_searchview.*
@@ -30,16 +26,18 @@ import android.text.Html
 import android.widget.TextView
 import android.text.style.ClickableSpan
 import androidx.core.content.ContextCompat
+import com.example.projetofinal.*
 
 
 class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
-
+    private lateinit var langHelper: LangHelper
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.frag_searchview, container, false)
+
 
         val inicio = arguments?.getString("begin")
         val fim = arguments?.getString("end")
@@ -118,7 +116,15 @@ class FragmentVistaNarrativas : androidx.fragment.app.Fragment() {
 
        // view.recycler_view.adapter = AdapterNarrativas(arrayNoticias, context!!)
 
-        view.titulo_narrativa.text= query+" - Noticias desde "+ inicio + " até " + fim +""
+        langHelper = LangHelper(activity!!.applicationContext)
+
+        if(langHelper.getLanguageSaved().equals("en")) {
+            view.titulo_narrativa.text= query+" - News from "+ inicio + " to " + fim +""
+        }
+        else{
+            view.titulo_narrativa.text= query+" - Noticias desde "+ inicio + " até " + fim +""
+        }
+
 
 
 

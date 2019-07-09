@@ -27,7 +27,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Áudio"
+                android:text="@string/key_media_title"
                 android:textColor="@color/backgroundMainCoiso"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
