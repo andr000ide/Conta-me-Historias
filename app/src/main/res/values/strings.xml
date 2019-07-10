@@ -159,7 +159,7 @@
     <string name="error_text_secondary">Já estamos a trabalhar nisso e esperamos que seja temporário. Por favor tente
         novamente mais tarde
     </string>
-    <string name="button_voltar">voltar ao início</string>
+    <string name="button_voltar">Tentar novamente</string>
     <string name="media_pt_titulo1" translatable="false"> &lt;a href="https://www.tsf.pt/sociedade/ciencia-e-tecnologia/interior/conta-me-historias-xutos-inspiram-projeto-premiado-9554297.html" >\"Conta-me Histórias.\" Xutos inspiram projeto premiado&lt;/a></string>
     <string name="media_pt_titulo2" translatable="false"> &lt;a href="http://www.90segundosdeciencia.pt/episodes/ep-580-ricardo-campos/" > Ep. 580 Ricardo Campos – “Conta-me histórias”, o arquivo de notícias que permite viajar pelo tempo &lt;/a></string>
     <string name="media_pt_titulo3" translatable="false"> &lt;a href="https://soundcloud.com/user-985956038/daniel-gomes-explica-como-participar-no-premio" > Conta-me Histórias na Rádio Comercial by Daniel Gomes (Gestor Arquivo.pt) &lt;/a></string>
@@ -177,5 +177,9 @@
     <string name="media_en_titulo3" translatable="false"> &lt;a href="http://bip.inesctec.pt/en/195/destaque.html" > News platform awarded with EUR 10 000 has Portuguese know-how &lt;/a></string>
     <string name="media_en_titulo4" translatable="false"> &lt;a href="https://www.inesctec.pt/en/news/news-platform-with-inesc-tecs-know-how-rewarded-with-eur-10m?platform=hootsuite#intro" > News platform with INESC TEC\'s know-how rewarded with EUR 10M &lt;/a></string>
     <string name="key_media_title">Áudio</string>
+    <string name="error_text_no_results">Não foram encontrados resultados suficientes</string>
+    <string name="error_text_procurar_outro_tema">Pesquise por um outro tópico à sua escolha</string>
+    <string name="error_text_empty">Pesquisa está vazia</string>
+    <string name="error_text_procurar_outro_tema2">Pesquise por um tópico à sua escolha</string>
 </resources>
 

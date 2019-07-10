@@ -1,17 +1,16 @@
 package com.example.projetofinal.Fragments
 
 
+import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import android.text.SpannableStringBuilder
-import android.view.KeyEvent
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import com.example.projetofinal.CustomDropDownAdapter
 import com.example.projetofinal.R
 import com.example.projetofinal.SecondActivity
@@ -83,9 +82,16 @@ class FragmentTwo : androidx.fragment.app.Fragment() {
             //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
             view.imagePesquisa.hideKeyboard()
 
-            val kotlinFragment = FragmentOne.newInstance(result,aux3)
+            if(result.isNotEmpty()){
+                val kotlinFragment = FragmentOne.newInstance(result,aux3)
 
-            (activity as SecondActivity).replaceFragment(kotlinFragment)
+                (activity as SecondActivity).replaceFragment(kotlinFragment)
+            }
+            else{
+                buttonerrorempty(view)
+            }
+
+
         }
         return view
     }
@@ -96,5 +102,20 @@ class FragmentTwo : androidx.fragment.app.Fragment() {
         imm.hideSoftInputFromWindow(windowToken, 0)
     }
 
+    fun buttonerrorempty(view: View) {
+
+        val dialog = Dialog(activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_mensagem_pesquisar_vazio)
+        dialog.window.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val button = dialog.findViewById(R.id.buttonOk) as Button
+
+        button.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
 
 }

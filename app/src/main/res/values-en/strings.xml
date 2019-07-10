@@ -138,6 +138,10 @@
     <string name="error_main_text">System is currently busy</string>
     <string name="error_text_secondary">We are currently working on that and hope its temporary. \n Please try again later
     </string>
-    <string name="button_voltar">back to beginning</string>
+    <string name="button_voltar">Try again</string>
     <string name="key_media_title">Institutions</string>
+    <string name="error_text_no_results">There were not enough results</string>
+    <string name="error_text_procurar_outro_tema">Search for another topic of your choice</string>
+    <string name="error_text_empty">Search is empty</string>
+    <string name="error_text_procurar_outro_tema2">Search for a topic of your choice</string>
 </resources>

@@ -27,7 +27,7 @@ import kotlin.concurrent.thread
 
 
 class FragmentTeste2 : androidx.fragment.app.Fragment() {
-
+    private lateinit var langHelper: LangHelper
     lateinit var call2: Call<Example_Yake>
     lateinit var call3: Call<Wordcloud>
     val colors: IntArray = intArrayOf(
@@ -44,8 +44,19 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(com.example.projetofinal.R.layout.fragment_layout_wordcloud, container, false)
-        view.textowordcloud.visibility=View.VISIBLE
-        view.wordCloud.visibility=View.INVISIBLE
+        //
+        // view.textowordcloud.visibility=View.VISIBLE
+        view.wordCloud.visibility=View.VISIBLE
+        langHelper = LangHelper(activity!!.applicationContext)
+
+        if(langHelper.getLanguageSaved().equals("en")){
+            view.wordCloud.setImageResource(R.drawable.contamehistorias_loading)
+        }
+        else{
+            view.wordCloud.setImageResource(R.drawable.contamehistorias_carregar)
+        }
+
+
 
         var jsonarray = arguments?.getString("timeline")
         var gson = Gson()
@@ -75,6 +86,9 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
                     }
                 }
             }
+
+            if(teste.length > 100){
+
 
             val service2 = RetrofitClientInstance_Keywords.retrofitInstance?.create(ServiceAPI::class.java)
             call2 = service2!!.search_words(teste,"3","20")
@@ -107,8 +121,8 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
                             val atividade = activity as SecondActivity
                             //atividade.imagemtestar.setImageBitmap(decodedByte)
                             view.wordCloud.setImageBitmap(decodedByte)
-                            view.textowordcloud.visibility=View.GONE
-                            view.wordCloud.visibility=View.VISIBLE
+                            //view.textowordcloud.visibility=View.GONE
+                            //view.wordCloud.visibility=View.VISIBLE
 
                         }
                         override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
@@ -120,6 +134,7 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
                 override fun onFailure(call: Call<Example_Yake>, t: Throwable) {
                 }
             })
+        }
         }
 
 
@@ -133,7 +148,6 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val activity = activity as SecondActivity
-        wordCloud.setImageBitmap(activity.getImagem())
     }
 
     override fun onDestroyView() {
@@ -146,7 +160,6 @@ class FragmentTeste2 : androidx.fragment.app.Fragment() {
         if(::call3.isInitialized){
             call3.cancel()
         }
-
     }
 
     fun outroServico(algo2 : String){
