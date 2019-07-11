@@ -46,7 +46,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         setSupportActionBar(toolbar)
         val actionbar = supportActionBar
-        actionbar?.title=getString(R.string.key_title)
+        actionbar?.title=""
+        //actionbar?.title=getString(R.string.key_title)
 
         drawer = drawerlayout2
         val toggle = EndDrawerToggle(
