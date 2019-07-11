@@ -40,6 +40,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         val actionbar = supportActionBar
         actionbar?.title=getString(R.string.key_title)
         actionbar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_home_black_24dp)
 
         val indicator:String = intent.getStringExtra("indicacao")
 
@@ -75,7 +76,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 navView?.setCheckedItem(R.id.nav_one)
                 check = R.id.nav_one
             }
-            else{
+            else if(indicator.equals("pesquisar")){
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                     FragmentTwo()
                 )
@@ -83,29 +84,51 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 navView?.setCheckedItem(R.id.nav_two)
                 check = R.id.nav_two
             }
+            else if(indicator.equals("about")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentSobre()
+                )
+                    .addToBackStack("3").commit()
+                navView?.setCheckedItem(R.id.nav_three)
+                check = R.id.nav_three
+            }
+            else if(indicator.equals("team")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentEquipa()
+                )
+                    .addToBackStack("4").commit()
+                navView?.setCheckedItem(R.id.nav_four)
+                check = R.id.nav_four
+            }
+            else if(indicator.equals("agradecimentos")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentAgradecimentos()
+                )
+                    .addToBackStack("6").commit()
+                navView?.setCheckedItem(R.id.nav_six)
+                check = R.id.nav_six
+            }
+            else if(indicator.equals("contactos")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    fragment_contacts()
+                )
+                    .addToBackStack("8").commit()
+                navView?.setCheckedItem(R.id.nav_eight)
+                check = R.id.nav_eight
+            }
+            else if(indicator.equals("media")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    Media()
+                )
+                    .addToBackStack("9").commit()
+                navView?.setCheckedItem(R.id.nav_nine)
+                check = R.id.nav_nine
+            }
+            else{
+
+            }
 
         }
-
-/*
-        val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
-        val call = service?.custom_search("Brexit","10")
-        call?.enqueue(object : Callback<Example> {
-
-
-            override fun onResponse(call: Call<Example>, response: Response<Example>) {
-                val examples = response.body()
-                examples?.let {
-                    val refresh = Intent(this@SecondActivity, SecondActivity::class.java)
-                    //refresh.putExtra("EXTRA_PEOPLE", examples)
-                    startActivity(refresh)
-                }
-            }
-
-            override fun onFailure(call: Call<Example>, t: Throwable) {
-                Toast.makeText(this@SecondActivity,"Erro no serviço ", Toast.LENGTH_SHORT)
-            }
-        })
-        */
     }
 
 
@@ -174,6 +197,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     .addToBackStack("9").commit()
                 check = R.id.nav_nine
             }
+            else ->{
+                return false
+            }
+
         }
 
         drawer?.closeDrawer(GravityCompat.END)
@@ -202,6 +229,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     override fun onBackPressed() {
         if(supportFragmentManager.backStackEntryCount ==1){
             supportFragmentManager.popBackStack()
+            //navView?.setCheckedItem(R.id.nav_null)
         }
         super.onBackPressed()
         //var aux = supportFragmentManager.backStackEntryCount
@@ -241,8 +269,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 navView?.setCheckedItem(R.id.nav_nine)
                 check=R.id.nav_nine
             }
+            else -> {
+                navView?.setCheckedItem(R.id.nav_nine)
+            }
         }
-
 
         }
         else{

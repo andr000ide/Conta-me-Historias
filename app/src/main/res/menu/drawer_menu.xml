@@ -42,6 +42,11 @@
               android:icon="@drawable/ic_flag_black_24dp"
               android:title="@string/lingua">
         </item>
+        <item android:id="@+id/nav_null"
+        android:title="algo"
+        android:visible="false">
+
+        </item>
 
     </group>
 </menu>

@@ -10,16 +10,24 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.core.content.ContextCompat
 import android.util.Log
+import android.view.MenuItem
 import androidx.core.app.ActivityCompat
 import android.view.View
+import androidx.core.view.GravityCompat
+import com.example.projetofinal.Fragments.*
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.toolbar
+import kotlinx.android.synthetic.main.second_activitynew.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
 
     private lateinit var langHelper: LangHelper
     private val TAG = "PermissionDemo"
     private val RECORD_REQUEST_CODE = 101
+    private var drawer: androidx.drawerlayout.widget.DrawerLayout? = null
+    private var navView: NavigationView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +41,29 @@ class MainActivity : AppCompatActivity() {
 
         if (checkIfFirstTime == true) {
             refreshApp(langHelper.getLanguageSaved())
+        }
+
+
+        setSupportActionBar(toolbar)
+        val actionbar = supportActionBar
+        actionbar?.title=getString(R.string.key_title)
+
+        drawer = drawerlayout2
+        val toggle = EndDrawerToggle(
+            this, drawerlayout2, toolbar, R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
+
+        drawerlayout2.addDrawerListener(toggle)
+        toggle.syncState()
+
+        navView = nav_view2
+        navView?.setNavigationItemSelectedListener(this)
+
+        val size = navView!!.menu.size()
+        for (i in 0 until size) {
+            navView!!.menu.getItem(i).isCheckable = false
+            navView!!.menu.getItem(i).isChecked = false
         }
 
 
@@ -97,7 +128,58 @@ class MainActivity : AppCompatActivity() {
         super.onBackPressed();
         finishAffinity(); // or finish();
         //super.onBackPressed()
+    }
 
+    override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+
+        when (p0.itemId) {
+            R.id.nav_one -> {
+                val randomIntent = Intent(this, SecondActivity::class.java)
+                randomIntent.putExtra("indicacao","try")
+                startActivity(randomIntent)
+            }
+            R.id.nav_two -> {
+                val randomIntent = Intent(this, SecondActivity::class.java)
+                randomIntent.putExtra("indicacao","pesquisar")
+                startActivity(randomIntent)
+            }
+            R.id.nav_three -> {
+                val randomIntent = Intent(this, SecondActivity::class.java)
+                randomIntent.putExtra("indicacao","about")
+                startActivity(randomIntent)
+            }
+            R.id.nav_four -> {
+                val randomIntent = Intent(this, SecondActivity::class.java)
+                randomIntent.putExtra("indicacao","team")
+                startActivity(randomIntent)
+            }
+            R.id.nav_five -> {
+                if(p0.title=="Português"){
+                    refreshApp("pt")
+                }
+                else{
+                    refreshApp("en")
+                }
+            }
+            R.id.nav_six -> {
+                val randomIntent = Intent(this, SecondActivity::class.java)
+                randomIntent.putExtra("indicacao","agradecimentos")
+                startActivity(randomIntent)
+            }
+            R.id.nav_eight  -> {
+                val randomIntent = Intent(this, SecondActivity::class.java)
+                randomIntent.putExtra("indicacao","contactos")
+                startActivity(randomIntent)
+            }
+            R.id.nav_nine  -> {
+                val randomIntent = Intent(this, SecondActivity::class.java)
+                randomIntent.putExtra("indicacao","media")
+                startActivity(randomIntent)
+            }
+        }
+
+        drawer?.closeDrawer(GravityCompat.END)
+        return true
     }
 }
 
