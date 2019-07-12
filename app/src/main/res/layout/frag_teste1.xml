@@ -12,7 +12,7 @@
             android:id="@+id/step_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:svTextSize="12sp"
+            app:svTextSize="0sp"
             app:svLineWidth="4dp"
             app:svFillRadius="10dp"
             app:svCircleColor="@color/colorPrimaryDark"

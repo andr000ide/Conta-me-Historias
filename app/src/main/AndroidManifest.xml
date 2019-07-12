@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.projetofinal">
+          package="com.app.projetofinal">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -17,7 +17,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity"
+        <activity android:name="com.app.projetofinal.MainActivity"
                   android:theme="@style/AppThemeMain"
                   android:screenOrientation="portrait">
 
@@ -29,7 +29,7 @@
         </activity>
         <activity android:theme="@style/AppThemeMain"
                   android:hardwareAccelerated="true"
-                  android:name=".SecondActivity" android:parentActivityName=".MainActivity"
+                  android:name="com.app.projetofinal.SecondActivity" android:parentActivityName="com.app.projetofinal.MainActivity"
                   android:screenOrientation="portrait"></activity>
     </application>
 

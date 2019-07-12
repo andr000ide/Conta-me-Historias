@@ -37,7 +37,7 @@
             Facebook, Twitter).
         </a>
     </string>
-    <string name="sobreFunciona">Como é que funciona?</string>
+    <string name="sobreFunciona">Como funciona?</string>
     <string name="sobreFuncionaT">
         <a>O Conta-me Histórias obtém informação a partir de arquivos web (e.g., Arquivo.pt) e
             media
@@ -74,8 +74,8 @@
     </string>
     <string name="sobrePremios">Prémios</string>
     <string name="sobrePremiosT">
-        <a>Vencedor dos</a> &lt;a
-        href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">prémios Arquivo.pt 2018&lt;/a>
+        <a>Vencedor do</a> &lt;a
+        href="https://sobre.arquivo.pt/en/arquivo-pt-2018-award-winners/">Prémio Arquivo.pt 2018&lt;/a>
         <a>e da Best Demo Presentation na 41st European Conference on Information Retrieval (</a>
         &lt;a href="http://www.ecir2019.org" >ECIR’19&lt;/a><a>).</a>
     </string>
@@ -110,7 +110,7 @@
     <string name="financiamento">Financiamento</string>
     <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth – Pervasive Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund (ERDF) através do programa COMPETE 2020 no âmbito do projeto POCI-01-0145-FEDER-006961, e por fundos nacionais da FCT – Fundação da Ciência e Tecnologia ao abrigo do UID/EEA/50014/2013.</string>
     <string name="outros">Outros</string>
-    <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
+    <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">Arquivo.pt</a> e
         à sua
         equipa que ao longo dos últimos anos criou uma plataforma de reconhecido valor na preservação dos conteúdos
         digitais portugueses,
@@ -181,5 +181,18 @@
     <string name="error_text_procurar_outro_tema">Pesquise por um outro tópico à sua escolha</string>
     <string name="error_text_empty">Pesquisa está vazia</string>
     <string name="error_text_procurar_outro_tema2">Pesquise por um tópico à sua escolha</string>
+    <string name="janeiro">Janeiro</string>
+    <string name="fevereiro">Fevereiro</string>
+    <string name="marco">Março</string>
+    <string name="abril">Abril</string>
+    <string name="maio">Maio</string>
+    <string name="junho">Junho</string>
+    <string name="julho">Julho</string>
+    <string name="agosto">Agosto</string>
+    <string name="setembro">Setembro</string>
+    <string name="outubro">Outubro</string>
+    <string name="novembro">Novembro</string>
+    <string name="dezembro">Dezembro</string>
+    <string name="infor">Fontes de informação:</string>
 </resources>
 
