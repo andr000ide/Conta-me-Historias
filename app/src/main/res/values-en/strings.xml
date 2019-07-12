@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name" >Tell me stories</string>
     <string name="key_description">Create narratives about any subject</string>
     <string name="key_search">Search</string>
     <string name="key_try">Try</string>
@@ -144,4 +145,17 @@
     <string name="error_text_procurar_outro_tema">Search for another topic of your choice</string>
     <string name="error_text_empty">Search is empty</string>
     <string name="error_text_procurar_outro_tema2">Search for a topic of your choice</string>
+    <string name="janeiro">January</string>
+    <string name="fevereiro">February</string>
+    <string name="marco">March</string>
+    <string name="abril">April</string>
+    <string name="maio">May</string>
+    <string name="junho">June</string>
+    <string name="julho">July</string>
+    <string name="agosto">August</string>
+    <string name="setembro">September</string>
+    <string name="outubro">October</string>
+    <string name="novembro">November</string>
+    <string name="dezembro">December</string>
+    <string name="infor">Data sources:</string>
 </resources>
