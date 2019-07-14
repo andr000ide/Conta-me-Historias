@@ -62,7 +62,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 )
                     .addToBackStack("1").commit()
                 navView?.setCheckedItem(R.id.nav_one)
-                check = R.id.nav_one
+                check = 99
             }
             else if(indicator.equals("pesquisar")){
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
@@ -70,7 +70,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 )
                     .addToBackStack("2").commit()
                 navView?.setCheckedItem(R.id.nav_two)
-                check = R.id.nav_two
+                check = 99
             }
             else if(indicator.equals("about")){
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
@@ -130,7 +130,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         FragmentThree()
                     )
                         .addToBackStack("1").commit()
-                    check = R.id.nav_one
+                    check = 99
                 }
             }
             R.id.nav_two -> {
@@ -139,7 +139,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         FragmentTwo()
                     )
                         .addToBackStack("2").commit()
-                    check = R.id.nav_two
+                    check = 99
                 }
             }
             R.id.nav_three -> {
